@@ -1,0 +1,43 @@
+const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('fs'),path=require('path');
+const root=path.resolve(__dirname,'..'),out=path.join(root,'qa');fs.mkdirSync(out,{recursive:true});
+const base=(process.env.LAB_URL||'http://127.0.0.1:4178').replace(/\/$/,'');
+(async()=>{
+  const edge='C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
+  const browser=await chromium.launch({headless:true,...(fs.existsSync(edge)?{executablePath:edge}:{})});
+  const context=await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true}),page=await context.newPage(),errors=[],failures=[],results=[];
+  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)failures.push(r.url()+': '+r.status());});
+  const ready=()=>page.waitForFunction(()=>window.labState?.ready&&!window.labState.busy);
+  for(const mode of ['polarization','rotation','spacing']){
+    await page.setViewportSize({width:1440,height:1000});await page.goto(`${base}/${mode}/`);await ready();
+    assert(Number(await page.locator('#ncc').textContent())>.97);
+    assert.equal(await page.locator('nav [aria-current=page]').count(),1);
+    await page.locator('#message').fill('你好，光！ECNU 2026');await page.locator('#send').click();
+    await page.waitForFunction(()=>window.labState.communication!==null,{},{timeout:60000});
+    let good=await page.evaluate(()=>({crc:labState.communication.crcValid,ber:labState.communication.ber,decoded:labState.communication.decoded}));assert(good.crc);assert.equal(good.decoded,'你好，光！ECNU 2026');
+    await page.locator('#wrong').click();await ready();assert(await page.evaluate(()=>labState.communication===null));
+    await page.locator('#send').click();await page.waitForFunction(()=>window.labState.communication!==null,{},{timeout:60000});
+    const wrong=await page.evaluate(()=>({crc:labState.communication.crcValid,ber:labState.communication.ber,decoded:labState.communication.decoded}));assert(!wrong.crc);assert(wrong.ber>.05);
+    await page.locator('#match').click();await ready();
+    await page.locator('#scan').click();await page.waitForFunction(()=>window.labState.scan!==null&&!window.labState.busy,{},{timeout:60000});
+    const n=await page.evaluate(()=>labState.scan.rows.length);assert.equal(n,mode==='spacing'?33:37);
+    const csvPromise=page.waitForEvent('download');await page.locator('#scan-export').click();const csv=await csvPromise;await csv.saveAs(path.join(out,mode+'.csv'));
+    assert.equal(fs.readFileSync(path.join(out,mode+'.csv'),'utf8').trim().split(/\r?\n/).length,n+1);
+    const jsonPromise=page.waitForEvent('download');await page.locator('#export').click();const json=await jsonPromise;await json.saveAs(path.join(out,mode+'.json'));assert.equal(JSON.parse(fs.readFileSync(path.join(out,mode+'.json'),'utf8')).mode,mode);
+    await page.locator('#send').click();await page.waitForFunction(()=>window.labState.communication!==null,{},{timeout:60000});
+    await page.screenshot({path:path.join(out,mode+'-desktop.png'),fullPage:true,animations:'disabled',style:'#toast{visibility:hidden}'});
+    await page.locator('summary').click();
+    const fonts=await page.evaluate(()=>({body:getComputedStyle(document.body).fontFamily,math:getComputedStyle(document.querySelector('math')).fontFamily,bodySize:getComputedStyle(document.body).fontSize}));assert(fonts.body.includes('Times New Roman')&&fonts.body.includes('SimSun'));assert(fonts.math.includes('Cambria Math'));assert.equal(fonts.bodySize,'18px');
+    await page.locator('.theory').screenshot({path:path.join(out,mode+'-theory.png')});
+    await page.setViewportSize({width:390,height:844});await page.evaluate(()=>scrollTo(0,0));
+    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);assert(overflow<=1,mode+' overflow '+overflow);
+    await page.screenshot({path:path.join(out,mode+'-mobile.png'),fullPage:true,animations:'disabled',style:'#toast{visibility:hidden}'});
+    await page.locator('#reference').selectOption({index:1});await ready();assert(Number(await page.locator('#ncc').textContent())>.97);assert(await page.evaluate(()=>labState.scan===null));
+    await page.locator('#message').fill('');await page.locator('#send').click();assert.equal(await page.locator('#toast').textContent(),'请先输入要传输的文字。');
+    await page.locator('#value').fill('999');await page.locator('#value').dispatchEvent('change');assert(await page.evaluate(()=>labState.value<=LabConfig.labs[labState.mode].max));
+    results.push({mode,good,wrong,scanPoints:n,fonts,mobileOverflow:overflow});
+  }
+  await page.setViewportSize({width:1440,height:1000});await page.goto(base+'/');assert.equal(await page.locator('.portal').count(),3);await page.screenshot({path:path.join(out,'index-desktop.png'),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:path.join(out,'index-mobile.png'),fullPage:true});
+  assert.deepEqual(errors,[]);assert.deepEqual(failures,[]);
+  const report={passed:true,base,results,pageErrors:errors,httpErrors:failures};fs.writeFileSync(path.join(out,'browser-validation.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});
