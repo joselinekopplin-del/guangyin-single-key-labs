@@ -1,0 +1,143 @@
+{
+  "checked": "2026-10-13",
+  "groups": [
+    {"id":"joint-layers","title":"联合密钥与层叠全息","description":"三维联合控制、旋转复用、层组合与秘密共享。"},
+    {"id":"polarization-jones","title":"偏振复用与 Jones 模型","description":"解释偏振如何改变光场，以及不同器件架构之间的区别。"},
+    {"id":"training-chip","title":"训练、容差与芯片实现","description":"从可训练相位面走向误差鲁棒设计和可见光实物。"},
+    {"id":"dynamic-security","title":"动态密钥与安全评估","description":"比较可更新入射光场与额外秘密因子，并明确攻击假设。"}
+  ],
+  "papers": [
+    {
+      "id":1,"group":"joint-layers","author":"T. Zhang et al.","year":2025,
+      "journal":"Advanced Materials","citation":"37, 2506222 (2025)",
+      "title":"Integrated Polarization, Distance, and Rotation for Multi-DoF Diffractive Processor and Information Encryption",
+      "zh":"偏振、距离与旋转的联合处理器","role":"核心模型",
+      "doi":"10.1002/adma.202506222","url":"https://doi.org/10.1002/adma.202506222",
+      "pdf":"https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/adma.202506222","access":"publisher","pdfLabel":"出版社 PDF · 可能需机构权限",
+      "principle":"把入射偏振、层间距和器件旋转同时纳入多层衍射处理器，通过联合优化让不同条件对应不同输出。",
+      "relation":"支持本项目三个参数进入同一传播算子的总体路线，说明三维融合已有研究基础。",
+      "boundary":"原文实验为太赫兹；本站使用可见光等效参数，不能直接沿用其器件结构和实验性能。"
+    },
+    {
+      "id":2,"group":"joint-layers","author":"Z. Fan et al.","year":2024,
+      "journal":"Nature Communications","citation":"15, 9416 (2024)",
+      "title":"Holographic multiplexing metasurface with twisted diffractive neural network",
+      "zh":"用层间旋转切换全息图像","role":"旋转依据",
+      "doi":"10.1038/s41467-024-53749-6","url":"https://www.nature.com/articles/s41467-024-53749-6",
+      "pdf":"https://www.nature.com/articles/s41467-024-53749-6.pdf","access":"open","pdfLabel":"开放 PDF · 正式版",
+      "principle":"将层间扭转作为衍射网络的结构变量，联合设计旋转条件下的全息输出，并研究横向失配等误差。",
+      "relation":"支持第二层真实旋转、旋转复用及容差分析，提醒我们区分器件旋转与显示图像旋转。",
+      "boundary":"论文的通道容量和器件结果不能作为本站 16 个通道的指标；本站旋转还包含数值插值误差。"
+    },
+    {
+      "id":3,"group":"joint-layers","author":"C. Park et al.","year":2026,
+      "journal":"Advanced Functional Materials","citation":"36, e23309 (2026；2025 年在线)",
+      "title":"Recomposable Layered Metasurfaces for Wavelength-Multiplexed Optical Encryption via Modular Diffractive Deep Neural Networks",
+      "zh":"可重组层叠器件与距离读取","role":"层组合比较",
+      "doi":"10.1002/adfm.202523309","url":"https://doi.org/10.1002/adfm.202523309",
+      "pdf":"https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/adfm.202523309","access":"publisher","pdfLabel":"出版社 PDF · 可能需机构权限",
+      "principle":"联合优化各层独立输出及层叠输出，使层组合、间距和波长共同决定读取的图像。",
+      "relation":"为 L₂–L₃ 距离控制和模块化器件提供比较，帮助区分传播距离与简单图像缩放。",
+      "boundary":"本站固定单波长和三层，没有实现论文的波长复用或可替换实体层。"
+    },
+    {
+      "id":4,"group":"joint-layers","author":"P. Georgi et al.","year":2021,
+      "journal":"Science Advances","citation":"7, eabf9718 (2021)",
+      "title":"Optical secret sharing with cascaded metasurface holography",
+      "zh":"用两层超表面共同读取秘密图像","role":"层叠与对准比较",
+      "doi":"10.1126/sciadv.abf9718","url":"https://doi.org/10.1126/sciadv.abf9718",
+      "pdf":"https://arxiv.org/pdf/2110.03265","access":"preprint","pdfLabel":"开放 PDF · 作者稿",
+      "principle":"单层显示各自的标识图，两层正确叠放后共同产生另一幅秘密图像；采用自动微分优化，并利用相对平移实现复用。",
+      "relation":"支持检查单层与层组合是否泄漏目标信息，提供实体分片与对准误差的实验参考。",
+      "boundary":"这是全息图像的层叠秘密共享方案；本站的同帧文字接收没有实现实体分片或平移密钥。"
+    },
+    {
+      "id":5,"group":"polarization-jones","author":"N. A. Rubin et al.","year":2021,
+      "journal":"Science Advances","citation":"7, eabg7488 (2021)",
+      "title":"Jones matrix holography with metasurfaces",
+      "zh":"用 Jones 矩阵描述偏振全息","role":"数学模型依据",
+      "doi":"10.1126/sciadv.abg7488","url":"https://doi.org/10.1126/sciadv.abg7488",
+      "pdf":"https://arxiv.org/pdf/2012.14874","access":"preprint","pdfLabel":"开放 PDF · 作者预印本",
+      "principle":"将全息器件及远场响应写成空间变化的 2 × 2 Jones 矩阵，并把相位恢复推广到矩阵，设计不同的偏振变换。",
+      "relation":"支撑本站双偏振复场与 Jones 相位面描述，说明偏振响应应由算子计算。",
+      "boundary":"本站采用受限的双折射相位面，没有实现论文中所有远场偏振变换或矩阵优化算法。"
+    },
+    {
+      "id":6,"group":"polarization-jones","author":"J. Li et al.","year":2022,
+      "journal":"Light: Science & Applications","citation":"11, 153 (2022)",
+      "title":"Polarization multiplexed diffractive computing: all-optical implementation of a group of linear transformations through a polarization-encoded diffractive network",
+      "zh":"输入与输出偏振组合承载不同算子","role":"偏振通道比较",
+      "doi":"10.1038/s41377-022-00849-x","url":"https://www.nature.com/articles/s41377-022-00849-x",
+      "pdf":"https://www.nature.com/articles/s41377-022-00849-x.pdf","access":"open","pdfLabel":"开放 PDF · 正式版",
+      "principle":"在各向同性衍射层之间加入固定偏振片阵列，按输入和输出偏振组合共同训练不同的复值线性变换。",
+      "relation":"提供偏振通道、检偏和通道隔离的建模参考，也支持比较不同偏振组合对应的算子。",
+      "boundary":"其偏振片阵列架构与本站的双折射相位面不同；论文讨论光学计算，不能直接用作加密安全证明。"
+    },
+    {
+      "id":7,"group":"polarization-jones","author":"D. Wen et al.","year":2015,
+      "journal":"Nature Communications","citation":"6, 8241 (2015)",
+      "title":"Helicity multiplexed broadband metasurface holograms",
+      "zh":"左右旋圆偏振切换全息图","role":"偏振复用基础",
+      "doi":"10.1038/ncomms9241","url":"https://www.nature.com/articles/ncomms9241",
+      "pdf":"https://www.nature.com/articles/ncomms9241.pdf","access":"open","pdfLabel":"开放 PDF · 正式版",
+      "principle":"组合响应相反入射手性的两组全息图案，利用几何相位，使左右旋圆偏振切换离轴图像。",
+      "relation":"为入射偏振作为读取条件提供直接实验依据，并用于比较圆偏振和线偏振方案。",
+      "boundary":"这是圆偏振与反射型几何相位器件；本站当前标称通道采用 H/V 线偏振，不能把两种方案视为同一实验。"
+    },
+    {
+      "id":8,"group":"training-chip","author":"X. Lin et al.","year":2018,
+      "journal":"Science","citation":"361, 1004–1008 (2018)",
+      "title":"All-optical machine learning using diffractive deep neural networks",
+      "zh":"通过训练设计多层衍射相位面","role":"训练框架基础",
+      "doi":"10.1126/science.aat8084","url":"https://doi.org/10.1126/science.aat8084",
+      "pdf":"https://arxiv.org/pdf/1804.08711","access":"preprint","pdfLabel":"开放 PDF · 作者稿",
+      "principle":"将多层衍射表面的透射参数作为训练变量，在计算机中反向传播优化，再由被动器件执行已设计的光学任务。",
+      "relation":"支持本站预训练相位面与多层传播框架，帮助解释训练阶段与网页推理阶段的分工。",
+      "boundary":"原文以太赫兹打印器件验证分类和成像，未实现本站三参文字通信；网页也不进行在线训练。"
+    },
+    {
+      "id":9,"group":"training-chip","author":"D. Mengu et al.","year":2020,
+      "journal":"Nanophotonics","citation":"2020 · DOI 10.1515/nanoph-2020-0291",
+      "title":"Misalignment resilient diffractive optical networks",
+      "zh":"把随机失配放进训练提高容差","role":"鲁棒性研究依据",
+      "doi":"10.1515/nanoph-2020-0291","url":"https://doi.org/10.1515/nanoph-2020-0291",
+      "pdf":"https://arxiv.org/pdf/2005.11464","access":"preprint","pdfLabel":"开放 PDF · 作者稿",
+      "principle":"在训练的前向传播中随机采样三维层间失配，让网络在一组可能的装配偏差下仍保持较好的任务表现。",
+      "relation":"为联合容差地图和随机重复试验提供鲁棒性研究背景，也指导后续把误差加入训练。",
+      "boundary":"本站目前进行接收端校准与误差测试，已有权重没有经过这种鲁棒重训练。"
+    },
+    {
+      "id":10,"group":"training-chip","author":"X. Luo et al.","year":2022,
+      "journal":"Light: Science & Applications","citation":"11, 158 (2022)",
+      "title":"Metasurface-enabled on-chip multiplexed diffractive neural networks in the visible",
+      "zh":"可见光偏振复用网络与 CMOS 集成","role":"实物芯片参考",
+      "doi":"10.1038/s41377-022-00844-2","url":"https://www.nature.com/articles/s41377-022-00844-2",
+      "pdf":"https://arxiv.org/pdf/2107.07873","access":"preprint","pdfLabel":"开放 PDF · 作者预印本",
+      "principle":"利用各向异性 TiO₂ 纳米柱实现双偏振相位响应，通过训练及全波验证设计多任务网络，并与 CMOS 图像传感器集成。",
+      "relation":"为项目从理想相位面走向纳米结构、加工和芯片集成提供实物路线，特别需要检查透射幅度及串扰。",
+      "boundary":"论文主要验证分类任务；本站的 8 μm 数值采样不是其纳米柱周期，也没有完成纳米结构映射或芯片制作。"
+    },
+    {
+      "id":11,"group":"dynamic-security","author":"G. Qu et al.","year":2020,
+      "journal":"Nature Communications","citation":"11, 5484 (2020)",
+      "title":"Reprogrammable meta-hologram for optical encryption",
+      "zh":"用可更新入射光场改变读取信息","role":"动态密钥方向",
+      "doi":"10.1038/s41467-020-19312-9","url":"https://www.nature.com/articles/s41467-020-19312-9",
+      "pdf":"https://www.nature.com/articles/s41467-020-19312-9.pdf","access":"open","pdfLabel":"开放 PDF · 正式版",
+      "principle":"将全息相位信息分到入射光场和固定超表面两部分，通过更新入射相位而改变同一器件的图像与视频输出。",
+      "relation":"提出与有限通道遍历风险相关的比较方向：可更新的输入相位图，而不仅是三个标称参数。",
+      "boundary":"本站没有增加空间入射相位密钥；随机填充和公开导频也不能替代该论文的动态秘密相位。"
+    },
+    {
+      "id":12,"group":"dynamic-security","author":"Z. Yu et al.","year":2024,
+      "journal":"Nature Communications","citation":"15, 2607 (2024)",
+      "title":"High-security learning-based optical encryption assisted by disordered metasurface",
+      "zh":"偏振无序器件与额外秘密因子","role":"攻击评估比较",
+      "doi":"10.1038/s41467-024-46946-w","url":"https://www.nature.com/articles/s41467-024-46946-w",
+      "pdf":"https://www.nature.com/articles/s41467-024-46946-w.pdf","access":"open","pdfLabel":"开放 PDF · 正式版",
+      "principle":"用偏振复用无序超表面产生散斑，叠加额外 QR 相位安全密钥，并训练接收网络恢复图像，同时比较攻击情形。",
+      "relation":"指导本站明确观察者知道哪些信息，并通过公开模型遍历实际检查信息泄漏。",
+      "boundary":"本站公开全部模型且没有该额外安全密钥，不能直接继承论文的安全结论或将散斑外观视为安全证据。"
+    }
+  ]
+}

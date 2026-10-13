@@ -10,11 +10,79 @@
 
 ## 查阅论文及能够支持的结论
 
-1. **Zhang et al., Advanced Materials 37 (2025), 2506222**：Integrated Polarization, Distance, and Rotation for Multi-DoF Diffractive Processor and Information Encryption。DOI：[10.1002/adma.202506222](https://doi.org/10.1002/adma.202506222)。已在同一三层处理器中整合偏振、距离、旋转，并开展信息传输。因此，三维融合本身不能作为本项目的首次提出。本文的实验为太赫兹；本站是可见光等效计算模型。
-2. **Fan et al., Nature Communications 15 (2024), 9416**：Holographic multiplexing metasurface with twisted diffractive neural network。DOI：[10.1038/s41467-024-53749-6](https://www.nature.com/articles/s41467-024-53749-6)。讨论旋转复用、复透射率旋转的插值误差与加工误差；用来指导器件旋转及联合容差分析。[开放 PDF](https://www.nature.com/articles/s41467-024-53749-6.pdf)。
-3. **Mengu et al., Nanophotonics (2020)**：Misalignment resilient diffractive optical networks。DOI：[10.1515/nanoph-2020-0291](https://doi.org/10.1515/nanoph-2020-0291)。将随机失配纳入训练以改善误差鲁棒性。本站以此为误差分析的基础，新增公开导频校准；当前权重没有做疫苗式鲁棒重训练。[作者预印本](https://arxiv.org/abs/2005.11464)。
-4. **Park et al., Advanced Functional Materials 36 (2026), e23309（2025 年在线）**：Recomposable Layered Metasurfaces for Wavelength-Multiplexed Optical Encryption via Modular Diffractive Deep Neural Networks。DOI：[10.1002/adfm.202523309](https://doi.org/10.1002/adfm.202523309)。模块化层组合、波长与层距共同控制读取，为项目提供另一种物理密钥架构的比较。本站没有引入第四个可调维度，也没有复现论文的纳米版图。
-5. **Yu et al., Nature Communications 15 (2024), 2607**：High-security learning-based optical encryption assisted by disordered metasurface。DOI：[10.1038/s41467-024-46946-w](https://www.nature.com/articles/s41467-024-46946-w)。结合私有无序器件与额外安全密钥，并分析攻击；据此引入本项目自身的公开模型风险检查。本文的私有器件假设与本站公开权重不同，不能迁移其安全结论。[开放 PDF](https://www.nature.com/articles/s41467-024-46946-w.pdf)。
+共 12 篇研究论文，按联合与层叠、偏振与 Jones 模型、训练与芯片、动态与安全四个方向选取。作者稿与正式版可能有差异；出版社 PDF 可能需要机构访问权限。
+
+1. **T. Zhang et al., Advanced Materials, 37, 2506222 (2025)**：Integrated Polarization, Distance, and Rotation for Multi-DoF Diffractive Processor and Information Encryption。DOI：[10.1002/adma.202506222](https://doi.org/10.1002/adma.202506222)。
+   - 原理：把入射偏振、层间距和器件旋转同时纳入多层衍射处理器，通过联合优化让不同条件对应不同输出。
+   - 项目用途：支持本项目三个参数进入同一传播算子的总体路线，说明三维融合已有研究基础。
+   - 适用边界：原文实验为太赫兹；本站使用可见光等效参数，不能直接沿用其器件结构和实验性能。
+   - [出版社 PDF · 可能需机构权限](https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/adma.202506222)
+
+2. **Z. Fan et al., Nature Communications, 15, 9416 (2024)**：Holographic multiplexing metasurface with twisted diffractive neural network。DOI：[10.1038/s41467-024-53749-6](https://www.nature.com/articles/s41467-024-53749-6)。
+   - 原理：将层间扭转作为衍射网络的结构变量，联合设计旋转条件下的全息输出，并研究横向失配等误差。
+   - 项目用途：支持第二层真实旋转、旋转复用及容差分析，提醒我们区分器件旋转与显示图像旋转。
+   - 适用边界：论文的通道容量和器件结果不能作为本站 16 个通道的指标；本站旋转还包含数值插值误差。
+   - [开放 PDF · 正式版](https://www.nature.com/articles/s41467-024-53749-6.pdf)
+
+3. **C. Park et al., Advanced Functional Materials, 36, e23309 (2026；2025 年在线)**：Recomposable Layered Metasurfaces for Wavelength-Multiplexed Optical Encryption via Modular Diffractive Deep Neural Networks。DOI：[10.1002/adfm.202523309](https://doi.org/10.1002/adfm.202523309)。
+   - 原理：联合优化各层独立输出及层叠输出，使层组合、间距和波长共同决定读取的图像。
+   - 项目用途：为 L₂–L₃ 距离控制和模块化器件提供比较，帮助区分传播距离与简单图像缩放。
+   - 适用边界：本站固定单波长和三层，没有实现论文的波长复用或可替换实体层。
+   - [出版社 PDF · 可能需机构权限](https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/adfm.202523309)
+
+4. **P. Georgi et al., Science Advances, 7, eabf9718 (2021)**：Optical secret sharing with cascaded metasurface holography。DOI：[10.1126/sciadv.abf9718](https://doi.org/10.1126/sciadv.abf9718)。
+   - 原理：单层显示各自的标识图，两层正确叠放后共同产生另一幅秘密图像；采用自动微分优化，并利用相对平移实现复用。
+   - 项目用途：支持检查单层与层组合是否泄漏目标信息，提供实体分片与对准误差的实验参考。
+   - 适用边界：这是全息图像的层叠秘密共享方案；本站的同帧文字接收没有实现实体分片或平移密钥。
+   - [开放 PDF · 作者稿](https://arxiv.org/pdf/2110.03265)
+
+5. **N. A. Rubin et al., Science Advances, 7, eabg7488 (2021)**：Jones matrix holography with metasurfaces。DOI：[10.1126/sciadv.abg7488](https://doi.org/10.1126/sciadv.abg7488)。
+   - 原理：将全息器件及远场响应写成空间变化的 2 × 2 Jones 矩阵，并把相位恢复推广到矩阵，设计不同的偏振变换。
+   - 项目用途：支撑本站双偏振复场与 Jones 相位面描述，说明偏振响应应由算子计算。
+   - 适用边界：本站采用受限的双折射相位面，没有实现论文中所有远场偏振变换或矩阵优化算法。
+   - [开放 PDF · 作者预印本](https://arxiv.org/pdf/2012.14874)
+
+6. **J. Li et al., Light: Science & Applications, 11, 153 (2022)**：Polarization multiplexed diffractive computing: all-optical implementation of a group of linear transformations through a polarization-encoded diffractive network。DOI：[10.1038/s41377-022-00849-x](https://www.nature.com/articles/s41377-022-00849-x)。
+   - 原理：在各向同性衍射层之间加入固定偏振片阵列，按输入和输出偏振组合共同训练不同的复值线性变换。
+   - 项目用途：提供偏振通道、检偏和通道隔离的建模参考，也支持比较不同偏振组合对应的算子。
+   - 适用边界：其偏振片阵列架构与本站的双折射相位面不同；论文讨论光学计算，不能直接用作加密安全证明。
+   - [开放 PDF · 正式版](https://www.nature.com/articles/s41377-022-00849-x.pdf)
+
+7. **D. Wen et al., Nature Communications, 6, 8241 (2015)**：Helicity multiplexed broadband metasurface holograms。DOI：[10.1038/ncomms9241](https://www.nature.com/articles/ncomms9241)。
+   - 原理：组合响应相反入射手性的两组全息图案，利用几何相位，使左右旋圆偏振切换离轴图像。
+   - 项目用途：为入射偏振作为读取条件提供直接实验依据，并用于比较圆偏振和线偏振方案。
+   - 适用边界：这是圆偏振与反射型几何相位器件；本站当前标称通道采用 H/V 线偏振，不能把两种方案视为同一实验。
+   - [开放 PDF · 正式版](https://www.nature.com/articles/ncomms9241.pdf)
+
+8. **X. Lin et al., Science, 361, 1004–1008 (2018)**：All-optical machine learning using diffractive deep neural networks。DOI：[10.1126/science.aat8084](https://doi.org/10.1126/science.aat8084)。
+   - 原理：将多层衍射表面的透射参数作为训练变量，在计算机中反向传播优化，再由被动器件执行已设计的光学任务。
+   - 项目用途：支持本站预训练相位面与多层传播框架，帮助解释训练阶段与网页推理阶段的分工。
+   - 适用边界：原文以太赫兹打印器件验证分类和成像，未实现本站三参文字通信；网页也不进行在线训练。
+   - [开放 PDF · 作者稿](https://arxiv.org/pdf/1804.08711)
+
+9. **D. Mengu et al., Nanophotonics, 2020 · DOI 10.1515/nanoph-2020-0291**：Misalignment resilient diffractive optical networks。DOI：[10.1515/nanoph-2020-0291](https://doi.org/10.1515/nanoph-2020-0291)。
+   - 原理：在训练的前向传播中随机采样三维层间失配，让网络在一组可能的装配偏差下仍保持较好的任务表现。
+   - 项目用途：为联合容差地图和随机重复试验提供鲁棒性研究背景，也指导后续把误差加入训练。
+   - 适用边界：本站目前进行接收端校准与误差测试，已有权重没有经过这种鲁棒重训练。
+   - [开放 PDF · 作者稿](https://arxiv.org/pdf/2005.11464)
+
+10. **X. Luo et al., Light: Science & Applications, 11, 158 (2022)**：Metasurface-enabled on-chip multiplexed diffractive neural networks in the visible。DOI：[10.1038/s41377-022-00844-2](https://www.nature.com/articles/s41377-022-00844-2)。
+   - 原理：利用各向异性 TiO₂ 纳米柱实现双偏振相位响应，通过训练及全波验证设计多任务网络，并与 CMOS 图像传感器集成。
+   - 项目用途：为项目从理想相位面走向纳米结构、加工和芯片集成提供实物路线，特别需要检查透射幅度及串扰。
+   - 适用边界：论文主要验证分类任务；本站的 8 μm 数值采样不是其纳米柱周期，也没有完成纳米结构映射或芯片制作。
+   - [开放 PDF · 作者预印本](https://arxiv.org/pdf/2107.07873)
+
+11. **G. Qu et al., Nature Communications, 11, 5484 (2020)**：Reprogrammable meta-hologram for optical encryption。DOI：[10.1038/s41467-020-19312-9](https://www.nature.com/articles/s41467-020-19312-9)。
+   - 原理：将全息相位信息分到入射光场和固定超表面两部分，通过更新入射相位而改变同一器件的图像与视频输出。
+   - 项目用途：提出与有限通道遍历风险相关的比较方向：可更新的输入相位图，而不仅是三个标称参数。
+   - 适用边界：本站没有增加空间入射相位密钥；随机填充和公开导频也不能替代该论文的动态秘密相位。
+   - [开放 PDF · 正式版](https://www.nature.com/articles/s41467-020-19312-9.pdf)
+
+12. **Z. Yu et al., Nature Communications, 15, 2607 (2024)**：High-security learning-based optical encryption assisted by disordered metasurface。DOI：[10.1038/s41467-024-46946-w](https://www.nature.com/articles/s41467-024-46946-w)。
+   - 原理：用偏振复用无序超表面产生散斑，叠加额外 QR 相位安全密钥，并训练接收网络恢复图像，同时比较攻击情形。
+   - 项目用途：指导本站明确观察者知道哪些信息，并通过公开模型遍历实际检查信息泄漏。
+   - 适用边界：本站公开全部模型且没有该额外安全密钥，不能直接继承论文的安全结论或将散斑外观视为安全证据。
+   - [开放 PDF · 正式版](https://www.nature.com/articles/s41467-024-46946-w.pdf)
 
 ## 已实现的项目级改进
 
