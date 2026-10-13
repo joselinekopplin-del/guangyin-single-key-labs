@@ -16,7 +16,7 @@ function initWorker(){
 function compute(type,extra={},progress){return new Promise((resolve,reject)=>{const id=++requestID;pending.set(id,{resolve,reject,progress});worker.postMessage({id,type,mode,value:state.value,keyIndex:state.keyIndex,...extra});});}
 function heat(id,values){
   const canvas=$(id),ctx=canvas.getContext('2d'),im=ctx.createImageData(64,64),peak=Math.max(...values,1e-30);
-  const stops=[[15,30,26],[35,66,49],[69,111,75],[152,179,114],[244,237,190]];
+  const stops=[[8,27,48],[17,73,110],[39,136,168],[125,194,202],[244,232,165]];
   for(let i=0;i<4096;i++){const u=Math.max(0,Math.min(1,values[i]/peak))*4,k=Math.min(3,Math.floor(u)),t=u-k;for(let j=0;j<3;j++)im.data[4*i+j]=Math.round(stops[k][j]*(1-t)+stops[k+1][j]*t);im.data[4*i+3]=255;}
   ctx.putImageData(im,0,0);
 }

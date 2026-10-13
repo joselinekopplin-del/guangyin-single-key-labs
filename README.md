@@ -1,4 +1,4 @@
-# 光隐 · 三境
+# 单变量光学加密仿真
 
 三个独立的单自由度光学加密仿真网页。新建仓库与原版“光隐”分离，原站点没有修改。
 
@@ -41,7 +41,7 @@ NCC 是去均值归一化相关系数；PSNR 在拟合亮度后计算；目标�
 
 ## 字体与设计
 
-宣纸底色、松烟墨、青绿／朱砂／石青分别标识三页。正文 18 px，主标题加粗。英文字母和数字优先 Times New Roman，中文字形由宋体 SimSun 承接；原生 MathML 使用 Cambria Math。字体来自访问设备，不分发商业字体；缺少指定字体时回退到相应衬线或数学字体。
+网页采用白底、冷灰分区与统一的蓝色交互提示，使用科研仪器界面的清晰信息层级。首页和三个实验页共享同一套布局。正文 18 px，标题加粗。英文字母和数字优先 Times New Roman，中文字形由宋体 SimSun 承接；原生 MathML 使用 Cambria Math。字体来自访问设备，不分发商业字体；缺少指定字体时回退到相应衬线或数学字体。
 
 ## 本地运行和验证
 
@@ -59,6 +59,6 @@ npm run test:browser
 
 通过 HTTP(S) 打开，避免 file:// 限制 Web Worker。Windows 已装 Edge 时验收脚本优先使用 Edge；否则使用 Playwright Chromium。可设置 LAB_URL 验收 GitHub Pages。qa/ 截图和测试数据不进入仓库。
 
-`assets/engine.js`、`assets/model-data.js` 是原项目内核的独立副本；`config.js` 将各页的自由度隔离；`worker.js` 后台计算；`app.js` 处理交互；`build-pages.cjs` 生成入口与三页静态 HTML。GitHub Pages 从 main 分支根目录提供静态文件。
+`assets/engine.js`、`assets/model-data.js` 是原项目内核的独立副本；`config.js` 将各页的自由度隔离；`worker.js` 后台计算；`app.js` 处理交互；`science.css` 管理共用样式；`build-pages.cjs` 生成入口与三页静态 HTML。GitHub Pages 从 main 分支根目录提供静态文件。
 
 该仓库只包含网页、公开研究参考和模型，不包含项目书、队员简历、文档或登录凭据。
