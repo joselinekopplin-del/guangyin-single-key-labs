@@ -1,6 +1,6 @@
 'use strict';
 self.window=self;
-importScripts('engine.js','model-data.js','joint-engine.js');
+importScripts('engine.js','model-data.js','joint-engine.js','research-engine.js');
 const O=self.Optics,J=self.JointOptics,D=self.MODEL_DATA;
 let queue=Promise.resolve(),frame=null,frameIndex=null,frameID=null;
 self.onmessage=({data:q})=>{queue=queue.then(()=>execute(q)).catch(e=>self.postMessage({id:q.id,error:e.message}));};
@@ -19,6 +19,11 @@ async function execute(q){
  }else if(q.type==='calibrate'){
   if(!frame||q.frameID!==frameID)throw Error('请先生成带有公开导频的通信密文。');result={...await J.calibrate(D,frame.pilot,frame.pilotSymbols,q.rx,q.window,progress),frameID};
  }else if(q.type==='tolerance')result=await J.tolerance(D,q.index,q.rx,q.phaseError,progress);
+ else if(q.type==='sensitivity')result=self.ResearchOptics.sensitivity(D,q.rx);
+ else if(q.type==='public-attack'){
+  if(!frame||q.frameID!==frameID)throw Error('请先生成通信密文。');
+  result={...await self.ResearchOptics.publicModelAttack(D,frame.measured,frame.pilot,frame.pilotSymbols,progress),frameID};
+ }else if(q.type==='trials')result=await self.ResearchOptics.repeatedTrials(D,q.index,q.config,progress);
  else throw Error('未知计算请求');
  self.postMessage({id:q.id,result});
 }
