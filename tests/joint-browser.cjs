@@ -1,0 +1,24 @@
+const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('fs'),path=require('path');
+const out=path.join(__dirname,'../qa/joint');fs.mkdirSync(out,{recursive:true});const base=(process.env.LAB_URL||'http://127.0.0.1:4178').replace(/\/$/,'');
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:'msedge'}),page=await browser.newPage({viewport:{width:1440,height:1100},acceptDownloads:true}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const ready=()=>page.waitForFunction(()=>jointState.ready&&!jointState.busy);
+ await page.goto(base+'/');await ready();assert.equal(await page.locator('#channel option').count(),16);assert(Number(await page.locator('#ncc').textContent())>.97);
+ await page.locator('#encrypt').click();await page.waitForFunction(()=>jointState.frame&&!jointState.busy);const frameID=await page.evaluate(()=>jointState.frame.frameID);
+ await page.locator('#decrypt').click();await page.waitForFunction(()=>jointState.decoded&&!jointState.busy);assert(await page.evaluate(()=>jointState.decoded.crcValid));assert.equal(await page.locator('#decoded').textContent(),'你好，三维联合密钥！');
+ await page.locator('#wrong').click();await ready();await page.locator('#decrypt').click();await page.waitForFunction(()=>jointState.decoded&&!jointState.busy);const wrong=await page.evaluate(()=>({ber:jointState.decoded.ber,crc:jointState.decoded.crcValid}));assert(wrong.ber>.1);assert.equal(await page.evaluate(()=>jointState.frame.frameID),frameID);
+ await page.locator('#drift').click();await ready();await page.locator('#decrypt').click();await page.waitForFunction(()=>jointState.decoded&&!jointState.busy);const before=await page.evaluate(()=>jointState.decoded.ber);
+ await page.locator('#calibrate').click();await page.waitForFunction(()=>jointState.calibration&&!jointState.busy,{},{timeout:90000});assert(await page.evaluate(()=>jointState.calibration.score>jointState.calibration.initialScore));
+ await page.locator('#apply-calibration').click();await ready();await page.locator('#decrypt').click();await page.waitForFunction(()=>jointState.decoded&&!jointState.busy);const after=await page.evaluate(()=>jointState.decoded.ber);assert(after<=before);assert(await page.evaluate(()=>jointState.decoded.crcValid));assert.equal(await page.evaluate(()=>jointState.frame.frameID),frameID);
+ await page.locator('#audit').click();await page.waitForFunction(()=>jointState.audit&&!jointState.busy,{},{timeout:90000});assert.equal(await page.locator('#audit-body tr').count(),8);assert.equal(await page.evaluate(()=>jointState.audit.frameID),frameID);
+ await page.locator('#map').click();await page.waitForFunction(()=>jointState.map&&!jointState.busy,{},{timeout:90000});assert.equal(await page.evaluate(()=>jointState.map.points.length),81);
+ let d=page.waitForEvent('download');await page.locator('#audit-csv').click();let download=await d;await download.saveAs(path.join(out,'audit.csv'));assert.equal(fs.readFileSync(path.join(out,'audit.csv'),'utf8').trim().split(/\r?\n/).length,9);
+ d=page.waitForEvent('download');await page.locator('#map-csv').click();download=await d;await download.saveAs(path.join(out,'map.csv'));assert.equal(fs.readFileSync(path.join(out,'map.csv'),'utf8').trim().split(/\r?\n/).length,82);
+ d=page.waitForEvent('download');await page.locator('#export').click();download=await d;await download.saveAs(path.join(out,'experiment.json'));assert.equal(JSON.parse(fs.readFileSync(path.join(out,'experiment.json'))).frame.frameID,frameID);
+ await page.screenshot({path:path.join(out,'desktop.png'),fullPage:true,style:'#toast{visibility:hidden}'});await page.locator('#extensions').screenshot({path:path.join(out,'extensions.png')});
+ await page.locator('summary').click();const fonts=await page.evaluate(()=>({body:getComputedStyle(document.body).fontFamily,math:getComputedStyle(document.querySelector('math')).fontFamily}));assert(fonts.body.includes('SimSun'));assert(fonts.math.includes('Cambria Math'));
+ await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:path.join(out,'mobile.png'),fullPage:true});
+ await page.locator('#message').fill('');await page.locator('#encrypt').click();assert.equal(await page.locator('#toast').textContent(),'请先输入待传输的文字。');
+ await page.goto(base+'/rotation/');await ready();assert(page.url().includes('/joint/'));assert.deepEqual(errors,[]);
+ const report={passed:true,base,frameID,wrong,calibration:{beforeBER:before,afterBER:after},auditRows:8,mapPoints:81,fonts,pageErrors:errors};fs.writeFileSync(path.join(out,'browser-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

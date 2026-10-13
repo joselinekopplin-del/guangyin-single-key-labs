@@ -1,0 +1,46 @@
+.masthead { padding-bottom: 18px; }
+.model-strip { display: flex; flex-wrap: wrap; gap: 14px 30px; padding: 12px 0 20px; font-size: 14px; color: var(--muted); }
+.model-strip strong { color: var(--ink); font-size: 18px; margin-right: 5px; }
+.joint-bench { grid-template-columns: 300px minmax(0,1fr); }
+.joint-control { margin-top: 14px; }
+.joint-control label { font-size: 16px; font-weight: bold; }
+.compact-value { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
+.compact-value input { width: 110px; padding: 3px 9px; font-size: 22px; color: var(--accent); }
+.compact-value span { font-size: 15px; color: var(--muted); }
+.joint-control input[type=range] { margin: 5px 0 0; }
+.tx-key { padding: 10px 12px; background: var(--accent-soft); border: 1px solid var(--line); font-size: 15px; color: var(--accent); font-weight: bold; }
+.comm-box { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.comm-box .message-input { min-height: 75px; }
+.transmit-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.frame-label { color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+.extension-heading { margin-top: 32px; }
+.extension-intro { color: var(--muted); font-size: 16px; max-width: 1100px; margin-bottom: 20px; }
+.window-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin: 16px 0; }
+.window-grid label { font-size: 14px; color: var(--muted); }
+.window-grid input { margin-top: 5px; font-size: 17px; }
+.analysis-result { min-height: 90px; padding: 14px; background: #f3f6f9; font-size: 16px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.joint-map { display: block; width: 100%; height: 310px; margin: 12px 0; }
+.audit-section { margin-top: 22px; }
+.table-scroll { overflow-x: auto; margin: 18px 0 8px; }
+.audit-table { border-collapse: collapse; width: 100%; font-size: 15px; white-space: nowrap; }
+.audit-table th, .audit-table td { text-align: left; border-bottom: 1px solid var(--line); padding: 10px 12px; }
+.audit-table th { background: #edf2f6; font-weight: bold; }
+.audit-table td:first-child { font-weight: bold; }
+.audit-table tr:first-child td { background: #eff7fa; }
+.audit-table .pass { color: #126346; font-weight: bold; }
+.audit-table .fail { color: var(--red); font-weight: bold; }
+.research-section { margin-top: 38px; }
+.research-section > p:not(.eyebrow) { font-size: 16px; color: var(--muted); }
+.paper-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin: 20px 0; }
+.paper { background: white; border: 1px solid var(--line); border-radius: 6px; padding: 21px; }
+.paper small { font-size: 13px; color: var(--muted); }
+.paper h3 { margin: 8px 0 3px; font-size: 18px; }
+.paper p, .paper a { font-size: 15px; }
+.paper p { color: var(--muted); }
+.paper .paper-author { font-style: italic; margin: 2px 0 10px; }
+.paper a { overflow-wrap: anywhere; }
+.comm-controls #phase-error { width: 115px; }
+#experiment, #extensions, #research { scroll-margin-top: 20px; }
+@media (max-width: 1100px) { .joint-bench { grid-template-columns: 260px minmax(0,1fr); } .comm-summary { flex-wrap: wrap; } }
+@media (max-width: 800px) { .joint-bench { grid-template-columns: 1fr; } .joint-bench .control-panel { display: block; } .joint-bench .control-section { border-top: 1px solid var(--line); padding-top: 17px; margin-top: 17px; } .joint-control { display: grid; grid-template-columns: 1fr 110px; gap: 3px 12px; align-items: center; } .joint-control input[type=range], .joint-control .range-labels { grid-column: 1 / -1; } .compact-value { margin: 0; } .compact-value input { width: 80px; } .joint-bench .button-stack { display: flex; flex-wrap: wrap; margin-top: 18px; } .paper-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .model-strip { gap: 8px 16px; font-size: 12px; } .model-strip strong { font-size: 16px; } .transmit-actions { display: grid; grid-template-columns: 1fr; } .window-grid { gap: 6px; } .window-grid label { font-size: 12px; } .window-grid input { padding: 6px 8px; } .joint-map { height: 275px; } .paper { padding: 17px; } .comm-box h2 { font-size: 21px; } .joint-bench .button-stack button { width: 100%; } nav a { font-size: 13px; } }
