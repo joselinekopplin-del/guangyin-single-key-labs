@@ -1,6 +1,6 @@
 {
   "name": "guangyin-single-key-labs",
-  "version": "3.3.2",
+  "version": "3.4.0",
   "private": true,
   "description": "TriKey · 三维联合密钥光学通信仿真与同步误差验证平台",
   "scripts": { "start": "node server.cjs", "build": "node build-joint.cjs", "test": "node tests/physics.cjs && node tests/joint-physics.cjs && node tests/research-physics.cjs", "test:browser": "node tests/experience-browser.cjs && node tests/research-browser.cjs", "benchmark": "node tests/joint-benchmark.cjs" },
