@@ -17,16 +17,16 @@
 }
 body { background: var(--paper); font-size: 17px; }
 .shell { max-width: 1480px; padding: 0 32px; }
-header { background: #142d42; border-bottom: 1px solid #29485f; box-shadow: 0 3px 14px rgb(13 35 54 / 12%); }
+header { background: #fbfcfe; border-bottom: 1px solid #d8e2ec; box-shadow: 0 2px 8px rgb(24 49 73 / 3%); }
 .header-inner { min-height: 74px; gap: 24px; }
-.brand { gap: 13px; color: #f5f9fc; }
+.brand { gap: 13px; color: #263f55; }
 .brand img { width: 37px; height: 37px; }
 .brand strong { font-size: 25px; letter-spacing: 2px; }
-.brand small { color: #b1c3d2; font-size: 13px; letter-spacing: 1px; margin-top: 3px; }
+.brand small { color: #61778a; font-size: 13px; letter-spacing: 1px; margin-top: 3px; }
 .workspace-tabs { align-self: center; gap: 6px; }
-.workspace-tabs button { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 42px; padding: 0 20px; border: 1px solid transparent; border-radius: 6px; color: #becdda; background: transparent; font-size: 17px; }
-.workspace-tabs button:hover { color: #fff; background: #203d55; border-color: transparent; }
-.workspace-tabs button[aria-selected=true] { background: #2b4c66; color: #fff; border-color: #46667f; }
+.workspace-tabs button { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 42px; padding: 0 20px; border: 1px solid transparent; border-radius: 6px; color: #536b7e; background: transparent; font-size: 17px; }
+.workspace-tabs button:hover { color: #294f70; background: #f0f4f8; border-color: transparent; }
+.workspace-tabs button[aria-selected=true] { background: #eaf2fa; color: #215d92; border-color: #ccdff0; }
 .ui-icon { flex: none; display: inline-block; width: 19px; height: 19px; vertical-align: -.18em; }
 h1 { font-size: 33px; line-height: 1.3; letter-spacing: .5px; color: #1b344b; }
 h2 { font-size: 23px; }

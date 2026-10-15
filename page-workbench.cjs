@@ -13,9 +13,9 @@ function workbench(html, prefix) {
   play: '<path d="M8 5l11 7-11 7z"/>'
  };
  const icon = name => `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${paths[name]}</svg>`;
- change(`<link rel="stylesheet" href="${prefix}assets/research.css">`, `<link rel="stylesheet" href="${prefix}assets/research.css"><link rel="stylesheet" href="${prefix}assets/workbench.css">`);
+ change(`<link rel="stylesheet" href="${prefix}assets/research.css">`, `<link rel="stylesheet" href="${prefix}assets/research.css"><link rel="stylesheet" href="${prefix}assets/workbench.css?v=${require('./package.json').version}">`);
  change('<body data-mode="joint">', '<body data-mode="joint" class="scientific-workbench">');
- change('<meta name="theme-color" content="#f5f7fa">', '<meta name="theme-color" content="#142d42">');
+ change('<meta name="theme-color" content="#f5f7fa">', '<meta name="theme-color" content="#fbfcfe">');
  for (const [id, label, name] of [['experiment', '实验台', 'wave'], ['extensions', '参数分析', 'sliders'], ['research', '参考文献', 'books']]) {
   change(`data-workspace="${id}">${label}</button>`, `data-workspace="${id}">${icon(name)}<span>${label}</span></button>`);
  }
