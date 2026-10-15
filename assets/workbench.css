@@ -21,7 +21,7 @@ header { background: #fbfcfe; border-bottom: 1px solid #d8e2ec; box-shadow: 0 2p
 .header-inner { min-height: 74px; gap: 24px; }
 .brand { gap: 13px; color: #263f55; }
 .brand img { width: 37px; height: 37px; }
-.brand strong { font-size: 25px; letter-spacing: 2px; }
+.brand strong { font-size: 27px; letter-spacing: .4px; }
 .brand small { color: #61778a; font-size: 13px; letter-spacing: 1px; margin-top: 3px; }
 .workspace-tabs { align-self: center; gap: 6px; }
 .workspace-tabs button { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 42px; padding: 0 20px; border: 1px solid transparent; border-radius: 6px; color: #536b7e; background: transparent; font-size: 17px; }

@@ -1,5 +1,6 @@
 /* Presentation only: preserve the numerical controls, frame state and exports. */
 function workbench(html, prefix) {
+ const version = require('./package.json').version;
  const change = (from, to) => {
   if (!html.includes(from)) throw Error('Missing workbench anchor: ' + from.slice(0, 90));
   html = html.replace(from, to);
@@ -13,7 +14,7 @@ function workbench(html, prefix) {
   play: '<path d="M8 5l11 7-11 7z"/>'
  };
  const icon = name => `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${paths[name]}</svg>`;
- change(`<link rel="stylesheet" href="${prefix}assets/research.css">`, `<link rel="stylesheet" href="${prefix}assets/research.css"><link rel="stylesheet" href="${prefix}assets/workbench.css?v=${require('./package.json').version}">`);
+ change(`<link rel="stylesheet" href="${prefix}assets/research.css">`, `<link rel="stylesheet" href="${prefix}assets/research.css"><link rel="stylesheet" href="${prefix}assets/workbench.css?v=${version}">`);
  change('<body data-mode="joint">', '<body data-mode="joint" class="scientific-workbench">');
  change('<meta name="theme-color" content="#f5f7fa">', '<meta name="theme-color" content="#fbfcfe">');
  for (const [id, label, name] of [['experiment', '实验台', 'wave'], ['extensions', '参数分析', 'sliders'], ['research', '参考文献', 'books']]) {
@@ -39,6 +40,9 @@ function workbench(html, prefix) {
  change('BER 使用仿真真值计算。</p></div></section></div>', 'BER 使用仿真真值计算。</p></div></div></div></section></div>');
  change('<summary>光路示意</summary>', '<summary>光路示意<span class="optical-summary-note"><i class="key-dot pol"></i>偏振 α<span>→</span><i class="key-dot rot"></i>转角 θ<span>→</span><i class="key-dot dist"></i>层距 d<span>→</span>复场测量</span></summary>');
  change('<button id="quick-demo" class="guide-new-frame" data-lock>新建并接收</button>', `<button id="quick-demo" class="guide-new-frame" data-lock>${icon('play')}新建并接收</button>`);
+ for (const file of ['joint-app.js', 'research-app.js', 'experience.js']) {
+  change(`<script src="${prefix}assets/${file}"></script>`, `<script src="${prefix}assets/${file}?v=${version}"></script>`);
+ }
  return html;
 }
 module.exports = workbench;

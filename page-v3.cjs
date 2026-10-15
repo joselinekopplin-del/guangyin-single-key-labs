@@ -3,7 +3,7 @@ function refine(html,prefix){
  change(`<link rel="stylesheet" href="${prefix}assets/joint.css">`,`<link rel="stylesheet" href="${prefix}assets/joint.css"><link rel="stylesheet" href="${prefix}assets/research.css">`);
  change('<nav aria-label="页内导航"><a href="#experiment">联合密钥实验</a><a href="#extensions">项目改进与验证</a><a href="#research">论文与模型依据</a></nav>',`<div class="workspace-tabs" role="tablist" aria-label="工作区"><button id="tab-experiment" role="tab" aria-selected="true" aria-controls="experiment" data-workspace="experiment">通信实验</button><button id="tab-extensions" role="tab" aria-selected="false" aria-controls="extensions" data-workspace="extensions">研究评估</button><button id="tab-research" role="tab" aria-selected="false" aria-controls="research" data-workspace="research">论文依据</button></div>`);
  change('<h1>三维联合密钥光学通信仿真</h1>','<h1>三维联合密钥仿真</h1>');
- change('<title>三维联合密钥 · 光学加密通信仿真</title>','<title>光隐 · 联合密钥仿真</title>');
+ change('<title>三维联合密钥 · 光学加密通信仿真</title>','<title>TriKey · 三维联合密钥仿真</title>');
  change('偏振、旋转角、层间距共同构成光学密钥；支持同帧错钥消融、公开导频校准和联合容差分析。','偏振、旋转、层距联合光学通信仿真；支持同步校准、三参灵敏度、随机重复对照和公开模型泄漏评估。');
  change('一次传播同时使用偏振、第二层转角与层间距。改变接收参数，使用同一份通信密文进行恢复与对照。','设置发射通道和接收参数，比较同一密文在不同条件下的接收结果。');
  change('<section class="optical">','<section class="optical" id="optical-panel">');
@@ -34,12 +34,12 @@ function refine(html,prefix){
  const paperStart=html.indexOf('<div class="paper-grid">'),paperEnd=html.indexOf('<details class="theory">',paperStart);
  if(paperStart<0||paperEnd<0)throw Error('Missing literature catalog anchors.');
  html=html.slice(0,paperStart)+require('./research/paper-catalog.cjs').render()+html.slice(paperEnd);
- change('<strong>光学加密通信仿真</strong><small>JOINT-KEY OPTICAL LAB</small>','<strong>光隐</strong><small>联合密钥仿真</small>');
+ change('<strong>光学加密通信仿真</strong><small>JOINT-KEY OPTICAL LAB</small>','<strong lang="en">TriKey</strong><small>光学通信仿真</small>');
  change('>通信实验</button>','>实验台</button>');change('>研究评估</button>','>参数分析</button>');change('>论文依据</button>','>参考文献</button>');
  const modelStart=html.indexOf('<div class="model-strip">'),modelEnd=html.indexOf('</div>',modelStart)+6;
  if(modelStart<0||modelEnd<6)throw Error('Missing model parameters.');
  html=html.slice(0,modelStart)+'<div class="model-strip"><span>波长 <strong>532 nm</strong></span><span>相位面 <strong>64 × 64</strong></span><span>传播网格 <strong>128 × 128</strong></span><span><strong>16</strong> 个训练通道</span></div>'+html.slice(modelEnd);
- const labels=[['联合全息与通信密文','光场结果'],['一次加密 三维联合恢复','文字传输'],['1 生成并传输密文','生成密文'],['2 用当前联合密钥恢复','用当前参数接收'],['匹配全部三个参数','匹配发射参数'],['项目改进与验证','参数与误差分析'],['论文依据与创新定位','参考文献'],['如何读懂这些指标？','指标说明'],['校准收益重复对照','校准前后对照'],['三维联合密钥 · 项目数值验证平台','光隐 · 数值仿真'],['导出完整实验 JSON ↓','导出实验 JSON'],['GitHub 源码 ↗','源代码'],['3 次 · 快速','3 次'],['6 次 · 标准','6 次'],['12 次 · 扩展','12 次']];
+ const labels=[['联合全息与通信密文','光场结果'],['一次加密 三维联合恢复','文字传输'],['1 生成并传输密文','生成密文'],['2 用当前联合密钥恢复','用当前参数接收'],['匹配全部三个参数','匹配发射参数'],['项目改进与验证','参数与误差分析'],['论文依据与创新定位','参考文献'],['如何读懂这些指标？','指标说明'],['校准收益重复对照','校准前后对照'],['三维联合密钥 · 项目数值验证平台','TriKey · 数值仿真'],['导出完整实验 JSON ↓','导出实验 JSON'],['GitHub 源码 ↗','源代码'],['3 次 · 快速','3 次'],['6 次 · 标准','6 次'],['12 次 · 扩展','12 次']];
  for(const [from,to]of labels)html=html.replace(from,to);
  html=html.replace(/<p class="eyebrow">[\s\S]*?<\/p>/g,'').replace(/<span class="section-index">[\s\S]*?<\/span>/g,'').replace(/<span>(TARGET|RECEIVED|CIPHERTEXT)<\/span>/g,'').replace('<div class="small-heading">01 / 联合密钥</div>','');
  html=html.replace('研究主线：在同一光学算子下，联合观察同步校准、三参响应耦合与公开模型泄漏。每个工具返回实际计算结果，可导出复查；原创性仍需查新及实验比较。','按当前接收参数计算。导频校准和错钥对照需要先在实验台生成密文。');
