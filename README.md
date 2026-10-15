@@ -1,6 +1,6 @@
 # 三维联合密钥光学通信仿真
 
-偏振、第二层旋转角、L₂–L₃ 间距同时进入同一个光学传播与接收算子。V3.2 使用实验台、参数分析、参考文献三个工作区。界面采用紧凑的参数栏、操作按钮和结果面板，光路及文献阅读笔记按需展开。
+偏振、第二层旋转角、L₂–L₃ 间距同时进入同一个光学传播与接收算子。V3.3 使用实验台、参数分析、参考文献三个工作区。界面采用科研仪器工作台布局：深蓝导航、浅灰工作区、独立参数面板和深色光场观测区，文字发送与接收并排显示。光路及文献阅读笔记按需展开。
 
 - [联合实验入口](https://joselinekopplin-del.github.io/guangyin-single-key-labs/)
 - [联合实验直接链接](https://joselinekopplin-del.github.io/guangyin-single-key-labs/joint/)
@@ -44,7 +44,7 @@ CRC 只检错。BER 用保存的发射比特作事后数值评估，不参与接
 
 ## 字体与页面
 
-白底、细分隔线和紧凑的实验台布局。中文采用宋体与楷体搭配：正文、说明、表格与输入内容使用宋体 SimSun；标题、导航、按钮、字段名称及文献中文短标题使用楷体 KaiTi。英文和数字优先 Times New Roman；原生 MathML 使用 Cambria Math。设备未安装楷体时依次尝试系统楷体，再回退至宋体及衬线字体，不分发商业字体文件。
+以蓝灰色为主色，偏振、旋转、层距分别用蓝、赭、青色标识。参数区、光场观测区、文字通信区使用不同层次的背景，指标、校验状态和实际恢复文字分开呈现；手机端改为纵向排布。中文采用宋体与楷体搭配：正文、说明、表格与输入内容使用宋体 SimSun；标题、导航、按钮、字段名称及文献中文短标题使用楷体 KaiTi。英文和数字优先 Times New Roman；原生 MathML 使用 Cambria Math。设备未安装楷体时依次尝试系统楷体，再回退至宋体及衬线字体，不分发商业字体文件。
 
 ## 本地运行和验收
 
@@ -62,7 +62,7 @@ npm run test:browser
 
 可设置 LAB_URL 对 GitHub Pages 做同样的浏览器验收。qa/ 为忽略的截图和测试输出目录。
 
-`build-joint.cjs` 与 `page-v3.cjs` 生成统一网页和旧网址跳转；`joint-engine.js` 实现固定帧编码、接收、校准和分析；`research-engine.js` 实现三参诊断、随机重复对照和公开模型测试；`joint-worker.js` 保持通信帧缓存；`joint-app.js` 与 `research-app.js` 管理交互。原 `engine.js` 与 `model-data.js` 为已有传播模型和训练权重。旧单变量界面源码保留作历史参考，发布入口使用联合版生成器。
+`build-joint.cjs` 与 `page-v3.cjs` 生成统一网页和旧网址跳转；`page-workbench.cjs` 与 `assets/workbench.css` 管理工作台布局和视觉样式；`joint-engine.js` 实现固定帧编码、接收、校准和分析；`research-engine.js` 实现三参诊断、随机重复对照和公开模型测试；`joint-worker.js` 保持通信帧缓存；`joint-app.js` 与 `research-app.js` 管理交互。原 `engine.js` 与 `model-data.js` 为已有传播模型和训练权重。旧单变量界面源码保留作历史参考，发布入口使用联合版生成器。
 
 论文清单统一保存在 `research/papers.json`，`research/paper-catalog.cjs` 生成卡片及文献说明，构建时同步网页和方案文档。10 篇提供开放正式版或作者稿，另 2 篇链接至出版社 PDF 并标注可能需要机构权限；本站不托管论文全文。
 

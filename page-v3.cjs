@@ -45,6 +45,6 @@ function refine(html,prefix){
  html=html.replace('研究主线：在同一光学算子下，联合观察同步校准、三参响应耦合与公开模型泄漏。每个工具返回实际计算结果，可导出复查；原创性仍需查新及实验比较。','按当前接收参数计算。导频校准和错钥对照需要先在实验台生成密文。');
  html=html.replace('项目书已有“偏振—旋转—距离联合密钥”的总体路线，本版本将其恢复为同一个通信链路，并增加面向实验同步与验证的数据工具。以下文献指导模型与误差分析，不等于已证明新增模块具有全球首创性。','模型、训练和误差分析用到的论文。各条目的阅读笔记说明其与本项目的关系。');
  change(`<script src="${prefix}assets/joint-app.js"></script>`,`<script src="${prefix}assets/joint-app.js"></script><script src="${prefix}assets/research-app.js"></script><script src="${prefix}assets/experience.js"></script>`);
- return html;
+ return require('./page-workbench.cjs')(html,prefix);
 }
 module.exports=refine;
