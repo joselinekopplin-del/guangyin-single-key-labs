@@ -2,22 +2,20 @@ function refine(html,prefix){
  const change=(a,b)=>{if(!html.includes(a))throw Error('Missing V3 layout anchor: '+a.slice(0,80));html=html.replace(a,b);};
  change(`<link rel="stylesheet" href="${prefix}assets/joint.css">`,`<link rel="stylesheet" href="${prefix}assets/joint.css"><link rel="stylesheet" href="${prefix}assets/research.css">`);
  change('<nav aria-label="页内导航"><a href="#experiment">联合密钥实验</a><a href="#extensions">项目改进与验证</a><a href="#research">论文与模型依据</a></nav>',`<div class="workspace-tabs" role="tablist" aria-label="工作区"><button id="tab-experiment" role="tab" aria-selected="true" aria-controls="experiment" data-workspace="experiment">通信实验</button><button id="tab-extensions" role="tab" aria-selected="false" aria-controls="extensions" data-workspace="extensions">研究评估</button><button id="tab-research" role="tab" aria-selected="false" aria-controls="research" data-workspace="research">论文依据</button></div>`);
- change('<h1>三维联合密钥光学通信仿真</h1>','<h1>联合密钥光学通信实验室</h1>');
- change('<title>三维联合密钥 · 光学加密通信仿真</title>','<title>联合密钥光学通信实验室 · 光隐</title>');
+ change('<h1>三维联合密钥光学通信仿真</h1>','<h1>三维联合密钥仿真</h1>');
+ change('<title>三维联合密钥 · 光学加密通信仿真</title>','<title>光隐 · 联合密钥仿真</title>');
  change('偏振、旋转角、层间距共同构成光学密钥；支持同帧错钥消融、公开导频校准和联合容差分析。','偏振、旋转、层距联合光学通信仿真；支持同步校准、三参灵敏度、随机重复对照和公开模型泄漏评估。');
- change('一次传播同时使用偏振、第二层转角与层间距。改变接收参数，使用同一份通信密文进行恢复与对照。','偏振、转角、层距共同控制光场。用同帧通信实验，连接密钥同步、局部可辨识性与信息泄漏评估。');
+ change('一次传播同时使用偏振、第二层转角与层间距。改变接收参数，使用同一份通信密文进行恢复与对照。','设置发射通道和接收参数，比较同一密文在不同条件下的接收结果。');
  change('<section class="optical">','<section class="optical" id="optical-panel">');
  change('<svg id="joint-scene"','<p class="optical-scroll-hint">左右滑动查看完整光路 →</p><div class="optical-diagram"><svg id="joint-scene"');
  change('</svg></section>','</svg></div></section>');
  change('<section id="experiment" aria-label="三维联合密钥实验">','<section id="experiment" role="tabpanel" aria-labelledby="tab-experiment">');
- const guide=`<section class="guided-lab" aria-labelledby="guide-title"><div class="guide-heading"><div><p class="eyebrow">START HERE / SAME-FRAME COMPARISON</p><h2 id="guide-title">从一次传输开始，看懂三维联合接收</h2></div><span class="guide-tag">保留同一密文</span></div><p class="guide-intro">选择一个场景，自动完成设置和接收。已有密文会继续使用；修改发射设置或文字后，才需要重新生成。</p><div class="scenario-grid"><button data-scenario="correct" data-lock><span class="scenario-number">01</span><span><strong>正确接收</strong><small>匹配三个参数，查看实际恢复</small></span><span aria-hidden="true">→</span></button><button data-scenario="wrong" data-lock><span class="scenario-number">02</span><span><strong>三项错钥</strong><small>换一组参数，仍接收同一密文</small></span><span aria-hidden="true">→</span></button><button data-scenario="calibrate" data-lock><span class="scenario-number">03</span><span><strong>漂移后校准</strong><small>连续比较校准前后，用真实结果判断</small></span><span aria-hidden="true">→</span></button></div><div class="guide-progress"><span id="guide-status" role="status">可以先做 01，再做 02 和 03，观察同帧对照。</span><button id="guide-csv" class="text-button" disabled>下载本帧对照 CSV ↓</button></div><details class="guide-details" id="guide-details"><summary>本帧对照记录 <span id="guide-count">0 项</span></summary><p id="guide-frame" class="hint">运行场景后保留本次计算结果。</p><div class="table-scroll"><table class="guide-table"><thead><tr><th scope="col">接收阶段</th><th scope="col">α / θ / d</th><th scope="col">BER</th><th scope="col">CRC</th></tr></thead><tbody id="guide-rows"><tr><td colspan="4">尚无对照记录</td></tr></tbody></table></div><p class="hint">“漂移后校准”加入 α + 1.5°、θ + 1°、d + 0.1 mm，使用“同步与容差”中的搜索窗口。噪声或器件误差可能导致恢复失败，页面保留实际结果。</p></details></section>`;
+ const guide=`<section id="workflow" class="guided-lab" aria-labelledby="guide-title"><div class="preset-toolbar"><h2 id="guide-title">预设操作</h2><button id="quick-demo" class="guide-new-frame" data-lock>新建并接收</button><button data-scenario="correct" data-lock>匹配接收</button><button data-scenario="wrong" data-lock>三项错钥</button><button data-scenario="calibrate" data-lock>漂移校准</button></div><p class="guide-intro">匹配、错钥和校准操作会沿用当前密文；没有密文时会先生成一帧。</p><div class="guide-progress"><span id="guide-status" role="status">尚未运行</span><button id="guide-csv" class="text-button" disabled>导出对照 CSV</button></div><details class="guide-details" id="guide-details"><summary>对照记录 <span id="guide-count">0 项</span></summary><p id="guide-frame" class="hint">运行后显示当前密文的接收记录。</p><div class="table-scroll"><table class="guide-table"><thead><tr><th scope="col">接收条件</th><th scope="col">α / θ / d</th><th scope="col">BER</th><th scope="col">CRC</th></tr></thead><tbody id="guide-rows"><tr><td colspan="4">尚无记录</td></tr></tbody></table></div><p class="hint">预设漂移为 α + 1.5°、θ + 1°、d + 0.1 mm，校准使用“参数分析”中设置的搜索窗口。</p></details></section>`;
  change('<section id="experiment" role="tabpanel" aria-labelledby="tab-experiment">','<section id="experiment" role="tabpanel" aria-labelledby="tab-experiment">'+guide);
- change('<section class="guided-lab"','<section id="workflow" class="guided-lab"');
- change('<span class="guide-tag">保留同一密文</span>','<button id="quick-demo" class="guide-new-frame" data-lock>生成新密文并演示 →</button>');
- change('选择一个场景，自动完成设置和接收。已有密文会继续使用；修改发射设置或文字后，才需要重新生成。','点击场景自动完成设置和接收，并在同一密文上对照。首次运行会自动生成密文；“生成新密文并演示”可另开一次传输。');
+
  const opticalStart=html.indexOf('<section class="optical" id="optical-panel">'),opticalEnd=html.indexOf('</section>',opticalStart)+10;
  if(opticalStart<0||opticalEnd<10)throw Error('Missing optical diagram.');
- const opticalMarkup=html.slice(opticalStart,opticalEnd);html=html.slice(0,opticalStart)+html.slice(opticalEnd);
+ const opticalMarkup=html.slice(opticalStart,opticalEnd).replace('<section class="optical" id="optical-panel">','<details class="optical" id="optical-panel"><summary>光路示意</summary><div class="optical-body">').replace(/<div class="strip-title">[\s\S]*?<\/div>/,'<p class="optical-caption">入射偏振 α，第二层转角 θ，L₂–L₃ 间距 d。接收端测量双偏振复场。</p>').replace(/<\/section>$/,'</div></details>');html=html.slice(0,opticalStart)+html.slice(opticalEnd);
  change('<div class="bench joint-bench">',opticalMarkup+'<div class="bench joint-bench">');
  change('<div class="comm-controls"><label for="snr">','<p class="payload-meter" id="payload-meter" aria-live="polite">正在计算文字长度…</p><div class="comm-controls"><label for="snr">');
  change('<div class="result-text" id="decoded"','<div id="receive-insight" class="receive-insight" role="status"><strong id="receive-title">准备传输</strong><p id="receive-detail">输入短文字后生成密文，再用三个接收参数恢复。</p></div><div class="result-text" id="decoded"');
@@ -36,6 +34,16 @@ function refine(html,prefix){
  const paperStart=html.indexOf('<div class="paper-grid">'),paperEnd=html.indexOf('<details class="theory">',paperStart);
  if(paperStart<0||paperEnd<0)throw Error('Missing literature catalog anchors.');
  html=html.slice(0,paperStart)+require('./research/paper-catalog.cjs').render()+html.slice(paperEnd);
+ change('<strong>光学加密通信仿真</strong><small>JOINT-KEY OPTICAL LAB</small>','<strong>光隐</strong><small>联合密钥仿真</small>');
+ change('>通信实验</button>','>实验台</button>');change('>研究评估</button>','>参数分析</button>');change('>论文依据</button>','>参考文献</button>');
+ const modelStart=html.indexOf('<div class="model-strip">'),modelEnd=html.indexOf('</div>',modelStart)+6;
+ if(modelStart<0||modelEnd<6)throw Error('Missing model parameters.');
+ html=html.slice(0,modelStart)+'<div class="model-strip"><span>波长 <strong>532 nm</strong></span><span>相位面 <strong>64 × 64</strong></span><span>传播网格 <strong>128 × 128</strong></span><span><strong>16</strong> 个训练通道</span></div>'+html.slice(modelEnd);
+ const labels=[['联合全息与通信密文','光场结果'],['一次加密 三维联合恢复','文字传输'],['1 生成并传输密文','生成密文'],['2 用当前联合密钥恢复','用当前参数接收'],['匹配全部三个参数','匹配发射参数'],['项目改进与验证','参数与误差分析'],['论文依据与创新定位','参考文献'],['如何读懂这些指标？','指标说明'],['校准收益重复对照','校准前后对照'],['三维联合密钥 · 项目数值验证平台','光隐 · 数值仿真'],['导出完整实验 JSON ↓','导出实验 JSON'],['GitHub 源码 ↗','源代码'],['3 次 · 快速','3 次'],['6 次 · 标准','6 次'],['12 次 · 扩展','12 次']];
+ for(const [from,to]of labels)html=html.replace(from,to);
+ html=html.replace(/<p class="eyebrow">[\s\S]*?<\/p>/g,'').replace(/<span class="section-index">[\s\S]*?<\/span>/g,'').replace(/<span>(TARGET|RECEIVED|CIPHERTEXT)<\/span>/g,'').replace('<div class="small-heading">01 / 联合密钥</div>','');
+ html=html.replace('研究主线：在同一光学算子下，联合观察同步校准、三参响应耦合与公开模型泄漏。每个工具返回实际计算结果，可导出复查；原创性仍需查新及实验比较。','按当前接收参数计算。导频校准和错钥对照需要先在实验台生成密文。');
+ html=html.replace('项目书已有“偏振—旋转—距离联合密钥”的总体路线，本版本将其恢复为同一个通信链路，并增加面向实验同步与验证的数据工具。以下文献指导模型与误差分析，不等于已证明新增模块具有全球首创性。','模型、训练和误差分析用到的论文。各条目的阅读笔记说明其与本项目的关系。');
  change(`<script src="${prefix}assets/joint-app.js"></script>`,`<script src="${prefix}assets/joint-app.js"></script><script src="${prefix}assets/research-app.js"></script><script src="${prefix}assets/experience.js"></script>`);
  return html;
 }

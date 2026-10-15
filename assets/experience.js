@@ -5,7 +5,7 @@ state.guidedRunning=false;state.guideRows=[];
 let activeFrame=null;
 function refresh(){
  const frame=state.frame,id=frame?.frameID||null;
- if(id!==activeFrame){activeFrame=id;state.guideRows=[];drawRows();if(!state.guidedRunning)$('guide-status').textContent=id?'新的通信密文已生成，可以继续做三个场景的同帧对照。':'发射设置已更新，下次运行场景会生成新的密文。';}
+ if(id!==activeFrame){activeFrame=id;state.guideRows=[];$('guide-details').open=false;drawRows();if(!state.guidedRunning)$('guide-status').textContent=id?'密文已更新，可继续对照。':'设置已更改，需要生成新密文。';}
  const bytes=new TextEncoder().encode($('message').value).length,valid=bytes>0&&bytes<=122&&!!$('message').value.trim();
  $('payload-meter').textContent=`${bytes} / 122 UTF-8 字节${bytes>122?' · 已超出，请缩短文字':' · 中文和英文占用的字节数不同'}`;
  $('payload-meter').classList.toggle('invalid',!valid);
@@ -14,9 +14,9 @@ function refresh(){
  $('quick-demo').disabled=state.busy||state.guidedRunning||!state.ready||!valid;
  $('guide-csv').disabled=state.busy||state.guidedRunning||!state.guideRows.length;
  $('export').disabled=state.busy||state.guidedRunning||!state.ready;
- let title='准备传输',detail='输入短文字后生成密文，再用三个接收参数恢复。',tone='neutral';
- if(frame){title='本次密文已固定';detail='更改接收参数只会改变恢复结果，不会重新生成密文。';}
- if(state.decoded){const r=state.decoded;title=r.crcValid?'本帧通过完整性检查':'本帧未通过完整性检查';tone=r.crcValid?'success':'attention';detail=`本帧 ${r.packetBits} 个统计位中，${r.errors} 位出错（BER ${(r.ber*100).toFixed(2)}%）。`+(r.crcValid?'这是本次接收结果，不代表密码安全认证。':'可重新匹配三个参数，或用公开导频尝试校准。');}
+ let title='等待传输',detail='输入文字并生成密文。',tone='neutral';
+ if(frame){title='等待接收';detail='密文已生成。调整接收参数后，点击“用当前参数接收”。';}
+ if(state.decoded){const r=state.decoded;title=r.crcValid?'CRC 通过':'CRC 未通过';tone=r.crcValid?'success':'attention';detail=`${r.packetBits} 个统计位中，${r.errors} 位出错（BER ${(r.ber*100).toFixed(2)}%）。`+(r.crcValid?'接收文字见下方。':'可检查三个参数，或运行导频校准。');}
  if(!state.decoded)$('crc').className='badge';
  $('receive-title').textContent=title;$('receive-detail').textContent=detail;$('receive-insight').dataset.tone=tone;
 }
@@ -47,8 +47,8 @@ async function guide(mode,fresh=false){
    const estimate={...state.calibration.estimated};setRx(estimate,true);clearTimeout(timer);await render();await decrypt();record('drift-after','漂移 · 已校准');
   }
   if(state.frame.frameID!==frameID)throw Error('密文发生变化，请重新运行对照。');
-  $('guide-status').textContent=`本场景完成 · 密文 ${frameID.slice(0,12)} · 记录保留实际 BER 与 CRC`;
-  $('guide-details').open=true;
+  $('guide-status').textContent=`接收完成，${state.decoded.crcValid?'CRC 通过':'CRC 未通过'}，BER ${(state.decoded.ber*100).toFixed(2)}%。密文 ${frameID.slice(0,12)}`;
+  if(mode==='calibrate')$('guide-details').open=true;
  }catch(e){$('guide-status').textContent='场景未完成：'+e.message;toast(e.message);}finally{state.guidedRunning=false;availability();}
 }
 document.querySelectorAll('[data-scenario]').forEach(b=>b.onclick=()=>guide(b.dataset.scenario));$('quick-demo').onclick=()=>guide('correct',true);
