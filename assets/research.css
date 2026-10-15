@@ -179,6 +179,15 @@ footer { margin-top: 26px; }
 /* Compact lab desk: put the controls and measured results first. */
 :root { --paper: #fff; --accent: #315f70; --muted: #56636c; --line: #d8dfe2; --shadow: none; }
 body { background: #fff; }
+/* KaiTi marks headings and controls; SimSun carries reading and data. */
+h1, h2, h3, .brand strong, button, label, summary,
+.small-heading, .image-name, .paper .paper-zh {
+ font-family: var(--font-kai);
+}
+input, select, textarea, .paper .paper-title,
+.paper .paper-author, .paper .paper-doi {
+ font-family: var(--font-song);
+}
 .shell { max-width: 1380px; padding-left: 30px; padding-right: 30px; }
 header { box-shadow: none; background: #fff; }
 .header-inner { min-height: 63px; }

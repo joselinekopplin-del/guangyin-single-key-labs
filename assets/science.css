@@ -10,7 +10,9 @@
   --accent-soft: #eaf3f8;
   --red: #ae4039;
   --shadow: 0 2px 10px rgba(20, 41, 60, .035);
-  font-family: "Times New Roman", "SimSun", "宋体", serif;
+  --font-song: "Times New Roman", "SimSun", "宋体", serif;
+  --font-kai: "Times New Roman", "KaiTi", "楷体", "Kaiti SC", "STKaiti", "SimSun", "宋体", serif;
+  font-family: var(--font-song);
   color: var(--ink);
   background: var(--paper);
   color-scheme: light;
