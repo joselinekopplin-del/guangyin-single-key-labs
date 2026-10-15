@@ -36,6 +36,7 @@ function workbench(html, prefix) {
  change('<label for="message" class="field-label">', '<div class="message-flow"><div class="message-compose"><label for="message" class="field-label">');
  change('<p class="frame-label" id="frame-label">', '</div><div class="message-receive"><h3>接收结果</h3><p class="frame-label" id="frame-label">');
  change('BER 使用仿真真值计算。</p></div></section></div>', 'BER 使用仿真真值计算。</p></div></div></div></section></div>');
+ change('<details class="optical" id="optical-panel">', '<details class="optical" id="optical-panel" open>');
  change('<summary>光路示意</summary>', '<summary>光路示意<span class="optical-summary-note"><i class="key-dot pol"></i>偏振 α<span>→</span><i class="key-dot rot"></i>转角 θ<span>→</span><i class="key-dot dist"></i>层距 d<span>→</span>复场测量</span></summary>');
  for (const file of ['joint-app.js', 'research-app.js', 'experience.js']) {
   change(`<script src="${prefix}assets/${file}"></script>`, `<script src="${prefix}assets/${file}?v=${version}"></script>`);

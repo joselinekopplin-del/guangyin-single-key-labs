@@ -1,13 +1,13 @@
 # TriKey · 三维联合密钥光学通信仿真
 
-TriKey 将偏振、第二层旋转角、L₂–L₃ 间距同时用于同一个光学传播与接收算子，名称中的 Tri 对应三个维度，Key 对应联合密钥。V3.3.4 延续纯文字名称与浅色蓝灰工作区，采用紧凑操作栏，把光场观测提前到首屏；结果、参数和说明使用不同的文字层级。手机端三幅光场并排比较，极窄屏按两列排布；光路及文献阅读笔记按需展开。
+TriKey 将偏振、第二层旋转角、L₂–L₃ 间距同时用于同一个光学传播与接收算子，名称中的 Tri 对应三个维度，Key 对应联合密钥。V3.3.5 延续纯文字名称与浅色蓝灰工作区，采用紧凑操作栏；结果、参数和说明使用不同的文字层级。手机端三幅光场并排比较，极窄屏按两列排布；光路示意默认展开，可手动收起，文献阅读笔记按需展开。
 
 - [联合实验入口](https://joselinekopplin-del.github.io/guangyin-single-key-labs/)
 - [联合实验直接链接](https://joselinekopplin-del.github.io/guangyin-single-key-labs/joint/)
 
 原 polarization、rotation、spacing 三个网址自动进入联合版。原版 PRISM 站点与 MD²NN 站点未被改动。
 
-本版作为 v3.3.4 单独发布。[v3.3.3 纯文字版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.3)与更早的 [GitHub 归档分支](https://github.com/joselinekopplin-del/guangyin-single-key-labs/tree/archive/trikey-before-logo-removal-20261015)均保留，可用于对比与恢复。
+本版作为 v3.3.5 单独发布。[v3.3.4 布局精修版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.4)、[v3.3.3 纯文字版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.3)与更早的 [GitHub 归档分支](https://github.com/joselinekopplin-del/guangyin-single-key-labs/tree/archive/trikey-before-logo-removal-20261015)均保留，可用于对比与恢复。
 
 ## 快速操作
 
