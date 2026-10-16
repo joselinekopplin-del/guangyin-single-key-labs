@@ -1,13 +1,13 @@
 # TriKey · 三维联合密钥光学通信仿真
 
-TriKey 将偏振、第二层旋转角、L₂–L₃ 间距同时用于同一个光学传播与接收算子，名称中的 Tri 对应三个维度，Key 对应联合密钥。V3.3.7 使用中性浅灰背景、白色面板和蓝色主要操作，三幅光场采用独立视窗，指标集中排列。光路示意默认展开，放大器件与标注，并与控制区使用一致的蓝、赭、绿三色；可手动收起。手机端三幅光场并排比较，极窄屏按两列排布；文献阅读笔记按需展开。面板、图像与输入控件采用 6–10px 的适度圆角，保留宋体、楷体、Times New Roman 和 Cambria Math 的字体分工。
+TriKey 将偏振、第二层旋转角、L₂–L₃ 间距同时用于同一个光学传播与接收算子，名称中的 Tri 对应三个维度，Key 对应联合密钥。V3.3.8 使用中性浅灰背景、白色面板和蓝色主要操作，三幅光场采用独立视窗，指标集中排列。光路示意默认展开，放大器件与标注，并与控制区使用一致的蓝、赭、绿三色；可手动收起。手机端三幅光场并排比较，极窄屏按两列排布；文献阅读笔记按需展开。浏览器标签页采用深蓝底白色 T 字母图标，页内仍为纯文字名称。面板、图像与输入控件采用 6–10px 的适度圆角，保留宋体、楷体、Times New Roman 和 Cambria Math 的字体分工。
 
 - [联合实验入口](https://joselinekopplin-del.github.io/guangyin-single-key-labs/)
 - [联合实验直接链接](https://joselinekopplin-del.github.io/guangyin-single-key-labs/joint/)
 
 原 polarization、rotation、spacing 三个网址自动进入联合版。原版 PRISM 站点与 MD²NN 站点未被改动。
 
-本版作为 v3.3.7 单独发布。[v3.3.6 界面精修版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.6)、[v3.3.5 光路默认展开版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.5)、[v3.3.4 布局精修版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.4)、[v3.3.3 纯文字版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.3)与更早的 [GitHub 归档分支](https://github.com/joselinekopplin-del/guangyin-single-key-labs/tree/archive/trikey-before-logo-removal-20261015)均保留，可用于对比与恢复。
+本版作为 v3.3.8 单独发布。[v3.3.7 适度圆角版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.7)、[v3.3.6 界面精修版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.6)、[v3.3.5 光路默认展开版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.5)、[v3.3.4 布局精修版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.4)、[v3.3.3 纯文字版](https://github.com/joselinekopplin-del/guangyin-single-key-labs/releases/tag/v3.3.3)与更早的 [GitHub 归档分支](https://github.com/joselinekopplin-del/guangyin-single-key-labs/tree/archive/trikey-before-logo-removal-20261015)均保留，可用于对比与恢复。
 
 ## 快速操作
 

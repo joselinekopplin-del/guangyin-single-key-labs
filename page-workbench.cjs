@@ -8,7 +8,7 @@ function workbench(html, prefix) {
  change(`<link rel="stylesheet" href="${prefix}assets/research.css">`, `<link rel="stylesheet" href="${prefix}assets/research.css"><link rel="stylesheet" href="${prefix}assets/workbench.css?v=${version}">`);
  change('<body data-mode="joint">', '<body data-mode="joint" class="scientific-workbench">');
  change('<meta name="theme-color" content="#f5f7fa">', '<meta name="theme-color" content="#ffffff">');
- change(`<link rel="icon" href="${prefix}assets/favicon.svg">`, '<link rel="icon" href="data:,">');
+ change(`<link rel="icon" href="${prefix}assets/favicon.svg">`, `<link rel="icon" type="image/svg+xml" href="${prefix}assets/favicon.svg?v=${version}">`);
  change(`<img src="${prefix}assets/favicon.svg" alt="">`, '');
  change('匹配、错钥和校准操作会沿用当前密文；没有密文时会先生成一帧。', '匹配、错钥和校准复用当前密文；“新建并接收”另开一帧。');
  change('每个通道对应完整的 (α, θ, d) 组合，三个条件共同决定输出。', '通道同时确定偏振 α、转角 θ 和层距 d。');
