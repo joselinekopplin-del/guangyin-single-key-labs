@@ -7,7 +7,7 @@ function workbench(html, prefix) {
  };
  change(`<link rel="stylesheet" href="${prefix}assets/research.css">`, `<link rel="stylesheet" href="${prefix}assets/research.css"><link rel="stylesheet" href="${prefix}assets/workbench.css?v=${version}">`);
  change('<body data-mode="joint">', '<body data-mode="joint" class="scientific-workbench">');
- change('<meta name="theme-color" content="#f5f7fa">', '<meta name="theme-color" content="#fbfcfe">');
+ change('<meta name="theme-color" content="#f5f7fa">', '<meta name="theme-color" content="#ffffff">');
  change(`<link rel="icon" href="${prefix}assets/favicon.svg">`, '<link rel="icon" href="data:,">');
  change(`<img src="${prefix}assets/favicon.svg" alt="">`, '');
  change('匹配、错钥和校准操作会沿用当前密文；没有密文时会先生成一帧。', '匹配、错钥和校准复用当前密文；“新建并接收”另开一帧。');
@@ -37,6 +37,13 @@ function workbench(html, prefix) {
  change('<p class="frame-label" id="frame-label">', '</div><div class="message-receive"><h3>接收结果</h3><p class="frame-label" id="frame-label">');
  change('BER 使用仿真真值计算。</p></div></section></div>', 'BER 使用仿真真值计算。</p></div></div></div></section></div>');
  change('<details class="optical" id="optical-panel">', '<details class="optical" id="optical-panel" open>');
+ for (const [shape, role] of [
+  ['<rect x="35"', 'diagram-source'],
+  ['<ellipse cx="210"', 'diagram-polarizer'],
+  ['<rect x="370"', 'diagram-layer'],
+  ['<rect x="725"', 'diagram-layer'],
+  ['<rect x="905"', 'diagram-receiver']
+ ]) change(shape, shape.replace(' ', ` class="${role}" `));
  change('<summary>光路示意</summary>', '<summary>光路示意<span class="optical-summary-note"><i class="key-dot pol"></i>偏振 α<span>→</span><i class="key-dot rot"></i>转角 θ<span>→</span><i class="key-dot dist"></i>层距 d<span>→</span>复场测量</span></summary>');
  for (const file of ['joint-app.js', 'research-app.js', 'experience.js']) {
   change(`<script src="${prefix}assets/${file}"></script>`, `<script src="${prefix}assets/${file}?v=${version}"></script>`);
