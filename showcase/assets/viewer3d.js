@@ -12,7 +12,7 @@ const info={
  Guides:{title:'方向辅助示意',text:'箭头标示光沿 +X 的传播顺序。箭头的颜色、粗细和照明仅用于展示，不是 FDTD 求解得到的电磁场。'}
 };
 let scene,camera,renderer,controls,model,selected=null,ready=false,exploded=false,touch=false,manifest;
-let focused=null,overviewVisibility=null,studioKey;const edgeOverlays=[];
+let focused=null,overviewVisibility=null,studioKey,inView=true;const edgeOverlays=[];
 const components={},basePositions={},labels={},box=new THREE.Box3(),center=new THREE.Vector3();let radius=1;
 function describeModel(){
  const p=manifest.physical,n=v=>Number(v.toFixed(4)).toString(),x2=p.d12_entrance_mm,x3=x2+p.d23_entrance_mm,xm=x3+p.d3_measurement_mm;
@@ -20,7 +20,7 @@ function describeModel(){
  info.L2.text=`当前系统定义的旋转层。几何展示转角为 ${n(p.layer2_rotation_deg)}°，入口 X = ${n(x2)} mm。拖动查看器改变的是相机，不是器件转角。`;
  info.L3.text=`第三层硅柱阵列。入口 X = ${n(x3)} mm；L2–L3 入口面间距为 ${n(p.d23_entrance_mm)} mm，含前层柱和基底，空气间隙为 ${n(p.d23_entrance_mm-p.pillar_height_mm-p.substrate_height_mm)} mm。`;
  info.MeasurementPlane.text=`计算定义的双偏振复电场采样面，X = ${n(xm)} mm。显示的是采样范围示意，不代表已实现的实体探测器，也不是接收信号强度图。`;
- $('model-config-note').textContent=`当前模型：${manifest.model_version}，${n(p.frequency_THz)} THz。光沿 +X 方向：L1 → L2 → L3 → 双偏振复场采样面。柱高 ${n(p.pillar_height_mm)} mm、基底厚 ${n(p.substrate_height_mm)} mm；层入口 0、${n(x2)}、${n(x3)} mm，采样面 ${n(xm)} mm。参数读取自模型清单；改变模型配置只改变几何展示，不更新归档的性能数据。箭头不是求解电磁场。`;
+ $('model-config-note').textContent=`${n(p.frequency_THz)} THz 文献参数假设模型。光沿 +X 方向依次经过 L1、L2、L3，到达双偏振复场采样面。柱高 ${n(p.pillar_height_mm)} mm，基底厚 ${n(p.substrate_height_mm)} mm；三层入口位于 0、${n(x2)}、${n(x3)} mm，采样面位于 ${n(xm)} mm。箭头表示传播方向，采样框表示计算平面。`;
  const facts=[['阵列',`${p.cells_per_axis} × ${p.cells_per_axis} / 层`],['横向孔径',`${n(p.cells_per_axis*p.period_mm)} mm`],['单元周期',`${n(p.period_mm*1000)} μm`],['柱高 / 基底',`${n(p.pillar_height_mm*1000)} / ${n(p.substrate_height_mm*1000)} μm`]];
  $('geometry-facts').replaceChildren();for(const[label,value]of facts){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;$('geometry-facts').append(dt,dd);}
 }
@@ -62,7 +62,7 @@ function returnOverall(){if(focused){for(const[key,visible]of Object.entries(ove
 function visibility(id,visible){const object=components[id];object.visible=visible;if(selected===id&&!visible){selected=null;highlight.visible=false;$('part-info').innerHTML='<h3>部件已隐藏</h3><p>重新勾选部件可恢复显示。</p>';}}
 function labelPositions(){for(const[id,label]of Object.entries(labels)){const obj=components[id],b=new THREE.Box3().setFromObject(obj),v=b.getCenter(new THREE.Vector3());v.y=b.max.y+radius*.03;v.project(camera);label.hidden=!$('view-labels').checked||!obj.visible||v.z>1||v.z< -1;label.style.left=((v.x*.5+.5)*viewport.clientWidth)+'px';label.style.top=((-v.y*.5+.5)*viewport.clientHeight)+'px';}}
 function updateScale(){const pixelsPerUnit=viewport.clientHeight/(2*Math.tan(THREE.MathUtils.degToRad(camera.fov)/2)*camera.position.distanceTo(controls.target)),limit=Math.min(120,viewport.clientWidth*.28),perMm=pixelsPerUnit*manifest.gltf_mm_to_unit;const values=[.005,.01,.02,.05,.1,.2,.5,1,2,5,10,20,50,100];let mm=values[0];for(const v of values)if(v*perMm<=limit)mm=v;$('model-scale-line').style.width=(mm*perMm)+'px';$('model-scale-text').textContent=(mm<1?Number((mm*1000).toFixed(2))+' μm':mm+' mm')+' · 视图中心';}
-function frame(){requestAnimationFrame(frame);if(!ready||document.body.dataset.view!=='structure'||document.hidden)return;controls.update();if(selected&&components[selected].visible)selectionBox.setFromObject(components[selected]);labelPositions();updateScale();renderer.render(scene,camera);}
+function frame(){requestAnimationFrame(frame);if(!ready||document.body.dataset.view!=='overview'||document.hidden||!inView)return;controls.update();if(selected&&components[selected].visible)selectionBox.setFromObject(components[selected]);labelPositions();updateScale();renderer.render(scene,camera);}
 function explode(){exploded=!exploded;const shift=manifest.gltf_mm_to_unit;for(const[id,sign]of [['L1',-1],['L2',0],['L3',1]]){const obj=components[id];obj.position.copy(basePositions[id]);obj.updateMatrixWorld(true);if(exploded){const world=obj.getWorldPosition(new THREE.Vector3());world.y+=sign*4*shift;obj.position.copy(obj.parent.worldToLocal(world));}}
  $('view-explode').setAttribute('aria-pressed',String(exploded));$('view-explode').textContent=exploded?'恢复整体结构':'分层展开';$('scale-note').textContent=exploded?'分层展开：展示位置已错开，不按实际相对位置显示；真实层间距未改变。':'按配置物理比例显示；硅外观和照明为可视化近似，不代表实物照片。';model.updateMatrixWorld(true);returnOverall();}
 async function init(){try{
@@ -92,13 +92,13 @@ async function init(){try{
  let down;
  renderer.domElement.addEventListener('pointerdown',e=>{down={x:e.clientX,y:e.clientY,button:e.button};});
  renderer.domElement.addEventListener('pointerup',e=>{if(!down||down.button!==0||Math.hypot(e.clientX-down.x,e.clientY-down.y)>6)return;const r=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);raycaster.setFromCamera(pointer,camera);const hits=raycaster.intersectObjects(Object.values(components).filter(o=>o.visible&&o.name!=='Guides'),true);if(hits.length){let o=hits[0].object;while(o&&!info[o.name])o=o.parent;if(o)select(o.name);}});
- ready=true;resize();view();disableControls(false);$('viewer-fallback').hidden=true;status.textContent='已加载 · Blender GLB · 展示操作与仿真独立';
+ ready=true;resize();view();disableControls(false);$('viewer-fallback').hidden=true;status.textContent='模型已加载';
  $('view-reset').onclick=returnOverall;for(const b of document.querySelectorAll('[data-camera]'))b.onclick=()=>view(b.dataset.camera);
  $('view-focus').onclick=()=>focusLayer(selected);$('view-overall').onclick=returnOverall;$('view-edges').onchange=()=>{for(const edges of edgeOverlays)edges.visible=$('view-edges').checked;};
  $('view-explode').onclick=explode;$('view-arrows').onchange=()=>visibility('Guides',$('view-arrows').checked);
  $('view-spin').onclick=()=>{controls.autoRotate=!controls.autoRotate;$('view-spin').setAttribute('aria-pressed',String(controls.autoRotate));$('view-spin').textContent=controls.autoRotate?'暂停自动旋转':'开始自动旋转';};
  $('viewer-touch').onclick=()=>{touch=!touch;renderer.domElement.style.touchAction=touch?'none':'pan-y';$('viewer-touch').setAttribute('aria-pressed',String(touch));$('viewer-touch').textContent=touch?'停用触控，恢复页面滚动':'启用触控操作';};
- new ResizeObserver(resize).observe(viewport);frame();
+ new ResizeObserver(resize).observe(viewport);new IntersectionObserver(entries=>{inView=entries.some(e=>e.isIntersecting);if(inView)resize();},{rootMargin:'80px'}).observe(viewport);frame();
  }catch(e){fail(e);}}
 $('viewer-fullscreen').onclick=async()=>{try{if(document.fullscreenElement===$('viewer-shell'))await document.exitFullscreen();else await $('viewer-shell').requestFullscreen();}catch(e){status.textContent='浏览器不允许全屏，请使用F11';}};
 document.addEventListener('fullscreenchange',()=>{$('viewer-fullscreen').textContent=document.fullscreenElement===$('viewer-shell')?'退出查看器全屏':'查看器全屏';resize();});

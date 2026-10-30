@@ -1,9 +1,10 @@
 /* Material 成果页导航与展示交互；不参与传播、解码或误码计算。 */
 (()=>{'use strict';
- const names=['overview','lab','data','boundaries','structure'];
- const title={overview:'成果概览',lab:'交互演示',data:'器件数据',boundaries:'研究边界',structure:'三维结构'};
+ const names=['overview','lab','data','boundaries'];
+ const title={overview:'成果展示',lab:'交互演示',data:'器件数据',boundaries:'研究边界'};
  const normalize=v=>v==='research'?'data':names.includes(v)?v:'overview';
  function show(view,{historyEntry=true,scroll=true}={}){
+  const structureAnchor=view==='structure';
   view=normalize(view);
   for(const n of names)document.getElementById('view-'+n).hidden=n!==view;
   for(const a of document.querySelectorAll('.nav-item')){
@@ -11,8 +12,9 @@
    if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   }
   document.body.dataset.view=view;document.dispatchEvent(new CustomEvent('material-view',{detail:view}));document.title=title[view]+' · 光隐阶段成果';
-  if(historyEntry&&location.hash!=='#'+view)history.pushState({view},'', '#'+view);
-  if(scroll)window.scrollTo({top:0,behavior:'instant'});
+  const hash=structureAnchor?'structure':view;
+  if(historyEntry&&location.hash!=='#'+hash)history.pushState({view},'', '#'+hash);
+  if(scroll){if(structureAnchor)requestAnimationFrame(()=>document.getElementById('structure').scrollIntoView({block:'start',behavior:'instant'}));else window.scrollTo({top:0,behavior:'instant'});}
  }
  window.showMaterialView=show;
  document.addEventListener('click',e=>{
