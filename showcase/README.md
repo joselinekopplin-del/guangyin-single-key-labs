@@ -31,3 +31,8 @@ GitHub Pages从本仓库main分支根目录发布；相对路径均支持`/showc
 Material Design的色彩角色、层次、导航与组件形态参考[官方设计指南](https://m3.material.io/styles/color/roles)，字体搭配依据[Material Web typography](https://github.com/material-components/material-web/blob/main/docs/theming/typography.md)；GitHub Pages发布规则见[官方文档](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。旧532nm网页仍保留原排版，本次字体调整应用于成果展示页。未引入新的构建工具链。
 
 为保留本机隐私，没有上传原始FSP工程、Windows安装路径、许可证、账户资料、开发日志或整套本机展示压缩包。公开来源摘录保留原记录SHA，内部详细验收仍存于项目本机。
+
+
+## 公开导频独立研究
+
+成果首页新增公开导频研究入口，结果页位于`research/public-pilots/`。这是已保存计算的统计展示，原交互模型和校准实现保留。固定模型下评估专用训练、隐含长度头、连续搜索、线性解码与按需协议；完整观测和私有标签只在本机研究目录。统计CSV、摘要及协议摘录随站点提供；未将PPT/讲解稿准备入口加回评委页面。研究完成不等于系统保密性、全器件FDTD或实测已通过。

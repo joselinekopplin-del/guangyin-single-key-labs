@@ -1,0 +1,248 @@
+{
+  "version": "public-pilot-v1",
+  "frozen_at": "2026-10-30T18:48:32.495736+08:00",
+  "target": {
+    "message_success": 0.99,
+    "confidence": "one-sided95% exact Clopper-Pearson; pointwise, not familywise",
+    "confirm_n": 299,
+    "confirm_cell": [
+      "joint",
+      60
+    ],
+    "new_target": true
+  },
+  "budgets": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "unit": "one separate full known BPSK frame =16 known symbols =8192 complex full-field measurement components; QR retains512 complex sufficient components",
+  "training": "Sylvester Hadamard rows in natural order multiplied elementwise by existing seed20261030 BPSK pilot; first row is existing pilot; repeated cycles beyond16 do not increase rank",
+  "payload": {
+    "bytes": 4,
+    "alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+    "payload_bits": 32,
+    "packet_bits": 80,
+    "data_frames": 5,
+    "encoding": "unchanged 2-byte length + UTF8 payload + CRC32"
+  },
+  "channels": [
+    [
+      0,
+      0,
+      6.0
+    ],
+    [
+      0,
+      0,
+      10.0
+    ],
+    [
+      0,
+      90,
+      6.0
+    ],
+    [
+      0,
+      90,
+      10.0
+    ],
+    [
+      0,
+      180,
+      6.0
+    ],
+    [
+      0,
+      180,
+      10.0
+    ],
+    [
+      0,
+      270,
+      6.0
+    ],
+    [
+      0,
+      270,
+      10.0
+    ],
+    [
+      90,
+      0,
+      6.0
+    ],
+    [
+      90,
+      0,
+      10.0
+    ],
+    [
+      90,
+      90,
+      6.0
+    ],
+    [
+      90,
+      90,
+      10.0
+    ],
+    [
+      90,
+      180,
+      6.0
+    ],
+    [
+      90,
+      180,
+      10.0
+    ],
+    [
+      90,
+      270,
+      6.0
+    ],
+    [
+      90,
+      270,
+      10.0
+    ]
+  ],
+  "drift": {
+    "nominal": [
+      0,
+      0,
+      0
+    ],
+    "alpha": [
+      2,
+      0,
+      0
+    ],
+    "theta": [
+      0,
+      2,
+      0
+    ],
+    "distance": [
+      0,
+      0,
+      0.2
+    ],
+    "joint": [
+      2,
+      2,
+      0.2
+    ]
+  },
+  "distribution": "Nominal channel uniform among16 selected before drift; each active drift independently uniform symmetric in listed degrees/degrees/mm. Independent sessions, fixed within entire training+5data-frame session.",
+  "snr_db": [
+    null,
+    40,
+    60
+  ],
+  "noise": "full8192 complex detector components iid circular Gaussian; each quadrature sigma=sqrt(P_ref*10^(-SNR/10)/2); P_ref=mean over16 nominal channels sum(abs(A)^2)/(8192), i.e. expected unit-energy randomBPSK output power per complex component. Sigma fixed across inputs/budgets; no signal renormalization.",
+  "energy": "main each complete BPSK frame norm2=1; each symbol1/16; total incident norm F+K. Fixed-total counterpart sets amplitude sqrt((F+1)/(F+K)), fixed detector noise unchanged. Unit is normalized incident field norm, not measured joule.",
+  "phase_gain": "physical g=1 held fixed; receiver jointly profiles unknown common complex gain forK>0; K0 uses known amplitude and phase reference g=amplitude",
+  "receivers": {
+    "L": {
+      "prior": "preconfigured nominal channel shared before actual drift; no exact parameter access",
+      "window": [
+        3,
+        3,
+        0.3
+      ],
+      "optimizer": "Powell bounded continuous coordinates degrees/degrees/mm",
+      "max_calls_per_start": 160,
+      "starts": 1
+    },
+    "E1": {
+      "prior": "public16 nominal channel neighborhoods, no selected channel",
+      "coarse_calls": 16,
+      "starts": 2,
+      "max_calls_per_start": 160,
+      "selection": "public training residual; decode top endpoints and prefer CRC-valid packet; K0 enumerate all16 public channels using CRC, never truth"
+    },
+    "E2": {
+      "prior": "identical L nominal, observation, algorithm, seed and budget; independent rerun must agree"
+    },
+    "ideal": {
+      "true_parameters": true,
+      "use": "upper bound diagnostic only; carrier amplitude known"
+    },
+    "no_calibration": {
+      "candidate": "L preconfiguration",
+      "gain": "from available pilots forK>0, otherwise known amplitude; no parameter fitting"
+    },
+    "linear": {
+      "known_pairs": "only actual public full training frames",
+      "method": "real-valued ridge decoder X(Yr^T Yr+lambda I)^-1 Yr^T",
+      "lambda": "max(1024*sigma^2,1e-12*trace(Yr^T Yr)/K)",
+      "K0": "NOT_APPLICABLE; no labelled pair, not counted as failed attack"
+    }
+  },
+  "adaptive": {
+    "stages": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "fit": "firstK-1 frames; last frame withheld from fit as prediction check",
+    "stop": "residual energy <= 2*1024*sigma^2 + 1e-10*observed_validation_energy; projected512complex domain; frozen threshold, not tuned on tests",
+    "after_stop": "refit allK for data; final K16 if never passes is forced_max, not successful_stop",
+    "feedback": "one public STOP/CONTINUE bit after each testedstage; all addedframes and feedback count, E1/E2 observe K and feedback",
+    "actual_protocol": "sequential requests to sender; receiver never receives unsent future frames; simulated potential noise is paired by index"
+  },
+  "splits": {
+    "tuning": 6,
+    "validation": 30,
+    "confirmation": 299
+  },
+  "selection": "amongtestedK,validation L whole80-bitpacket+CRC success>=.99; smallestcandidate. Intermediateintegerbudgets may be tested only in thatcell using samevalidation IDs, labelled selection; confirmation independent. No confirmation when no candidate.",
+  "primary_confirmation": "only joint60; test selected B, default A(K1), and frozen adaptive C on299 fixedindependentsessions; report pointwise CI, never pool correlated frames.",
+  "supplement": {
+    "fixed_total": [
+      "joint40",
+      "joint60"
+    ],
+    "fixed_total_n": 10,
+    "high_budget_n": 10,
+    "high_budget_K": [
+      1,
+      4,
+      16
+    ],
+    "high_budget_starts": 4,
+    "high_budget_calls": 320,
+    "cumulative_n": 10,
+    "cumulative_counts": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      48
+    ]
+  },
+  "costs": "all coarse/optimizer/failed forward model evaluations and16-symbol-equivalent propagations; shared QR/Gram preprocessing separately; actual timings include contexts, search and decode, E2 repeats.",
+  "sources": {
+    "system_thz/config.json": "5d84fd3a362cc7f3b49e425bd0036452476591c3f03f876cce37d2aa7a1391ae",
+    "system_thz/library.json": "61fde1173921e37e590aff3023157c4d323cdae9df3d8553d6424a9181081db3",
+    "system_thz/system_results/design.json": "4e9ea8c997aea43f59d75c1795f47b06e82e2e7df6dd1e4eef06a55df96cf586",
+    "system_thz/system_model.py": "844784d7a0bb961a2d621de49494013b5c29d36ba7d74d3556b8600e056b46a8"
+  },
+  "limits": [
+    "frozen approximate three-layer model, no newFDTD",
+    "preconfigured channel advantage is prior information, not user identity",
+    "nearcardinal coarse-grid topology constant, angle sensitivity here isJones response; not subdegree physical validation",
+    "only4ASCIIbytepayload in mainstudy",
+    "empirical recovery, not mutual information/keybits/securityproof"
+  ],
+  "public_copy_notice": "Public protocol excerpt. The full frozen protocol and private seeds are retained locally for audit, and were not supplied to receiver interfaces.",
+  "full_protocol_sha256": "6d2a0647afde35551f7269470c5a021be9114db72e4e8169cc373a02bf62edfe"
+}

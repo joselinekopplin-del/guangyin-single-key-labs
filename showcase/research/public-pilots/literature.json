@@ -1,0 +1,128 @@
+{
+  "schema": "trikey.public_pilot.literature.v1",
+  "checked_at": "2026-10-30",
+  "scope": "Original papers on training overhead/energy, task-oriented identification, adaptive pilots and known/chosen-plaintext optical recovery. Bounded source check, not exhaustive novelty search.",
+  "primary_research_count": 6,
+  "sources": [
+    {
+      "id": "P1",
+      "authors": ["Babak Hassibi", "Bertrand M. Hochwald"],
+      "title": "How Much Training Is Needed in Multiple-Antenna Wireless Links?",
+      "year": 2003,
+      "venue": "IEEE Transactions on Information Theory 49(4), 951–963",
+      "doi": "10.1109/TIT.2003.809594",
+      "doi_url": "https://doi.org/10.1109/TIT.2003.809594",
+      "primary_url": "https://authors.library.caltech.edu/records/y6rsb-e9851",
+      "fulltext_read_url": "https://my.ece.utah.edu/~ece6962/project/training_MIMO.pdf",
+      "read_extent": "Abstract and original paper Section II; bibliographic data verified in author institution repository.",
+      "supported_claim": "Optimal training overhead depends on channel, coherence and power constraints. Variable training/data power differs from equal-power training.",
+      "project_use": "Separate fixed-symbol-energy and fixed-total-energy comparisons; state session/channel coherence.",
+      "nontransferable": "The MIMO training-length result is not a theorem that three optical parameters require three pilots.",
+      "access_note": "Author repository temporary signed PDF endpoint inaccessible through browser tool; original-paper university mirror read instead."
+    },
+    {
+      "id": "P2",
+      "authors": ["Dimitrios Katselis", "Cristian R. Rojas", "Mats Bengtsson", "Emil Björnson", "Xavier Bombois", "Nafiseh Shariati", "Magnus Jansson", "Håkan Hjalmarsson"],
+      "title": "Training sequence design for MIMO channels: an application-oriented approach",
+      "year": 2013,
+      "venue": "EURASIP Journal on Wireless Communications and Networking 2013, 245",
+      "doi": "10.1186/1687-1499-2013-245",
+      "doi_url": "https://doi.org/10.1186/1687-1499-2013-245",
+      "primary_url": "https://link.springer.com/article/10.1186/1687-1499-2013-245",
+      "read_extent": "Open publisher full text; abstract, Sections 1, 5.3 and 6.",
+      "supported_claim": "Training can be designed for end-use quality and energy constraints; channel-estimate MSE and equalization performance differ; adaptive pilot choice has feedback overhead.",
+      "project_use": "Evaluate payload recovery separately from parameter error and charge feedback overhead.",
+      "nontransferable": "Does not establish payload BER or 99% frame reliability for the Trikey model."
+    },
+    {
+      "id": "P3",
+      "authors": ["Zhen Gao", "Linglong Dai", "Zhaocheng Wang", "Sheng Chen"],
+      "title": "Spatially Common Sparsity Based Adaptive Channel Estimation and Feedback for FDD Massive MIMO",
+      "year": 2015,
+      "venue": "IEEE Transactions on Signal Processing 63(23), 6169–6183",
+      "doi": "10.1109/TSP.2015.2463260",
+      "doi_url": "https://doi.org/10.1109/TSP.2015.2463260",
+      "primary_url": "https://arxiv.org/abs/1604.03695v3",
+      "fulltext_read_url": "https://arxiv.org/html/1604.03695v3",
+      "read_extent": "Author manuscript v3, revised 2023-10-19; abstract, Section III overview and IV-D/IV-G section structure.",
+      "supported_claim": "Adaptive training overhead and pilot design using spatial sparsity and temporal correlation precede this project.",
+      "project_use": "Motivates controlled adaptive-training comparison, not a claim of first proposing adaptive pilots.",
+      "nontransferable": "Wireless sparsity assumptions, thresholds and bounds are not imported into optical simulation. No claim about replication or validation of its theorems.",
+      "access_note": "Southampton repository returned 403; author arXiv version was accessible."
+    },
+    {
+      "id": "P4",
+      "authors": ["Yann Frauel", "Albertina Castro", "Thomas J. Naughton", "Bahram Javidi"],
+      "title": "Security analysis of optical encryption",
+      "year": 2005,
+      "venue": "Proceedings of SPIE 5986, 598603",
+      "doi": "10.1117/12.633677",
+      "doi_url": "https://doi.org/10.1117/12.633677",
+      "primary_url": "https://mural.maynoothuniversity.ie/id/eprint/8421/",
+      "fulltext_read_url": "https://mural.maynoothuniversity.ie/id/eprint/8421/1/TN-Security-2005.pdf",
+      "read_extent": "Author institution full text; abstract and Sections 1, 3, 4, 5.",
+      "supported_claim": "Amplitude-encoding DRPE has known/chosen plaintext vulnerabilities; approximate image recovery need not require complete keys. Section 4.1 (PDF page 5, equations 5–7) learns an equivalent linear encryption matrix from input basis vectors and their outputs.",
+      "project_use": "Separate message recovery from exact parameter estimation.",
+      "nontransferable": "Original numerical DRPE model is not the current three-layer dual-polarization model; attack rates are not transferred."
+    },
+    {
+      "id": "P5",
+      "authors": ["Xiang Peng", "Peng Zhang", "Hengzheng Wei", "Bin Yu"],
+      "title": "Known-plaintext attack on optical encryption based on double random phase keys",
+      "year": 2006,
+      "venue": "Optics Letters 31(8), 1044–1046",
+      "doi": "10.1364/OL.31.001044",
+      "doi_url": "https://doi.org/10.1364/OL.31.001044",
+      "primary_url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-31-8-1044",
+      "read_extent": "Publisher bibliographic record and abstract only; full text subscription-restricted.",
+      "supported_claim": "Known plaintext and phase retrieval can recover phase keys in the specified DRPE scheme.",
+      "project_use": "Public known input/output pairs must be available to both modeled receivers.",
+      "nontransferable": "No claim of implementing this paper's phase-retrieval algorithm or of a universal pilot-count threshold."
+    },
+    {
+      "id": "P6",
+      "authors": ["Xiang Peng", "Hengzheng Wei", "Peng Zhang"],
+      "title": "Chosen-plaintext attack on lensless double-random phase encoding in the Fresnel domain",
+      "year": 2006,
+      "venue": "Optics Letters 31(22), 3261–3263",
+      "doi": "10.1364/OL.31.003261",
+      "doi_url": "https://doi.org/10.1364/OL.31.003261",
+      "primary_url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-31-22-3261",
+      "read_extent": "Publisher bibliographic record and abstract only; full text subscription-restricted.",
+      "supported_claim": "Impulse-function chosen inputs attack Fresnel L-DRPE; abstract identifies linearity of encryption/decryption as a source of vulnerability.",
+      "project_use": "Motivates testing an equivalent linear decoder with only actually public training pairs.",
+      "nontransferable": "A receiver that merely observes protocol pilots must not be given additional chosen-plaintext access."
+    }
+  ],
+  "statistics_sources": [
+    {
+      "id": "S1",
+      "title": "NIST/SEMATECH e-Handbook, 7.2.4.1 Confidence intervals",
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+      "type": "official statistical methods documentation",
+      "read_extent": "Exact binomial and one-sided interval sections",
+      "use": "Small failure counts need suitable binomial intervals; distinguish one-sided and two-sided confidence."
+    },
+    {
+      "id": "S2",
+      "title": "SciPy BinomTestResult.proportion_ci, v1.15.0 documentation",
+      "url": "https://docs.scipy.org/doc/scipy-1.15.0/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html",
+      "type": "official software documentation",
+      "read_extent": "method exact and references",
+      "use": "Clopper-Pearson implementation definition; actual runtime version must be recorded separately."
+    }
+  ],
+  "derived_statistics_not_paper_results": {
+    "assumption": "Independent Bernoulli sessions, fixed n, all n successes, no multiple-comparison correction",
+    "one_sided_confidence": 0.95,
+    "target_probability": 0.99,
+    "all_success_lower_formula": "alpha^(1/n)",
+    "one_sided_minimum_n_if_zero_failures": 299,
+    "two_sided_95_minimum_n_if_zero_failures": 368,
+    "lower_one_sided_30_of_30": 0.9049661471446958,
+    "lower_one_sided_299_of_299": 0.9900308532071007,
+    "warning": "Zero failures at n=30 does not confirm 99%; 299 is only the all-success threshold. Freeze n and candidate before confirmation; same-session frames are not independent trials."
+  },
+  "novelty_position": "A reproducible quantitative protocol specific to the frozen Trikey model can be a project contribution. Any empirical finding must be computed from this study's records. Adaptive pilots and optical known-plaintext recovery are established concepts; no first-ever claim.",
+  "source_limitations": "Bounded search, not exhaustive prior-art review. Some full text inaccessible; read extent is explicit per source. No source values used as substitute simulation observations."
+}
