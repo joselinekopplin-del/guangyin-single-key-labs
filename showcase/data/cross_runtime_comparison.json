@@ -1,0 +1,325 @@
+{
+  "checked_at": "2026-10-30T05:10:59.331639+00:00",
+  "status": "PASS",
+  "scope": "Read-only full-array and calibrated-result comparison rerun from final browser export; no propagation rerun, resending, rehash substitution or core change.",
+  "input": {
+    "message": "ECNU",
+    "tx": {
+      "alpha_deg": 0,
+      "theta_deg": 0,
+      "d23_m": 0.006
+    },
+    "same_message": true,
+    "same_tx": true,
+    "same_metadata": true,
+    "node_signal_metadata": {
+      "pilot_symbols": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "model_version": "thz-assumed-0.1",
+      "measurement": "dual-polarization complex field",
+      "snr_db": null
+    },
+    "browser_signal_metadata": {
+      "pilot_symbols": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "model_version": "thz-assumed-0.1",
+      "measurement": "dual-polarization complex field",
+      "snr_db": null
+    },
+    "same_model_library_design": true,
+    "model_hashes": {
+      "library.json": {
+        "node_case": "61fde1173921e37e590aff3023157c4d323cdae9df3d8553d6424a9181081db3",
+        "browser_export": "61fde1173921e37e590aff3023157c4d323cdae9df3d8553d6424a9181081db3",
+        "source_file_sha256": "61fde1173921e37e590aff3023157c4d323cdae9df3d8553d6424a9181081db3"
+      },
+      "system_results/design.json": {
+        "node_case": "4e9ea8c997aea43f59d75c1795f47b06e82e2e7df6dd1e4eef06a55df96cf586",
+        "browser_export": "4e9ea8c997aea43f59d75c1795f47b06e82e2e7df6dd1e4eef06a55df96cf586",
+        "source_file_sha256": "4e9ea8c997aea43f59d75c1795f47b06e82e2e7df6dd1e4eef06a55df96cf586"
+      },
+      "config.json": {
+        "node_case": "5d84fd3a362cc7f3b49e425bd0036452476591c3f03f876cce37d2aa7a1391ae",
+        "browser_export": "5d84fd3a362cc7f3b49e425bd0036452476591c3f03f876cce37d2aa7a1391ae",
+        "source_file_sha256": "5d84fd3a362cc7f3b49e425bd0036452476591c3f03f876cce37d2aa7a1391ae"
+      }
+    },
+    "core_hashes": {
+      "engine.js": {
+        "before_node": "1f5b351df47f5c6ab966395ba7ed276b5ea8d238c7b6ab4f42d00527502a6ec0",
+        "current": "1f5b351df47f5c6ab966395ba7ed276b5ea8d238c7b6ab4f42d00527502a6ec0"
+      },
+      "thz-engine.js": {
+        "before_node": "003eb06b68c259d6332c675f54ae32d9cbe67d248405d599d05c46e2971ddbf9",
+        "current": "003eb06b68c259d6332c675f54ae32d9cbe67d248405d599d05c46e2971ddbf9"
+      },
+      "thz-evidence.js": {
+        "before_node": "61ad28f0e7975cacf69980938866d849e25249392b6de0b43b9ff9ba3f457b03",
+        "current": "61ad28f0e7975cacf69980938866d849e25249392b6de0b43b9ff9ba3f457b03"
+      }
+    },
+    "core_unchanged_since_node_case": true
+  },
+  "array_comparison": {
+    "serialization": "float64 little-endian; measured frames then pilot; x then y; real then imaginary",
+    "message_frames_node": 5,
+    "message_frames_browser": 5,
+    "total_float64_values": 98304,
+    "different_value_count": 42684,
+    "signed_zero_differences": 0,
+    "max_abs_difference": 2.6020852139652106e-18,
+    "relative_l2": 3.279570053107676e-16,
+    "threshold": 1e-09,
+    "threshold_source": "existing config.acceptance.python_js_relative_l2, not relaxed",
+    "within_existing_threshold": true,
+    "per_frame_and_polarization": [
+      {
+        "plane": "message_frame_0",
+        "polarization": "x",
+        "points": 4096,
+        "relative_complex_l2": 3.228862368052868e-16,
+        "absolute_complex_l2": 2.590815488645235e-17,
+        "max_complex_abs_difference": 2.6134951429544983e-18,
+        "zero_norm": false
+      },
+      {
+        "plane": "message_frame_0",
+        "polarization": "y",
+        "points": 4096,
+        "relative_complex_l2": null,
+        "absolute_complex_l2": 0.0,
+        "max_complex_abs_difference": 0.0,
+        "zero_norm": true
+      },
+      {
+        "plane": "message_frame_1",
+        "polarization": "x",
+        "points": 4096,
+        "relative_complex_l2": 3.4951916508619485e-16,
+        "absolute_complex_l2": 9.06894297884818e-18,
+        "max_complex_abs_difference": 6.942281208919283e-19,
+        "zero_norm": false
+      },
+      {
+        "plane": "message_frame_1",
+        "polarization": "y",
+        "points": 4096,
+        "relative_complex_l2": null,
+        "absolute_complex_l2": 0.0,
+        "max_complex_abs_difference": 0.0,
+        "zero_norm": true
+      },
+      {
+        "plane": "message_frame_2",
+        "polarization": "x",
+        "points": 4096,
+        "relative_complex_l2": 3.408172601155602e-16,
+        "absolute_complex_l2": 1.268865565601495e-17,
+        "max_complex_abs_difference": 1.0872472150093846e-18,
+        "zero_norm": false
+      },
+      {
+        "plane": "message_frame_2",
+        "polarization": "y",
+        "points": 4096,
+        "relative_complex_l2": null,
+        "absolute_complex_l2": 0.0,
+        "max_complex_abs_difference": 0.0,
+        "zero_norm": true
+      },
+      {
+        "plane": "message_frame_3",
+        "polarization": "x",
+        "points": 4096,
+        "relative_complex_l2": 3.7079531703058766e-16,
+        "absolute_complex_l2": 1.5002280910508775e-17,
+        "max_complex_abs_difference": 1.1319402998375371e-18,
+        "zero_norm": false
+      },
+      {
+        "plane": "message_frame_3",
+        "polarization": "y",
+        "points": 4096,
+        "relative_complex_l2": null,
+        "absolute_complex_l2": 0.0,
+        "max_complex_abs_difference": 0.0,
+        "zero_norm": true
+      },
+      {
+        "plane": "message_frame_4",
+        "polarization": "x",
+        "points": 4096,
+        "relative_complex_l2": 3.1704303918928185e-16,
+        "absolute_complex_l2": 2.707673306801065e-17,
+        "max_complex_abs_difference": 2.8189256484623115e-18,
+        "zero_norm": false
+      },
+      {
+        "plane": "message_frame_4",
+        "polarization": "y",
+        "points": 4096,
+        "relative_complex_l2": null,
+        "absolute_complex_l2": 0.0,
+        "max_complex_abs_difference": 0.0,
+        "zero_norm": true
+      },
+      {
+        "plane": "pilot",
+        "polarization": "x",
+        "points": 4096,
+        "relative_complex_l2": 3.2911833831698776e-16,
+        "absolute_complex_l2": 1.6147836052739574e-17,
+        "max_complex_abs_difference": 1.305552300251628e-18,
+        "zero_norm": false
+      },
+      {
+        "plane": "pilot",
+        "polarization": "y",
+        "points": 4096,
+        "relative_complex_l2": null,
+        "absolute_complex_l2": 0.0,
+        "max_complex_abs_difference": 0.0,
+        "zero_norm": true
+      }
+    ]
+  },
+  "hash_verification": {
+    "node_recorded": "e61a5b2d99a2b99ba16e3e70cd0012435d1db4f77f038b74932497ef3697ff20",
+    "node_recomputed_from_arrays": "e61a5b2d99a2b99ba16e3e70cd0012435d1db4f77f038b74932497ef3697ff20",
+    "browser_recorded": "c33dbfe0ba274a7edf31fd0126eca652c8b62c89fee22a1dd628352021b5f2c4",
+    "browser_recomputed_from_arrays": "c33dbfe0ba274a7edf31fd0126eca652c8b62c89fee22a1dd628352021b5f2c4",
+    "hashes_equal": false,
+    "meaning": "SHA-256 checks exact bytes and changes for last-bit numeric differences. Distinct independent runs are not required to have equal exact-byte hashes. The same in-memory observation must remain unchanged while receiving/calibrating."
+  },
+  "same_calibrated_receiver_candidate": {
+    "node": {
+      "alpha_deg": 0.125,
+      "theta_deg": 0,
+      "d23_m": 0.006
+    },
+    "browser": {
+      "alpha_deg": 0.125,
+      "theta_deg": 0,
+      "d23_m": 0.006
+    },
+    "candidate_equal": true,
+    "bits_equal": true,
+    "erasures_equal": true,
+    "decoded_equal": true,
+    "crc_equal": true,
+    "node_evaluation": {
+      "packet_bits": 80,
+      "bit_errors": 1,
+      "ber": 0.0125,
+      "active_erasures": 0,
+      "success": false
+    },
+    "browser_evaluation": {
+      "packet_bits": 80,
+      "bit_errors": 1,
+      "ber": 0.0125,
+      "active_erasures": 0,
+      "success": false
+    },
+    "evaluation_equal": true,
+    "node_pilot_score": 0.9999973774046563,
+    "browser_pilot_score": 0.9999973774046558,
+    "soft_symbols_max_abs_difference": 8.141287644036765e-11,
+    "calibration_search": {
+      "estimated": {
+        "node": {
+          "alpha_deg": 0.125,
+          "theta_deg": 0,
+          "d23_m": 0.006
+        },
+        "browser": {
+          "alpha_deg": 0.125,
+          "theta_deg": 0,
+          "d23_m": 0.006
+        },
+        "equal": true
+      },
+      "evaluations": {
+        "node": 100,
+        "browser": 100,
+        "equal": true
+      },
+      "window": {
+        "node": [
+          3,
+          3,
+          0.0003
+        ],
+        "browser": [
+          3,
+          3,
+          0.0003
+        ],
+        "equal": true
+      },
+      "rounds": {
+        "node": 4,
+        "browser": 4,
+        "equal": true
+      },
+      "initial": {
+        "node": {
+          "alpha_deg": 2,
+          "theta_deg": 0,
+          "d23_m": 0.006
+        },
+        "browser": {
+          "alpha_deg": 2,
+          "theta_deg": 0,
+          "d23_m": 0.006
+        },
+        "equal": true
+      }
+    }
+  },
+  "conclusion": "Same parameters, model/library/design hashes and unchanged numerical core; full signal relative L2 difference3.28e-16 and max real-array difference2.60e-18 are at floating-point rounding scale and far below pre-existing1e-9 numerical-equivalence threshold. No model/input mismatch found. This read-only comparison does not isolate the individual runtime arithmetic operation responsible for the rounding difference; it does not require or forge equal SHA hashes.",
+  "publication_note": "原始本机核查记录的公开摘录；保留数值比较与判定，省略本机文件路径及制作日志。原始观测文件SHA用于追溯，不表示浏览器独立运行的观测ID必须与Node一致。",
+  "source_record_sha256": "bae6634b6f50c7925ffc75c5d850bc85a877715f010f4e1cf4ed9c55e48508bb",
+  "source_observations": {
+    "node_observation": {
+      "sha256": "3b511194ca1226560d3775d1b2daf91aa40dd937197da215b82847acc020bde6",
+      "location": "data/observations/ECNU.json"
+    },
+    "browser_export": {
+      "sha256": "d50cbad873f5e56390ae8c4443dad2a6cc634e2e3675857d990bd3e4127b7d0e",
+      "location": "原项目本机归档，未上传"
+    }
+  }
+}

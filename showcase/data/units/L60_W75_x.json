@@ -1,0 +1,159 @@
+{
+  "started": "2026-10-29T17:59:18.871810+08:00",
+  "status": "passed",
+  "mode": "demo",
+  "L_um": 60,
+  "W_um": 75,
+  "polarization": "x",
+  "frequency_Hz": 700000000000,
+  "config_hash": "7b0f8dbf22f7b9c581794e5e21c9e384524051be807efd680878dc903a9cee8f",
+  "configuration": {
+    "mode": "demo",
+    "label": "第一阶段文献参数假设模型：同频硅柱P110/H500/H500；非Zhang论文定量复现",
+    "frequency_Hz": 700000000000,
+    "geometry": {
+      "P_um": 110,
+      "H1_um": 500,
+      "H2_um": 500,
+      "L_um": 60,
+      "W_um": 75,
+      "illumination": "pillar_first"
+    },
+    "material": {
+      "model": "constant_index_lossless",
+      "n": 3.42,
+      "k": 0,
+      "epsilon_csv": null,
+      "valid_band_Hz": [
+        550000000000,
+        850000000000
+      ],
+      "source": "n=3.42 为参考 Dai 等 JOSAB 2004 高阻浮区硅测量约3.417–3.418后的舍入建模值；k=0为本项目无损理想化，不是目标论文给定参数。"
+    },
+    "surroundings": {
+      "n_input": 1,
+      "n_output": 1
+    },
+    "paper_confirmation": {
+      "geometry": false,
+      "material": false,
+      "illumination": false,
+      "transmission_definition": "amplitude",
+      "phase_reference_equivalent": false
+    },
+    "normalization": "vacuum_same_planes_zero_order_forward_field",
+    "numerics": {
+      "air_padding_um": 600,
+      "mesh_um": 1.75,
+      "mesh_accuracy": 2,
+      "simulation_time_ps": 1600,
+      "auto_shutoff": 1e-07,
+      "frequency_min_Hz": 680000000000,
+      "frequency_max_Hz": 720000000000,
+      "threads": 8,
+      "processes": 1,
+      "optimize_for_short_pulse": false,
+      "symmetry": "mirror_xy"
+    },
+    "acceptance": {
+      "origin": "本项目自选验收阈值，非论文给定",
+      "reference_power_error": 0.01,
+      "reference_reflection_max": 0.001,
+      "energy_error": 0.02,
+      "power_sign_tolerance": 0.001,
+      "modal_power_error": 0.02,
+      "monitor_t_difference": 0.02,
+      "phase_amplitude_floor": 0.05,
+      "convergence_power_abs": 0.01,
+      "convergence_t_abs": 0.02,
+      "convergence_phase_rad": 0.05
+    },
+    "sweep": {
+      "L_min_um": 30,
+      "L_max_um": 90,
+      "W_min_um": 30,
+      "W_max_um": 90,
+      "points_per_axis": 5
+    },
+    "convergence": {
+      "mesh_um": [
+        2,
+        1.75,
+        1.5
+      ],
+      "time_factors": [
+        1,
+        2
+      ]
+    },
+    "output_root": "stage1_literature",
+    "assumption_provenance": {
+      "geometry": "P=110μm,H1=500μm,H2=500μm借用Wang等SciAdv11,eadu0904(2025), DOI10.1126/sciadv.adu0904, Results/Fig.2C前段；同组、同0.7THz、L/W30–90μm，但尚未确认与Zhang原值一致。",
+      "material": "Dai et al., 10.1364/JOSAB.21.001379; expanded material source, no verified citation edge to target.",
+      "illumination": "柱侧先入射是本项目选择；目标正文与SI未确定单元仿真的端口设置。",
+      "quantitative_reproduction": false
+    },
+    "numerical_revision": {
+      "reason": "按官方窄带建议关闭short-pulse，并使用经全周期对照后方可放行的镜面对称；几何改用同频文献明确值，阈值不变。",
+      "prior_config": "config.assumed.json",
+      "engine": "engine_v2",
+      "source_documentation": "https://optics.ansys.com/hc/en-us/articles/360034383094-Changing-the-source-bandwidth-in-FDTD-and-MODE",
+      "mesh_reason": "4/3/2.5微米真实对照未通过原定复振幅与功率阈值，因此细化到2/1.75/1.5微米；阈值不变。单进程8线程串行计算，自动衰减仍1e-7。"
+    },
+    "parameter_manifest": "reports/stage1_parameters.json"
+  },
+  "project": "projects\\L60_W75_x_7b0f8dbf22f7_1793267958871810500.fsp",
+  "reference": "vacuum_same_planes_zero_order_forward_field",
+  "phase_convention": "exp(-i*omega*t), +z propagation exp(+i*k*z); arg(t) in [-pi,pi]",
+  "normalization_definition": "t=forward zeroth-order co-polar E of full finite substrate+pillar / same-plane empty-air reference; includes substrate relative to equal air path; T,R from total signed Poynting flux/sourcepower",
+  "t_real": -0.9704671032105816,
+  "t_imag": -0.021789178493980713,
+  "amplitude": 0.9707116805279414,
+  "phase_rad": -3.11914416647246,
+  "T": 0.941483477740721,
+  "R": 0.0577075866816331,
+  "A_estimate": 0.0008089355776458446,
+  "field_file": "data\\L60_W75_x_7b0f8dbf22f7_1793267958871810500_field.npz",
+  "raw_file": "data\\L60_W75_x_7b0f8dbf22f7_1793267958871810500_raw.json",
+  "reference_planes_m": {
+    "z_min": -0.0006,
+    "z_max": 0.0015999999999999999,
+    "source": -0.00035999999999999997,
+    "monitor_R": -0.00047999999999999996,
+    "monitor_T": 0.0013,
+    "monitor_T_far": 0.00142,
+    "height": 0.001
+  },
+  "checks": [],
+  "raw_response": {
+    "t_real": -0.9704671032105816,
+    "t_imag": -0.021789178493980713,
+    "amplitude": 0.9707116805279414,
+    "phase_rad": -3.11914416647246,
+    "phase_raw_rad": -3.11914416647246,
+    "phase_reliable": true,
+    "cross_t": {
+      "real": -6.042120802788045e-42,
+      "imag": 6.816567554763391e-42
+    },
+    "power_zero_order": 0.9422811667133802,
+    "T": 0.941483477740721,
+    "R": 0.0577075866816331,
+    "A_estimate": 0.0008089355776458446,
+    "monitor_t_difference": 5.558632644836736e-06,
+    "checks": [],
+    "simulation_status": 2
+  },
+  "phase_raw_rad": -3.11914416647246,
+  "phase_reliable": true,
+  "cross_t": {
+    "real": -6.042120802788045e-42,
+    "imag": 6.816567554763391e-42
+  },
+  "power_zero_order": 0.9422811667133802,
+  "monitor_t_difference": 5.558632644836736e-06,
+  "simulation_status": 2,
+  "project_alias": "projects\\unitcell_x.fsp",
+  "finished": "2026-10-29T18:03:31.384369+08:00",
+  "elapsed_seconds": 252.516
+}

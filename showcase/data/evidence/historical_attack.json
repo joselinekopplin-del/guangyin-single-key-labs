@@ -1,0 +1,393 @@
+{
+  "sensitivity": {
+    "center": {
+      "pol": "H",
+      "polError": 90,
+      "angle": 90,
+      "z": 10,
+      "wavelength": 532,
+      "phaseError": 0,
+      "seed": 20261013
+    },
+    "units": [
+      1,
+      1,
+      0.1
+    ],
+    "gram": [
+      [
+        0.00031057938905165906,
+        -0.000007704163483629525,
+        -3.077469021158124e-18
+      ],
+      [
+        -0.000007704163483629525,
+        0.06579985129949886,
+        -0.001675327696315868
+      ],
+      [
+        -3.077469021158124e-18,
+        -0.001675327696315868,
+        0.058574435820999596
+      ]
+    ],
+    "correlation": [
+      [
+        1,
+        -0.0017042241618689135,
+        -7.215282124530113e-16
+      ],
+      [
+        -0.0017042241618689135,
+        1,
+        -0.02698567309845171
+      ],
+      [
+        -7.215282124530113e-16,
+        -0.02698567309845171,
+        1
+      ]
+    ],
+    "strength": [
+      0.017623262724355528,
+      0.2565148169199956,
+      0.24202156065317734
+    ],
+    "eigenvalues": [
+      0.00031057848206606734,
+      0.05820488544199414,
+      0.0661694025854899
+    ],
+    "weakest": [
+      0.9999999930644848,
+      0.0001177266796049147,
+      0.0000033851305900094235
+    ],
+    "condition": 213.0521153471737,
+    "method": "Central finite differences; complex-gain projection; normalized real Gram matrix. Local model sensitivity, not key entropy or a Cramer-Rao confidence bound."
+  },
+  "attack": {
+    "ranking": [
+      {
+        "index": 11,
+        "symbol": "B",
+        "rx": {
+          "pol": "H",
+          "polError": 90,
+          "angle": 90,
+          "z": 10,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 0.9990045836849032
+      },
+      {
+        "index": 15,
+        "symbol": "F",
+        "rx": {
+          "pol": "H",
+          "polError": 90,
+          "angle": 270,
+          "z": 10,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 0.0032693430423072376
+      },
+      {
+        "index": 10,
+        "symbol": "A",
+        "rx": {
+          "pol": "H",
+          "polError": 90,
+          "angle": 90,
+          "z": 6,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 0.0011811004114725934
+      },
+      {
+        "index": 12,
+        "symbol": "C",
+        "rx": {
+          "pol": "H",
+          "polError": 90,
+          "angle": 180,
+          "z": 6,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 0.0003731980935916767
+      },
+      {
+        "index": 8,
+        "symbol": "8",
+        "rx": {
+          "pol": "H",
+          "polError": 90,
+          "angle": 0,
+          "z": 6,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 0.0003158091016859003
+      },
+      {
+        "index": 9,
+        "symbol": "9",
+        "rx": {
+          "pol": "H",
+          "polError": 90,
+          "angle": 0,
+          "z": 10,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 0.00020763470345655098
+      },
+      {
+        "index": 13,
+        "symbol": "D",
+        "rx": {
+          "pol": "H",
+          "polError": 90,
+          "angle": 180,
+          "z": 10,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 0.00016636507877978486
+      },
+      {
+        "index": 14,
+        "symbol": "E",
+        "rx": {
+          "pol": "H",
+          "polError": 90,
+          "angle": 270,
+          "z": 6,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 0.0001077313086227801
+      },
+      {
+        "index": 0,
+        "symbol": "0",
+        "rx": {
+          "pol": "H",
+          "polError": 0,
+          "angle": 0,
+          "z": 6,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 3.8455558887134354e-8
+      },
+      {
+        "index": 1,
+        "symbol": "1",
+        "rx": {
+          "pol": "H",
+          "polError": 0,
+          "angle": 0,
+          "z": 10,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 3.59513730690058e-8
+      },
+      {
+        "index": 6,
+        "symbol": "6",
+        "rx": {
+          "pol": "H",
+          "polError": 0,
+          "angle": 270,
+          "z": 6,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 2.9615646786349447e-8
+      },
+      {
+        "index": 7,
+        "symbol": "7",
+        "rx": {
+          "pol": "H",
+          "polError": 0,
+          "angle": 270,
+          "z": 10,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 2.137666135689723e-8
+      },
+      {
+        "index": 5,
+        "symbol": "5",
+        "rx": {
+          "pol": "H",
+          "polError": 0,
+          "angle": 180,
+          "z": 10,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 1.916448288095226e-8
+      },
+      {
+        "index": 4,
+        "symbol": "4",
+        "rx": {
+          "pol": "H",
+          "polError": 0,
+          "angle": 180,
+          "z": 6,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 1.5085226799093726e-8
+      },
+      {
+        "index": 2,
+        "symbol": "2",
+        "rx": {
+          "pol": "H",
+          "polError": 0,
+          "angle": 90,
+          "z": 6,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 9.083002490680022e-9
+      },
+      {
+        "index": 3,
+        "symbol": "3",
+        "rx": {
+          "pol": "H",
+          "polError": 0,
+          "angle": 90,
+          "z": 10,
+          "wavelength": 532,
+          "phaseError": 0,
+          "seed": 20261013
+        },
+        "score": 2.4509515304551207e-9
+      }
+    ],
+    "best": {
+      "index": 11,
+      "symbol": "B",
+      "rx": {
+        "pol": "H",
+        "polError": 90,
+        "angle": 90,
+        "z": 10,
+        "wavelength": 532,
+        "phaseError": 0,
+        "seed": 20261013
+      },
+      "score": 0.9990045836849032
+    },
+    "decoded": "公开模型风险验证",
+    "crcValid": true,
+    "pilotScore": 0.9990045836849032,
+    "scoreGap": 0.995735240642596,
+    "assumptions": "Attacker knows the published operator, all 16 nominal tuples, public pilot symbols, and measured complex fields; no sender key or plaintext supplied."
+  },
+  "trials": {
+    "count": 3,
+    "seed": 20261013,
+    "index": 11,
+    "snr": 30,
+    "phaseError": 0,
+    "driftScale": 1,
+    "rows": [
+      {
+        "trial": 1,
+        "seed": 1069083528,
+        "drift": [
+          -2.599492944396724,
+          0.008380673735428605,
+          0.1345372236812401
+        ],
+        "beforeBER": 0,
+        "afterBER": 0,
+        "beforeSuccess": true,
+        "afterSuccess": true,
+        "pilotBefore": 0.8957938996923128,
+        "pilotAfter": 0.9989280306621015,
+        "candidates": 112
+      },
+      {
+        "trial": 2,
+        "seed": 1127405220,
+        "drift": [
+          3.9858885149274195,
+          -0.20352319381792572,
+          0.0023593689284270893
+        ],
+        "beforeBER": 0,
+        "afterBER": 0,
+        "beforeSuccess": true,
+        "afterSuccess": true,
+        "pilotBefore": 0.9839272471312374,
+        "pilotAfter": 0.9981640061991274,
+        "candidates": 100
+      },
+      {
+        "trial": 3,
+        "seed": 1633906555,
+        "drift": [
+          0.05427453838462956,
+          0.20008987562527647,
+          0.03374209219253706
+        ],
+        "beforeBER": 0,
+        "afterBER": 0,
+        "beforeSuccess": true,
+        "afterSuccess": true,
+        "pilotBefore": 0.9830178491178396,
+        "pilotAfter": 0.9983680555208109,
+        "candidates": 136
+      }
+    ],
+    "before": {
+      "success": 3,
+      "rate": 1,
+      "ci": [
+        0.43849391955098227,
+        1
+      ],
+      "meanBER": 0
+    },
+    "after": {
+      "success": 3,
+      "rate": 1,
+      "ci": [
+        0.43849391955098227,
+        1
+      ],
+      "meanBER": 0
+    },
+    "note": "Paired same-frame trials; Gaussian synchronization drift SD 1.4 deg, 0.8 deg, 0.08 mm multiplied by the selected scale; Wilson 95% interval for message recovery, conditional on this simulation setup."
+  }
+}

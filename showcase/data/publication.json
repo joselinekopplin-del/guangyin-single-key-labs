@@ -1,0 +1,10 @@
+{
+  "version": "2026.10.30-material.1",
+  "scope": "公开成果页；交互模型未改变；原始工程与本机验收日志不上传",
+  "numerical_core_sha256": {
+    "engine.js": "1f5b351df47f5c6ab966395ba7ed276b5ea8d238c7b6ab4f42d00527502a6ec0",
+    "thz-engine.js": "003eb06b68c259d6332c675f54ae32d9cbe67d248405d599d05c46e2971ddbf9",
+    "thz-evidence.js": "61ad28f0e7975cacf69980938866d849e25249392b6de0b43b9ff9ba3f457b03"
+  },
+  "original_demo": "2026.10.30-demo.1"
+}

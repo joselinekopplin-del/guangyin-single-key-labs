@@ -1,0 +1,64 @@
+{
+  "schema": "guangyin.demo.protocol.v1",
+  "fixed_before_computation": "2026-10-30T04:45:32.044Z",
+  "selection": "Use existing ECNU default. B candidates fixed before evaluation, one axis at a time: orthogonal polarization90deg, cardinal L2 rotation90deg, second existing distance10mm. No outcome filtering. C replays pre-existing ECNU+2deg failure through same core. Chinese alternative 光隐演示 picked for simple presentation, no search.",
+  "messages": [
+    "ECNU",
+    "光隐演示"
+  ],
+  "tx": {
+    "alpha_deg": 0,
+    "theta_deg": 0,
+    "d23_m": 0.006
+  },
+  "B": [
+    {
+      "id": "polarization",
+      "label": "只改入射偏振为90°",
+      "candidate": {
+        "alpha_deg": 90,
+        "theta_deg": 0,
+        "d23_m": 0.006
+      }
+    },
+    {
+      "id": "rotation",
+      "label": "只改第二层转角为90°",
+      "candidate": {
+        "alpha_deg": 0,
+        "theta_deg": 90,
+        "d23_m": 0.006
+      }
+    },
+    {
+      "id": "distance",
+      "label": "只改L2–L3入口间距为10mm",
+      "candidate": {
+        "alpha_deg": 0,
+        "theta_deg": 0,
+        "d23_m": 0.01
+      }
+    }
+  ],
+  "C": {
+    "initial": {
+      "alpha_deg": 2,
+      "theta_deg": 0,
+      "d23_m": 0.006
+    },
+    "window": [
+      3,
+      3,
+      0.0003
+    ],
+    "rounds": 4
+  },
+  "random_seed": null,
+  "noise": "none; deterministic calculations",
+  "scope": "Selected demonstration cases, not independent final testset or performance statistics",
+  "source_sha256": {
+    "engine.js": "1f5b351df47f5c6ab966395ba7ed276b5ea8d238c7b6ab4f42d00527502a6ec0",
+    "thz-engine.js": "003eb06b68c259d6332c675f54ae32d9cbe67d248405d599d05c46e2971ddbf9",
+    "thz-evidence.js": "61ad28f0e7975cacf69980938866d849e25249392b6de0b43b9ff9ba3f457b03"
+  }
+}

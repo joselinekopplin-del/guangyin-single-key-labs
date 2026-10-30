@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-label="实际采用硅柱单元的结构示意，不按比例绘制">
+<rect width="1000" height="620" fill="#fff"/>
+<g font-family="Times New Roman, SimSun, serif" fill="#183747">
+<text x="50" y="50" font-size="28" font-weight="bold">实际单元几何　L = 60 μm，W = 75 μm</text>
+<text x="50" y="88" font-size="20">结构示意，不按比例绘制；参数来自当前文献假设模型</text>
+<g stroke="#294d63" stroke-width="3"><rect x="100" y="325" width="330" height="160" fill="#c4d9e5"/><rect x="190" y="165" width="150" height="160" fill="#577f9a"/></g>
+<text x="90" y="530" font-size="22">xz 截面（y = 0）</text><text x="220" y="255" font-size="22" fill="#fff">硅柱</text>
+<text x="175" y="410" font-size="22">有限硅基底</text>
+<path d="M265 105V147M255 133l10 14 10-14" stroke="#b16939" fill="none" stroke-width="3"/><text x="290" y="132" font-size="19">+z 正入射</text>
+<path d="M370 165h35m-17 0v160m-18 0h35M450 325h35m-17 0v160m-18 0h35M100 500v18m0-9h330m0-9v18" fill="none" stroke="#294d63" stroke-width="2"/>
+<text x="410" y="245" font-size="19">H₁ = 500 μm</text><text x="485" y="407" font-size="19">H₂ = 500 μm</text>
+<text x="160" y="560" font-size="21">P = 110 μm</text>
+<g stroke="#294d63" stroke-width="2"><rect x="650" y="165" width="260" height="260" fill="none" stroke-dasharray="7 6"/><rect x="709" y="205" width="142" height="180" fill="#577f9a"/></g>
+<text x="650" y="465" font-size="22">俯视图　虚线为周期边界</text><text x="703" y="192" font-size="19">L = 60 μm（x）</text>
+<text x="865" y="296" font-size="19" transform="rotate(90 865 296)">W = 75 μm（y）</text>
+<text x="50" y="600" font-size="18">0.7 THz · n = 3.42，k = 0 · 单柱周期单元，非完整三层芯片</text>
+</g></svg>

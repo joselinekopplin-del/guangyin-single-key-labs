@@ -1,0 +1,153 @@
+{
+  "generated_at": "2026-10-30T04:45:44.101Z",
+  "case_protocol_sha256": "389fc735cf907f07668a4ae75669b72faa742811abd76d9e993a551e5cdc8e7f",
+  "core_sha256": {
+    "engine.js": "1f5b351df47f5c6ab966395ba7ed276b5ea8d238c7b6ab4f42d00527502a6ec0",
+    "thz-engine.js": "003eb06b68c259d6332c675f54ae32d9cbe67d248405d599d05c46e2971ddbf9",
+    "thz-evidence.js": "61ad28f0e7975cacf69980938866d849e25249392b6de0b43b9ff9ba3f457b03"
+  },
+  "cases_json_sha256": "c364c804d2926789f015b094fe7e194e81eaa239eb9e1d483a8e107f471f95ce",
+  "files": [
+    {
+      "file": "figures/field_xz_x.png",
+      "source_project_relative": "stage1_literature/figures/field_xz_x.png",
+      "sha256": "92ef86c8b6315eff0adc881aa6d058bb04b45c8bdc63f59005f6ad33a7ad8884",
+      "meaning": "真实FDTD，L60/W75µm，0.7THz x偏振xz截面|E|²"
+    },
+    {
+      "file": "figures/field_xz_y.png",
+      "source_project_relative": "stage1_literature/figures/field_xz_y.png",
+      "sha256": "0d1c2e1873765a17049ff8afca03900ed04cb8f8f32ae97db3487687fdc79187",
+      "meaning": "真实FDTD，L60/W75µm，0.7THz y偏振xz截面|E|²"
+    },
+    {
+      "file": "figures/x_phase_rad_sweep.png",
+      "source_project_relative": "stage1_literature/figures/x_phase_rad_sweep.png",
+      "sha256": "583ff0a9502b718f0090383679aa1c5bf93577223b220cac1ecd1df5a247b7f2",
+      "meaning": "x偏振相位随L/W变化，真实5×5扫描，每格一个尺寸"
+    },
+    {
+      "file": "figures/y_phase_rad_sweep.png",
+      "source_project_relative": "stage1_literature/figures/y_phase_rad_sweep.png",
+      "sha256": "883be24582c61ca3da380632433ba6b45f816772527414cd2d1a9e778828f850",
+      "meaning": "y偏振相位随L/W变化，真实5×5扫描，每格一个尺寸"
+    },
+    {
+      "file": "figures/x_amplitude_sweep.png",
+      "source_project_relative": "stage1_literature/figures/x_amplitude_sweep.png",
+      "sha256": "2de05218ba30ab4757a98d252e6ae942c8ca8a15875d8c094a0406ce2103ae87",
+      "meaning": "x偏振透射振幅|t|，真实5×5扫描"
+    },
+    {
+      "file": "figures/y_amplitude_sweep.png",
+      "source_project_relative": "stage1_literature/figures/y_amplitude_sweep.png",
+      "sha256": "1f859d1dc1a89ac0ab60db7589f91c07b129400ba3882fee6f17d6bccc39ba6e",
+      "meaning": "y偏振透射振幅|t|，真实5×5扫描"
+    },
+    {
+      "file": "figures/geometry_C.png",
+      "source_project_relative": "system_thz/system_results/figures/geometry_C.png",
+      "sha256": "e390e62b924330f12eb48f982b647eca10c31f74a36aa6e04fc5eee15229efa2",
+      "meaning": "已保存三层近似传播/几何/响应研究图；非整片FDTD，原始结果保持"
+    },
+    {
+      "file": "figures/complex_response_C.png",
+      "source_project_relative": "system_thz/system_results/figures/complex_response_C.png",
+      "sha256": "a0887a38f0a6c25a276b877d5c13640623c98ceda12a1b9c4738d1ddf48acd0f",
+      "meaning": "已保存三层近似传播/几何/响应研究图；非整片FDTD，原始结果保持"
+    },
+    {
+      "file": "figures/system_fields.png",
+      "source_project_relative": "system_thz/system_results/figures/system_fields.png",
+      "sha256": "1d7ee3b8116d9e0c0e7ebbe9642cafa6e9905fe53a232894038dbafbbc03dc5b",
+      "meaning": "已保存三层近似传播/几何/响应研究图；非整片FDTD，原始结果保持"
+    },
+    {
+      "file": "figures/efficiency_security.png",
+      "source_project_relative": "system_thz/system_results/figures/efficiency_security.png",
+      "sha256": "1f89a3b5811fd843d79c76700df20d186f766056c153f7940244693f7a3d6a11",
+      "meaning": "已保存三层近似传播/几何/响应研究图；非整片FDTD，原始结果保持"
+    },
+    {
+      "file": "data/units/L60_W75_x.json",
+      "source_project_relative": "stage1_literature/data/points/L60_W75_x.json",
+      "sha256": "e817c3e34a704bc88f8035865ae1a6973e88d36782144baeda29bee73c76d31f",
+      "meaning": "真实单元原始记录；其project字段指本机研究库，未随包复制FSP"
+    },
+    {
+      "file": "data/units/L60_W75_y.json",
+      "source_project_relative": "stage1_literature/data/points/L60_W75_y.json",
+      "sha256": "b21dea411721aa87d218bac680e95b622792ac32af8889cede872a1017be94e6",
+      "meaning": "真实单元原始记录；其project字段指本机研究库，未随包复制FSP"
+    },
+    {
+      "file": "data/evidence/security.json",
+      "source_project_relative": "system_thz/system_results/security.json",
+      "sha256": "a4234a6d437ace09ab9da99eb177976b9b42af28cb02af12b3d8847928eb4f36",
+      "meaning": "既有研究证据快照，保留攻击成功及科研失败，不等于展示验收"
+    },
+    {
+      "file": "data/evidence/calibration_30dB_historical.json",
+      "source_project_relative": "system_thz/system_results/calibration.json",
+      "sha256": "c82301fce95749b50c2d91a7db068fd8048eee14563222aff8f591b589e9618c",
+      "meaning": "既有研究证据快照，保留攻击成功及科研失败，不等于展示验收"
+    },
+    {
+      "file": "data/evidence/calibration_security_tradeoff.json",
+      "source_project_relative": "system_thz/system_results/calibration_security_tradeoff.json",
+      "sha256": "3ef40beaa293ddb7df46fd0dafa6e3ae34badb65d19a975e047e644721333feb",
+      "meaning": "既有研究证据快照，保留攻击成功及科研失败，不等于展示验收"
+    },
+    {
+      "file": "data/evidence/research_acceptance.json",
+      "source_project_relative": "system_thz/reports/final_acceptance.json",
+      "sha256": "1463a228189c8fecf3c9152d33e8fac206c9e5ab8bbbf332e5eeb93421590777",
+      "meaning": "既有研究证据快照，保留攻击成功及科研失败，不等于展示验收"
+    },
+    {
+      "file": "data/evidence/historical_attack.json",
+      "source_project_relative": "system_thz/reports/web/research_prior_or_current.json",
+      "sha256": "aceb856cfcb5e932c8f2c64f12703e991334e1866b3a31f2fe62f278f2276a46",
+      "meaning": "既有研究证据快照，保留攻击成功及科研失败，不等于展示验收"
+    }
+  ],
+  "raw_observations": [
+    {
+      "file": "data/observations/ECNU.json",
+      "sha256": "3b511194ca1226560d3775d1b2daf91aa40dd937197da215b82847acc020bde6"
+    },
+    {
+      "file": "data/observations/chinese.json",
+      "sha256": "e8bf11eefa1f237ae41de8b68a8b56054ac03f97de7e694cb387ecde21505d5d"
+    }
+  ],
+  "generated_assets": [
+    {
+      "file": "figures/unit_geometry.svg",
+      "sha256": "7c1729cae450d41914c3c6fe06c91b2182143f56f28d2d2e444ac6f110f33da0",
+      "kind": "structure schematic not to scale",
+      "geometry_sources": [
+        "data/units/L60_W75_x.json",
+        "data/units/L60_W75_y.json"
+      ],
+      "dimensions_um": {
+        "L": 60,
+        "W": 75,
+        "P": 110,
+        "H1": 500,
+        "H2": 500
+      }
+    },
+    {
+      "file": "静态回放.html",
+      "sha256": "980f2f3e8662ba594a5300bb37e98968177ceb661e37c05135cc4a8f3ec5bc2a",
+      "kind": "standalone replay from saved cases and embedded actual source figures",
+      "actual_browser_check": "data/static_qa.json"
+    }
+  ],
+  "core_current_hash_matches": {
+    "engine.js": true,
+    "thz-engine.js": true,
+    "thz-evidence.js": true
+  }
+}

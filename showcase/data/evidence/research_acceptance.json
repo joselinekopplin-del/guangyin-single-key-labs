@@ -1,0 +1,111 @@
+{
+  "schema": "trikey.final.acceptance.v1",
+  "status": "BLOCKED",
+  "overall": "BLOCKED",
+  "scope": "literature-assumed THz software/numerical research, honest partial acceptance",
+  "rows": [
+    {
+      "id": 1,
+      "item": "现有成果可复核",
+      "status": "PASS",
+      "detail": "复用50响应及历史API回读，实际核对当前文件SHA；第一阶段未重新求解。",
+      "evidence": "reports/baseline_integrity.json",
+      "command": ".venv\\Scripts\\python.exe system_thz/prepare_library.py"
+    },
+    {
+      "id": 2,
+      "item": "统一物理参数",
+      "status": "PASS",
+      "detail": "0.7THz；110μm周期；有限基底相对空气响应，距离由入口面计一次器件厚度。借用几何仍是假设。",
+      "evidence": "config.json",
+      "command": ".venv\\Scripts\\python.exe system_thz/reports/source_audit/review_stage01.py"
+    },
+    {
+      "id": 3,
+      "item": "单元库可靠性与插值验证",
+      "status": "FAIL",
+      "detail": "真实查询表共27几何/54响应；系统仍冻结原25组。新增90/90边界收敛及代表完整周期交叉偏振检查通过，四个独立中点插值均未通过。未认证连续尺寸区间和全域收敛。",
+      "evidence": "reports/library_validation.json",
+      "command": ".venv\\Scripts\\python.exe system_thz/run_extension_resume.py"
+    },
+    {
+      "id": 4,
+      "item": "真实器件三层近似模型",
+      "status": "PASS",
+      "detail": "此PASS仅表示真实几何配对、A/B/C和数值传播实现；物理有效性另外受第3/6项、斜入射及多次反射限制。16×16单元、16码元多帧，不是原1024码元单帧。",
+      "evidence": "system_results/summary.json",
+      "command": ".venv\\Scripts\\python.exe system_thz/system_evaluate.py --reuse-design"
+    },
+    {
+      "id": 5,
+      "item": "同一密文匹配与错钥",
+      "status": "PASS",
+      "detail": "标称恢复 16/16；独立测试 8/8。这是指定测量与输入范围内的结果。",
+      "evidence": "system_results/same_cipher_wrong_keys.json",
+      "command": ".venv\\Scripts\\python.exe system_thz/check_system_contracts.py"
+    },
+    {
+      "id": 6,
+      "item": "局部全波对照",
+      "status": "FAIL",
+      "detail": "仅实际设计中相邻复响应差较小/最大的两柱周期超胞x偏振。“较小差异”不表示几何连续平滑。y偏振、有限阵列、斜入射和完整三层全波未运行。",
+      "evidence": "reports/local_fullwave_results.json",
+      "command": ".venv\\Scripts\\python.exe system_thz/resume_local_fullwave.py"
+    },
+    {
+      "id": 7,
+      "item": "鲁棒性与校准恢复",
+      "status": "FAIL",
+      "detail": "保存所有误差和噪声测试。导频校准BER 0.2833333333333333 → 0.008333333333333333；改善不等于完整恢复。制造误差NOT_RUN，横移另查细分验证。",
+      "evidence": "system_results/calibration.json",
+      "command": ".venv\\Scripts\\python.exe system_thz/system_evaluate.py --reuse-design"
+    },
+    {
+      "id": 8,
+      "item": "安全攻击评估",
+      "status": "PASS",
+      "detail": "公开枚举恢复：True；连续搜索恢复：True。评估完成不代表安全；历史攻击保留，未增加数字加密冒充光学安全。",
+      "evidence": "system_results/security.json",
+      "command": ".venv\\Scripts\\python.exe system_thz/system_evaluate.py --reuse-design"
+    },
+    {
+      "id": 9,
+      "item": "Python与网页一致性",
+      "status": "PASS",
+      "detail": "1024计算域/64探测窗的场、旋转、解码及公开导频校准均对照。另把真实浏览器导出复场交Python重算；默认ECNU校准恢复失败仍保留，不混为实现差异。",
+      "evidence": "reports/web_consistency.json",
+      "command": "一键验证后续系统.cmd"
+    },
+    {
+      "id": 10,
+      "item": "离线查看与重复运行",
+      "status": "PASS",
+      "detail": "实际离线浏览器收发和连续两次PNG重绘分别验收；原始输入SHA不得变化，两次图片SHA必须一致。只重绘不运行求解器。",
+      "evidence": "reports/delivery_verification.json",
+      "command": "一键仅重绘后续图表.cmd；一键验证后续系统.cmd"
+    }
+  ],
+  "security_property": "FAIL",
+  "quantitative_Zhang_reproduction": "BLOCKED",
+  "chip_fabrication_and_measurements": "NOT_RUN",
+  "full_three_layer_FDTD": "NOT_RUN",
+  "status_meaning": "PASS applies only to the explicit item and scope; no overall all-stage pass while required physics or performance gates remain unresolved",
+  "current_unit_extension_state": "PASS",
+  "independent_review": "reports/independent_review.json",
+  "unit_catalog": {
+    "archive_real_geometries": 27,
+    "archive_real_responses": 54,
+    "system_frozen_geometries": 25,
+    "interpolated_response_count": 0
+  },
+  "physical_applicability": "BLOCKED: normal-incidence local periodic approximation; see local full-wave comparison and physical_review_20261030.md",
+  "geometry_fault_stress": "system_results/geometry_fault_stress.json",
+  "failure_diagnosis": "system_results/failure_diagnosis.json",
+  "calibration_security_tradeoff": "system_results/calibration_security_tradeoff.json",
+  "source_hashes": {
+    "config.json": "5d84fd3a362cc7f3b49e425bd0036452476591c3f03f876cce37d2aa7a1391ae",
+    "library.json": "61fde1173921e37e590aff3023157c4d323cdae9df3d8553d6424a9181081db3",
+    "system_results/summary.json": "a7499e6c5a8d1e5f7f7d22322b369ba42425d15ee487f1d481bad3de3c288d1c",
+    "reports/library_validation.json": "9b30ca64a4cab790932efd88be507e7e3a03a529c8e032f76794630130e715c8"
+  }
+}
