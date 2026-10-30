@@ -1,0 +1,2 @@
+/* 先显示静态预览，再按需加载本地 Three.js；模块失败也保留中文说明。 */
+(()=>{let started=false;const load=()=>{if(started||document.body.dataset.view!=='structure')return;started=true;import('./viewer3d.js').catch(e=>{document.getElementById('viewer-status').textContent='三维模块加载失败';document.getElementById('fallback-text').textContent='降级显示：静态结构预览，非交互模型。请通过HTTP启动页面并检查本地vendor文件。'+e.message;console.error('viewer module load',e);});};document.addEventListener('material-view',load);load();})();

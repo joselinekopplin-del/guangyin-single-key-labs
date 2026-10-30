@@ -1,0 +1,99 @@
+{
+  "schema": "guangyin.structure.v1",
+  "model_version": "thz-assumed-0.1",
+  "design_snapshot": "data/design_snapshot.json",
+  "physical": {
+    "frequency_THz": 0.7,
+    "cells_per_axis": 16,
+    "period_mm": 0.11,
+    "pillar_height_mm": 0.5,
+    "substrate_height_mm": 0.5,
+    "d12_entrance_mm": 5.0,
+    "d23_entrance_mm": 6.0,
+    "d3_measurement_mm": 5.0,
+    "measurement_samples_per_axis": 64,
+    "incident_polarization_deg": 0.0,
+    "layer2_rotation_deg": 0.0,
+    "local_pillar_orientation_deg": 0.0,
+    "illumination": "pillar_first",
+    "material_n": 3.42,
+    "material_k": 0.0
+  },
+  "display": {
+    "physical_geometry_scale_xyz": [
+      1,
+      1,
+      1
+    ],
+    "arrow_radius_mm": 0.028,
+    "arrow_head_length_mm": 0.26,
+    "measurement_frame_thickness_mm": 0.025,
+    "colors": {
+      "L1": [
+        0.035,
+        0.043,
+        0.055,
+        1
+      ],
+      "L2": [
+        0.035,
+        0.043,
+        0.055,
+        1
+      ],
+      "L3": [
+        0.035,
+        0.043,
+        0.055,
+        1
+      ],
+      "Guides": [
+        0.73,
+        0.52,
+        0.08,
+        1
+      ],
+      "MeasurementPlane": [
+        0.35,
+        0.5,
+        0.65,
+        1
+      ]
+    },
+    "render_resolution": [
+      1800,
+      1100
+    ],
+    "render_samples": 64,
+    "silicon_surface": {
+      "pillar_roughness": 0.28,
+      "substrate_roughness": 0.18,
+      "substrate_color": [
+        0.045,
+        0.055,
+        0.07,
+        1
+      ],
+      "interpretation": "仅为可见结构的PBR外观近似，不等同于0.7THz介电参数或真实加工表面测量",
+      "metallic": 0,
+      "visual_ior": 2.8,
+      "specular_ior_level": 0.45
+    },
+    "render_version": "structure-display-2.0"
+  },
+  "output": {
+    "blend": "system.blend",
+    "glb": "../showcase/models/system.glb",
+    "preview": "../showcase/models/preview.png",
+    "manifest": "../showcase/models/manifest.json",
+    "validation": "logs/build_validation.json",
+    "detail": "../showcase/models/detail.png"
+  },
+  "notes": [
+    "物理参数采用当前假设模型，非已确认的目标论文原值。",
+    "模型展示冻结设计C，修改本配置只改变展示模型，不会重训练或改变网页仿真密钥。",
+    "每层256个长宽均来自同一真实几何索引；每层柱合并为独立网格的256个不连接块，不简化柱数。",
+    "传播箭头、偏振符号及测量面边框均为辅助示意，非FDTD电磁场，不代表实际已安装探测器。",
+    "硅柱与基底统一深灰材质；粗糙度及可见光IOR是展示近似，没有新增或改动FDTD材料参数。"
+  ]
+}

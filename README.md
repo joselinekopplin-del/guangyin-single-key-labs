@@ -57,6 +57,10 @@ CRC 只检错。BER 用保存的发射比特作事后数值评估，不参与接
 
 ## 本地运行和验收
 
+2026-10-30 新增三维展示：双击仓库根目录 `启动三维预览.cmd`，打开本机 HTTP 地址 `http://127.0.0.1:4192/showcase/#structure`（占用时自动换端口）。已有模型无需安装 Blender，也不会启动 FDTD。详见 [三维展示使用说明](三维展示使用说明.md)。
+
+模型源文件为 `model3d/system.blend`，网页导出为 `showcase/models/system.glb`；生成脚本 `model3d/build_model.py`，参数 `model3d/model_config.json`。当前数据来自 0.7 THz 三层冻结设计 C，25 种候选实际用到 24 种，保持原物理近似边界。查看器通过本地锁定的 Three.js r180 加载 Blender 导出，显示操作不改变物理参数。本次三维外观修缮和Material字体更新按用户授权发布到现有GitHub Pages；下方旧 532 nm 构建说明仍适用于历史网页，不是三维页生成步骤。
+
 Node.js 18+，运行时无第三方依赖。
 
 ```sh

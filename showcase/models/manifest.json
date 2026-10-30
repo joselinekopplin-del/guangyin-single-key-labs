@@ -1,0 +1,9576 @@
+{
+  "schema": "guangyin.structure.v1",
+  "generated_at": "2026-10-30T16:53:19.299934+08:00",
+  "blender_version": "5.2.3 LTS",
+  "gltf_mm_to_unit": 0.0010000000474974513,
+  "model_version": "thz-assumed-0.1",
+  "model_kind": "Blender exported editable geometric structure; not a full-wave field solution",
+  "coordinate_system": {
+    "propagation_axis": "+X",
+    "blender": "X=original FDTD z; Y=original x; Z=original y",
+    "gltf": "X=propagation; Y=original y; Z=-original x; glTF standard Y-up",
+    "blender_scene_scale_length": 0.0010000000474974513,
+    "blender_coordinate_unit": "1 numeric unit = 1 mm",
+    "gltf_world_units_per_mm": 0.0010000000474974513,
+    "gltf_world_unit": "metre",
+    "gltf_world_mm_to_unit": 0.0010000000474974513,
+    "gltf_local_coordinate_unit": "Layer local positions remain mm; OpticalSystem scale=.001 converts to world metres",
+    "gltf_root_scale": [
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.0010000000474974513
+    ],
+    "gltf_root_translations": {
+      "L1": [
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        5,
+        0,
+        0
+      ],
+      "L3": [
+        11,
+        0,
+        0
+      ],
+      "MeasurementPlane": [
+        16,
+        0,
+        0
+      ]
+    }
+  },
+  "physical": {
+    "frequency_THz": 0.7,
+    "cells_per_axis": 16,
+    "period_mm": 0.11,
+    "pillar_height_mm": 0.5,
+    "substrate_height_mm": 0.5,
+    "d12_entrance_mm": 5.0,
+    "d23_entrance_mm": 6.0,
+    "d3_measurement_mm": 5.0,
+    "measurement_samples_per_axis": 64,
+    "incident_polarization_deg": 0.0,
+    "layer2_rotation_deg": 0.0,
+    "local_pillar_orientation_deg": 0.0,
+    "illumination": "pillar_first",
+    "material_n": 3.42,
+    "material_k": 0.0
+  },
+  "display": {
+    "render_version": "structure-display-2.0",
+    "default_scale": "真实几何比例；箭头和采样面线框为示意",
+    "scale_xyz": [
+      1,
+      1,
+      1
+    ],
+    "not_to_scale_in_exploded_view": true,
+    "surface_appearance": {
+      "pillar_roughness": 0.28,
+      "substrate_roughness": 0.18,
+      "substrate_color": [
+        0.045,
+        0.055,
+        0.07,
+        1
+      ],
+      "interpretation": "仅为可见结构的PBR外观近似，不等同于0.7THz介电参数或真实加工表面测量",
+      "metallic": 0,
+      "visual_ior": 2.8,
+      "specular_ior_level": 0.45
+    },
+    "surface_is_visual_approximation": "统一深灰硅外观，PBR粗糙度及可见光IOR仅为展示近似；不是0.7THz材料反射或加工测量，未改变物理模型n=3.42。",
+    "colors_are_display_only": true,
+    "simplification": "每层256个真实几何柱作为256个独立网格块合并为一对象；三层与基底分别保留；未减少柱数。",
+    "arrows_are_schematic": true,
+    "measurement_is_computational_plane": true
+  },
+  "parts": [
+    {
+      "id": "L1",
+      "label": "第1层超表面",
+      "entry_mm": 0,
+      "thickness_mm": 1.0,
+      "pillar_height_mm": 0.5,
+      "substrate_height_mm": 0.5,
+      "rotation_deg": 0,
+      "children": [
+        "L1_Pillars",
+        "L1_Substrate"
+      ],
+      "description": "16×16硅柱，孔径1.76mm；先柱后基底，同一几何配对决定两种偏振响应。"
+    },
+    {
+      "id": "L2",
+      "label": "第2层超表面",
+      "entry_mm": 5.0,
+      "thickness_mm": 1.0,
+      "pillar_height_mm": 0.5,
+      "substrate_height_mm": 0.5,
+      "rotation_deg": 0.0,
+      "children": [
+        "L2_Pillars",
+        "L2_Substrate"
+      ],
+      "description": "16×16硅柱，孔径1.76mm；先柱后基底，同一几何配对决定两种偏振响应。这是系统定义的可旋转第二层。"
+    },
+    {
+      "id": "L3",
+      "label": "第3层超表面",
+      "entry_mm": 11.0,
+      "thickness_mm": 1.0,
+      "pillar_height_mm": 0.5,
+      "substrate_height_mm": 0.5,
+      "rotation_deg": 0,
+      "children": [
+        "L3_Pillars",
+        "L3_Substrate"
+      ],
+      "description": "16×16硅柱，孔径1.76mm；先柱后基底，同一几何配对决定两种偏振响应。"
+    },
+    {
+      "id": "MeasurementPlane",
+      "label": "复场采样面",
+      "entry_mm": 16.0,
+      "side_mm": 7.04,
+      "description": "64×64采样窗；假设获得双偏振复场的计算面，不是实体相机。"
+    },
+    {
+      "id": "Guides",
+      "label": "方向与偏振示意",
+      "description": "+X传播箭头与线偏振符号，非真实电磁场。"
+    }
+  ],
+  "stable_root_names": [
+    "L1",
+    "L2",
+    "L3",
+    "MeasurementPlane",
+    "Guides"
+  ],
+  "triangles": 9664,
+  "gltf_nodes": 15,
+  "materials": [
+    {
+      "name": "Polarization_display_color",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        0.11999999731779099,
+        0.44999998807907104,
+        0.6499999761581421,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.5,
+      "visual_ior": 1.5,
+      "specular_factor": 1
+    },
+    {
+      "name": "Propagation_display_color",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        0.7300000190734863,
+        0.5199999809265137,
+        0.07999999821186066,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.5,
+      "visual_ior": 1.5,
+      "specular_factor": 1
+    },
+    {
+      "name": "L1_Silicon_Pillars",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        0.03500000014901161,
+        0.0430000014603138,
+        0.054999999701976776,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.2800000011920929,
+      "visual_ior": 2.799999952316284,
+      "specular_factor": 0.8999999761581421
+    },
+    {
+      "name": "L1_Silicon_Substrate",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        0.04500000178813934,
+        0.054999999701976776,
+        0.07000000029802322,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.18000000715255737,
+      "visual_ior": 2.799999952316284,
+      "specular_factor": 0.8999999761581421
+    },
+    {
+      "name": "L2_Silicon_Pillars",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        0.03500000014901161,
+        0.0430000014603138,
+        0.054999999701976776,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.2800000011920929,
+      "visual_ior": 2.799999952316284,
+      "specular_factor": 0.8999999761581421
+    },
+    {
+      "name": "L2_Silicon_Substrate",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        0.04500000178813934,
+        0.054999999701976776,
+        0.07000000029802322,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.18000000715255737,
+      "visual_ior": 2.799999952316284,
+      "specular_factor": 0.8999999761581421
+    },
+    {
+      "name": "L3_Silicon_Pillars",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        0.03500000014901161,
+        0.0430000014603138,
+        0.054999999701976776,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.2800000011920929,
+      "visual_ior": 2.799999952316284,
+      "specular_factor": 0.8999999761581421
+    },
+    {
+      "name": "L3_Silicon_Substrate",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        0.04500000178813934,
+        0.054999999701976776,
+        0.07000000029802322,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.18000000715255737,
+      "visual_ior": 2.799999952316284,
+      "specular_factor": 0.8999999761581421
+    },
+    {
+      "name": "Measurement_display_color",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        0.3499999940395355,
+        0.5,
+        0.6499999761581421,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.5,
+      "visual_ior": 1.5,
+      "specular_factor": 1
+    }
+  ],
+  "cell_count": 768,
+  "cell_geometries": [
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 0,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 1,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 2,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 3,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 4,
+      "geometry_id": "L90_W45",
+      "L_um": 90.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 5,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 6,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 7,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 8,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 9,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 10,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 11,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 12,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 13,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 14,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 0,
+      "column": 15,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 0,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 1,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 2,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 3,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 4,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 5,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 6,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 7,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 8,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 9,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 10,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 11,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 12,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 13,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 14,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 1,
+      "column": 15,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 0,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 1,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 2,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 3,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 4,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 5,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 6,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 7,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 8,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 9,
+      "geometry_id": "L75_W45",
+      "L_um": 75.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 10,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 11,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 12,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 13,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 14,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 2,
+      "column": 15,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 0,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 1,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 2,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 3,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 4,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 5,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 6,
+      "geometry_id": "L75_W45",
+      "L_um": 75.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 7,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 8,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 9,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 10,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 11,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 12,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 13,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 14,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 3,
+      "column": 15,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 1,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 2,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 3,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 4,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 5,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 6,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 7,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 8,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 9,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 10,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 11,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 12,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 13,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 14,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 4,
+      "column": 15,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 0,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 1,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 2,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 3,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 4,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 5,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 6,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 7,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 8,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 9,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 10,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 11,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 12,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 13,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 14,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 5,
+      "column": 15,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 1,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 2,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 3,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 4,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 5,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 7,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 8,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 9,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 10,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 11,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 12,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 13,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 14,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 6,
+      "column": 15,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 0,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 1,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 2,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 3,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 4,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 5,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 6,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 7,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 8,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 9,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 10,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 11,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 12,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 13,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 14,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 7,
+      "column": 15,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 0,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 1,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 2,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 3,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 4,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 5,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 6,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 7,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 8,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.055,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 9,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 10,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.275,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 11,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 12,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.495,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 13,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.605,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 14,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 8,
+      "column": 15,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.055
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 0,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 1,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 2,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 3,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 4,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 5,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 6,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 7,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 8,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.055,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 9,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.165,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 10,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.275,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 11,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.385,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 12,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 13,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 14,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.715,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 9,
+      "column": 15,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        0.165
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 1,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 2,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 3,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 4,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 5,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 7,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 8,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.055,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 9,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 10,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 11,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 12,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 13,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 14,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 10,
+      "column": 15,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.275
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 1,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 2,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 3,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 4,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 5,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 7,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 8,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.055,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 9,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 10,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 11,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 12,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 13,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.605,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 14,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.715,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 11,
+      "column": 15,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.385
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 1,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 2,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 3,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 4,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 5,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 7,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 8,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 9,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 10,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.275,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 11,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 12,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 13,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 14,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.715,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 12,
+      "column": 15,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.495
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 1,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 2,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 3,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 4,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 5,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 7,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 8,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 9,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 10,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.275,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 11,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 12,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.495,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 13,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 14,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 13,
+      "column": 15,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        0.605
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 0,
+      "geometry_id": "L90_W30",
+      "L_um": 90.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 1,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 2,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 3,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 4,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 5,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 6,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 7,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 8,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 9,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 10,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 11,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 12,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 13,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 14,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 14,
+      "column": 15,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        0.715
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 1,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 2,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 3,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 4,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 5,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 6,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 7,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 8,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.055,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 9,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 10,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 11,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 12,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 13,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 14,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        0.825
+      ]
+    },
+    {
+      "layer": 1,
+      "row": 15,
+      "column": 15,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 1,
+      "geometry_id": "L90_W30",
+      "L_um": 90.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 2,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 3,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 4,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 5,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 6,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 7,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 8,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 9,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 10,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 11,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 12,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 13,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 14,
+      "geometry_id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 0,
+      "column": 15,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 1,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 2,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 3,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 4,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 5,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 6,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 7,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 8,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 9,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 10,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 11,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 12,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 13,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 14,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 1,
+      "column": 15,
+      "geometry_id": "L90_W75",
+      "L_um": 90.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 1,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 2,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 3,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 4,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 5,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 6,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 7,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 8,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 9,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 10,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 11,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 12,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 13,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 14,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 2,
+      "column": 15,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 1,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 2,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 3,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 4,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 5,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 6,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 7,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 8,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 9,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 10,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 11,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 12,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 13,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 14,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 3,
+      "column": 15,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 0,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 1,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 2,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 3,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 4,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 5,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 6,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 7,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 8,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 9,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 10,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 11,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 12,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 13,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 14,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 4,
+      "column": 15,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 0,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 1,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 2,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 3,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 4,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 5,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 6,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 7,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 8,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 9,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 10,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 11,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 12,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 13,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 14,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 5,
+      "column": 15,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 0,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 1,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 2,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 3,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 4,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 5,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 6,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 7,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 8,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 9,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 10,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 11,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 12,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 13,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 14,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 6,
+      "column": 15,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 0,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 1,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 2,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 3,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 4,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 5,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 7,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 8,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 9,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 10,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 11,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 12,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 13,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 14,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 7,
+      "column": 15,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 0,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 1,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 2,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 3,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 4,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 5,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 6,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 7,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 8,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 9,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 10,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 11,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 12,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 13,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 14,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 8,
+      "column": 15,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        0.055
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 0,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 1,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 2,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 3,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 4,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 5,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 7,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 8,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.055,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 9,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.165,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 10,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 11,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 12,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 13,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 14,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 9,
+      "column": 15,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        0.165
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 0,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 1,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 2,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 3,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 4,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 5,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 7,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 8,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.055,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 9,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.165,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 10,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 11,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 12,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 13,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 14,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 10,
+      "column": 15,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        0.275
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 0,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 1,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 2,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 3,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 4,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 5,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 7,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 8,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 9,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 10,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 11,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 12,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 13,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 14,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 11,
+      "column": 15,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        0.385
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 0,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 1,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 2,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 3,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 4,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 5,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 6,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 7,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 8,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 9,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 10,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.275,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 11,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 12,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 13,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 14,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.715,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 12,
+      "column": 15,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.495
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 0,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 1,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 2,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 3,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 4,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 5,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 6,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 7,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 8,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.055,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 9,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.165,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 10,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 11,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 12,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.495,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 13,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 14,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 13,
+      "column": 15,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.605
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 0,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 1,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 2,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 3,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 4,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 5,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 6,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 7,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 8,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.055,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 9,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 10,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.275,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 11,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.385,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 12,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 13,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.605,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 14,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.715,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 14,
+      "column": 15,
+      "geometry_id": "L90_W30",
+      "L_um": 90.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        0.715
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 0,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 1,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 2,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 3,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 4,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 5,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 6,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 7,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 8,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.055,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 9,
+      "geometry_id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 10,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 11,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 12,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 13,
+      "geometry_id": "L90_W30",
+      "L_um": 90.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 14,
+      "geometry_id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        0.825
+      ]
+    },
+    {
+      "layer": 2,
+      "row": 15,
+      "column": 15,
+      "geometry_id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 0,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 1,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 2,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 3,
+      "geometry_id": "L90_W75",
+      "L_um": 90.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 4,
+      "geometry_id": "L90_W75",
+      "L_um": 90.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 5,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 6,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 7,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 8,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 9,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 10,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 11,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 12,
+      "geometry_id": "L90_W75",
+      "L_um": 90.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 13,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 14,
+      "geometry_id": "L90_W75",
+      "L_um": 90.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 0,
+      "column": 15,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 0,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 1,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 2,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 3,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 4,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 5,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 6,
+      "geometry_id": "L90_W75",
+      "L_um": 90.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 7,
+      "geometry_id": "L90_W75",
+      "L_um": 90.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 8,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 9,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 10,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 11,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 12,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 13,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 14,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 1,
+      "column": 15,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 0,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 1,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 2,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 3,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 4,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 5,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 6,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 7,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 8,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 9,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 10,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 11,
+      "geometry_id": "L90_W75",
+      "L_um": 90.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 12,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 13,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 14,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 2,
+      "column": 15,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 0,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 1,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 2,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 3,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 4,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 5,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 6,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 7,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 8,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 9,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 10,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 11,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 12,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 13,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 14,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 3,
+      "column": 15,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 0,
+      "geometry_id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 1,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 2,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 3,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 4,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 5,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 6,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 7,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 8,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 9,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 10,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 11,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 12,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 13,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 14,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 4,
+      "column": 15,
+      "geometry_id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 0,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 1,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 2,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 3,
+      "geometry_id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 4,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 5,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 6,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 7,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 8,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 9,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 10,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 11,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 12,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 13,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 14,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 5,
+      "column": 15,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 0,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 1,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 2,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 3,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 4,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 5,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 6,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 7,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 8,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 9,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 10,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 11,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 12,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 13,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 14,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 6,
+      "column": 15,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 0,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.825,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 1,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.715,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 2,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.605,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 3,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.495,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 4,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.385,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 5,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.275,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 6,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 7,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.055,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 8,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 9,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 10,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.275,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 11,
+      "geometry_id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 12,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.495,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 13,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.605,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 14,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.715,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 7,
+      "column": 15,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.825,
+        -0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 0,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 1,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 2,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 3,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 4,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 5,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 6,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 7,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 8,
+      "geometry_id": "L90_W45",
+      "L_um": 90.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 9,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.165,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 10,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.275,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 11,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.385,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 12,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.495,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 13,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.605,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 14,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 8,
+      "column": 15,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.055
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 0,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 1,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 2,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 3,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 4,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 5,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 6,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 7,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 8,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 9,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.165,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 10,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.275,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 11,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.385,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 12,
+      "geometry_id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.495,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 13,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.605,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 14,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.715,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 9,
+      "column": 15,
+      "geometry_id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        0.165
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 0,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 1,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 2,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 3,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 4,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 5,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 6,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 7,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 8,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 9,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.165,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 10,
+      "geometry_id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.275,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 11,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.385,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 12,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.495,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 13,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.605,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 14,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 10,
+      "column": 15,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.825,
+        0.275
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 0,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 1,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 2,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 3,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 4,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 5,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 6,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 7,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 8,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 9,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.165,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 10,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 11,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 12,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.495,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 13,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.605,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 14,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 11,
+      "column": 15,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.385
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 0,
+      "geometry_id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 1,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 2,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 3,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 4,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 5,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 6,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 7,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 8,
+      "geometry_id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "center_transverse_mm": [
+        0.055,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 9,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.165,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 10,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 11,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 12,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 13,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 14,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.715,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 12,
+      "column": 15,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.825,
+        0.495
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 0,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 1,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 2,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 3,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 4,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 5,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 6,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 7,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 8,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.055,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 9,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.165,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 10,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 11,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 12,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.495,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 13,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.605,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 14,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.715,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 13,
+      "column": 15,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.825,
+        0.605
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 0,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 1,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 2,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 3,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 4,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 5,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 6,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 7,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 8,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.055,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 9,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.165,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 10,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.275,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 11,
+      "geometry_id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.385,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 12,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.495,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 13,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.605,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 14,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.715,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 14,
+      "column": 15,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.825,
+        0.715
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 0,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.825,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 1,
+      "geometry_id": "L30_W75",
+      "L_um": 30.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.715,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 2,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.605,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 3,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        -0.495,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 4,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        -0.385,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 5,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.275,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 6,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        -0.165,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 7,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        -0.055,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 8,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.055,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 9,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.165,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 10,
+      "geometry_id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "center_transverse_mm": [
+        0.275,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 11,
+      "geometry_id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "center_transverse_mm": [
+        0.385,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 12,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.495,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 13,
+      "geometry_id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "center_transverse_mm": [
+        0.605,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 14,
+      "geometry_id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.715,
+        0.825
+      ]
+    },
+    {
+      "layer": 3,
+      "row": 15,
+      "column": 15,
+      "geometry_id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "center_transverse_mm": [
+        0.825,
+        0.825
+      ]
+    }
+  ],
+  "candidate_geometry_count": 25,
+  "used_geometry_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "used_geometry_count": 24,
+  "source_sha256": {
+    "system_thz/config.json": "5d84fd3a362cc7f3b49e425bd0036452476591c3f03f876cce37d2aa7a1391ae",
+    "system_thz/library.json": "61fde1173921e37e590aff3023157c4d323cdae9df3d8553d6424a9181081db3",
+    "system_thz/system_results/design.json": "4e9ea8c997aea43f59d75c1795f47b06e82e2e7df6dd1e4eef06a55df96cf586",
+    "config.stage1.json": "1cea59bff33c4feb5c55aaca35e56659de19a0af11f2a40bc280bfcb4e65b94d",
+    "engine_v2/build_unitcell.py": "643be694f523090e7a0f6c99d6bd14b5fbfa9fd31f529afacfac3818ff6f3005"
+  },
+  "configuration_sha256": "7891365fbe87070acd793a5702dc1643ffef5b50a04a93599c167625bbab3afa",
+  "design_snapshot_sha256": "b6e17d6bf26d03584b67f4021685494dc02144ab123443dd0d5984fe8d6585b5",
+  "files": {
+    "glb": {
+      "path": "system.glb",
+      "sha256": "ebe0251564a245e277018faffc11617359230bc360eb8c58476a01cdf7ff897e",
+      "bytes": 493652
+    },
+    "blend": {
+      "path": "../../model3d/system.blend",
+      "sha256": "3634adec2c5ceaf3e2b1327c565541275d4bb418e9ddeedf60c9c713bae61314",
+      "bytes": 155792
+    },
+    "preview": {
+      "path": "preview.png",
+      "sha256": "d8561e58cda6d360d44d9bd49ea93fb84b7c3e3c7865d05f4e4ba2fdbc1b605e",
+      "bytes": 2109701,
+      "kind": "Blender structural render; fallback image, not live 3D or electromagnetic field"
+    },
+    "detail": {
+      "path": "detail.png",
+      "sha256": "d6bdbaa06067aa9e07dcbf3a81ffb3e3054dcd007a1ada1680b514bf4e2d7fe5",
+      "bytes": 1969971,
+      "kind": "Blender orthographic structural detail of L1; real frozen design geometry, not SEM or FDTD field",
+      "scale_bar_mm": 0.5,
+      "scale_bar_plane": "orthographic image plane",
+      "geometry_source": "frozen design C, L1",
+      "cell_count": 256
+    }
+  },
+  "limits": [
+    "物理参数采用当前假设模型，非已确认的目标论文原值。",
+    "模型展示冻结设计C，修改本配置只改变展示模型，不会重训练或改变网页仿真密钥。",
+    "每层256个长宽均来自同一真实几何索引；每层柱合并为独立网格的256个不连接块，不简化柱数。",
+    "传播箭头、偏振符号及测量面边框均为辅助示意，非FDTD电磁场，不代表实际已安装探测器。",
+    "硅柱与基底统一深灰材质；粗糙度及可见光IOR是展示近似，没有新增或改动FDTD材料参数。"
+  ]
+}
