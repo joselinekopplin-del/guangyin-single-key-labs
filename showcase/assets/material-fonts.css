@@ -28,7 +28,7 @@ strong, b { font-weight: 600; }
 .brand { font-size: 24px; letter-spacing: -.025em; }
 .brand strong { font-weight: 600; }
 .brand span, .brand small { letter-spacing: 0; font-size: 14px; }
-.rail-name { font-size: 24px; letter-spacing: -.04em; }
+.rail-name { font-size: 20px; letter-spacing: -.025em; white-space: nowrap; }
 .eyebrow { font-size: 13px; letter-spacing: .035em; font-weight: 600; }
 button, .button, .btn { font-size: 15px; font-weight: 500; letter-spacing: .01em; }
 .hero-actions .button, .hero-actions button { font-size: 16px; }

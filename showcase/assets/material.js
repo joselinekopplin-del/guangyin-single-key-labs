@@ -11,7 +11,7 @@
    const active=a.dataset.view===view;a.classList.toggle('active',active);
    if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   }
-  document.body.dataset.view=view;document.dispatchEvent(new CustomEvent('material-view',{detail:view}));document.title=title[view]+' · 光隐阶段成果';
+  document.body.dataset.view=view;document.dispatchEvent(new CustomEvent('material-view',{detail:view}));document.title=title[view]+' · Trikey';
   const hash=structureAnchor?'structure':view;
   if(historyEntry&&location.hash!=='#'+hash)history.pushState({view},'', '#'+hash);
   if(scroll){if(structureAnchor)requestAnimationFrame(()=>document.getElementById('structure').scrollIntoView({block:'start',behavior:'instant'}));else window.scrollTo({top:0,behavior:'instant'});}
