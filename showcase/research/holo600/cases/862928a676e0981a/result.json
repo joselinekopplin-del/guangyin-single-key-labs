@@ -1,0 +1,89 @@
+{
+  "schema": "trikey.holo600.result.v1",
+  "job_id": "862928a676e0981a",
+  "keys": {
+    "alpha_deg": 90.0,
+    "theta_deg": 90.0,
+    "d23_m": 0.01
+  },
+  "reference_enabled": false,
+  "model_version": "holo600-diagonal-jones-asm-v1",
+  "design_sha256": "2c05e3cff4787f4cb201b1f0bdeecd11dcb35a234e83c19623396a2431626245",
+  "core_sha256": "051df16fc010dfc55b4fbded3e72b20796f2d7242240477dfc25dd484e78a3d5",
+  "frequency_Hz": 700000000000.0,
+  "period_m": 0.00011,
+  "aperture_m": 0.066,
+  "grid": 1536,
+  "n": 600,
+  "metrics": {
+    "NCC": 0.06226542248000752,
+    "PSNR_dB": 11.93086361877588,
+    "SSIM": 0.023371057508620934,
+    "MSE_absolute": 6.7928534700847995e-15,
+    "data_range": 3.255137244195794e-07,
+    "captured_energy": 0.009003446412979304,
+    "target_energy": 0.00933085053704568,
+    "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+  },
+  "power": [
+    {
+      "before": 1.0000000111176632,
+      "after_sheet": 0.917584517697037,
+      "after_propagation": 0.23945383140245008
+    },
+    {
+      "before": 0.23945383140245008,
+      "after_sheet": 0.1973699753073256,
+      "after_propagation": 0.053243303738429934
+    },
+    {
+      "before": 0.053243303738429934,
+      "after_sheet": 0.03890221657289691,
+      "after_propagation": 0.010042568345928917
+    }
+  ],
+  "kernel_hashes": [
+    "229e31c2d1e5a46f8e7d5f6a91f7a51749e272a58b63bd7ec465fbdaad2b3728",
+    "1c0afd2d977e0d5c25edd252bbe827222880ea6da0962cf799de3ea0280d424c",
+    "229e31c2d1e5a46f8e7d5f6a91f7a51749e272a58b63bd7ec465fbdaad2b3728"
+  ],
+  "propagation_seconds": 0.8715536999999998,
+  "elapsed_seconds": 1.3589397000000005,
+  "holography": null,
+  "images": {
+    "target": "research/holo600/target.png",
+    "detector": "research/holo600/cases/862928a676e0981a/detector.png"
+  },
+  "created_at": "2026-11-01T11:48:45.423327+08:00",
+  "precomputed": true,
+  "real_compute": false,
+  "mode": "precomputed",
+  "record_kind": "frozen_scan_point",
+  "downloads": {
+    "metadata": "research/holo600/cases/862928a676e0981a/result.json"
+  },
+  "display_scale": {
+    "target_detector_reconstruction_vmin": 0,
+    "target_detector_reconstruction_vmax": 3.255137244195794e-07,
+    "detector_pixels_above_scale": 20,
+    "preview": "8-bit palette PNG for display; all metrics from full precision saved field"
+  },
+  "scope": "已保存的实际角谱传播计算。页面切换不重新求解；当前近似模型采样验收仍FAIL。",
+  "provenance": {
+    "raw_sha256": "3f2e6f7f0b84eed9b511df92c99bcb854c7a95cb42ff4342e6e7c74fd619f468",
+    "scan_summary_sha256": "038db987e4b7838ba805cb73e643c21ec1a981d23f7e4c403a627ac1b96c6ed4",
+    "raw_record_id": "862928a676e0981a",
+    "raw_field_in_public_bundle": false,
+    "sources": {
+      "design": "2c05e3cff4787f4cb201b1f0bdeecd11dcb35a234e83c19623396a2431626245",
+      "config": "72da9ed40931374cb17d3049bd40e0ed1838dd5a8b1813607c27dbeec10f8e90",
+      "core": "051df16fc010dfc55b4fbded3e72b20796f2d7242240477dfc25dd484e78a3d5",
+      "evaluation": "9a839d1c5ec183db01d6d3e0fd42621d1746b7de9b4d81ec4c5f20d47866ea53",
+      "holography": "0243cfe23f499a38206642401a343bd0355ce42096bc13f10a58b76344ec52f1"
+    }
+  },
+  "available_planes": [
+    "detector"
+  ],
+  "phase_warning": "本参数点没有独立归档第三层出口相位图；不以其他条件替代。"
+}

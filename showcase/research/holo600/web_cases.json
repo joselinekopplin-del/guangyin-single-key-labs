@@ -1,0 +1,57 @@
+{
+  "schema": "trikey.holo600.webarchives.public.v1",
+  "mode": "precomputed",
+  "cases": [
+    {
+      "id": "20261101_114818_c2a01892",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "created_at": "2026-11-01T11:48:20.289062+08:00",
+      "result_url": "research/holo600/web_runs/20261101_114818_c2a01892/result.json"
+    },
+    {
+      "id": "20261101_114821_991b0282",
+      "keys": {
+        "alpha_deg": 90.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "created_at": "2026-11-01T11:48:22.944981+08:00",
+      "result_url": "research/holo600/web_runs/20261101_114821_991b0282/result.json"
+    },
+    {
+      "id": "20261101_114823_c1ecfce1",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "created_at": "2026-11-01T11:48:25.825971+08:00",
+      "result_url": "research/holo600/web_runs/20261101_114823_c1ecfce1/result.json"
+    },
+    {
+      "id": "20261101_114828_fa2c4cfd",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.0075
+      },
+      "created_at": "2026-11-01T11:48:30.617477+08:00",
+      "result_url": "research/holo600/web_runs/20261101_114828_fa2c4cfd/result.json"
+    },
+    {
+      "id": "20261101_114826_bbb9a171",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.0070999999999999995
+      },
+      "created_at": "2026-11-01T11:48:28.583374+08:00",
+      "result_url": "research/holo600/web_runs/20261101_114826_bbb9a171/result.json"
+    }
+  ],
+  "scope": "five frozen QA calculations only; excludes subsequent private user-operated sessions"
+}

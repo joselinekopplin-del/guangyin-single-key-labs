@@ -1,0 +1,106 @@
+{
+  "schema": "trikey.holo600.result.v1",
+  "job_id": "49516b3949a7c093",
+  "keys": {
+    "alpha_deg": 0.0,
+    "theta_deg": 0.0,
+    "d23_m": 0.006
+  },
+  "reference_enabled": true,
+  "model_version": "holo600-diagonal-jones-asm-v1",
+  "design_sha256": "2c05e3cff4787f4cb201b1f0bdeecd11dcb35a234e83c19623396a2431626245",
+  "core_sha256": "051df16fc010dfc55b4fbded3e72b20796f2d7242240477dfc25dd484e78a3d5",
+  "frequency_Hz": 700000000000.0,
+  "period_m": 0.00011,
+  "aperture_m": 0.066,
+  "grid": 1536,
+  "n": 600,
+  "metrics": {
+    "NCC": 0.7489584790915927,
+    "PSNR_dB": 12.017687093238948,
+    "SSIM": 0.034449510550530145,
+    "MSE_absolute": 6.6584002663533716e-15,
+    "data_range": 3.255137244195794e-07,
+    "captured_energy": 0.019706752927022002,
+    "target_energy": 0.00933085053704568,
+    "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+  },
+  "power": [
+    {
+      "before": 1.0000000111176632,
+      "after_sheet": 0.9171035955341722,
+      "after_propagation": 0.2692454838167139
+    },
+    {
+      "before": 0.2692454838167139,
+      "after_sheet": 0.22562492617965363,
+      "after_propagation": 0.07352319442973247
+    },
+    {
+      "before": 0.07352319442973247,
+      "after_sheet": 0.061556607174359255,
+      "after_propagation": 0.020945127779949644
+    }
+  ],
+  "kernel_hashes": [
+    "229e31c2d1e5a46f8e7d5f6a91f7a51749e272a58b63bd7ec465fbdaad2b3728",
+    "bd13b09952c0941abd39a7c0b5d0a422651423d2db5c37bbd11ae582af6c008c",
+    "229e31c2d1e5a46f8e7d5f6a91f7a51749e272a58b63bd7ec465fbdaad2b3728"
+  ],
+  "propagation_seconds": 0.9324324999999999,
+  "elapsed_seconds": 1.3375779,
+  "holography": {
+    "field_relative_error": 2.8429931830942223e-07,
+    "assumption": "ideal known coherent reference; four phase steps per polarization, eight exposures; no camera noise",
+    "reference_amplitude": 0.0016666666666666668
+  },
+  "images": {
+    "target": "research/holo600/target.png",
+    "detector": "research/holo600/cases/49516b3949a7c093/detector.png",
+    "layer3": "research/holo600/web_runs/20261101_114823_c1ecfce1/layer3.png",
+    "phase_x": "research/holo600/web_runs/20261101_114823_c1ecfce1/phase_x.png",
+    "phase_y": "research/holo600/web_runs/20261101_114823_c1ecfce1/phase_y.png",
+    "hologram_x": "research/holo600/web_runs/20261101_114823_c1ecfce1/hologram_x.png",
+    "reconstruction": "research/holo600/web_runs/20261101_114823_c1ecfce1/reconstruction.png"
+  },
+  "created_at": "2026-11-01T11:48:05.976466+08:00",
+  "precomputed": true,
+  "real_compute": false,
+  "mode": "precomputed",
+  "record_kind": "frozen_scan_point",
+  "downloads": {
+    "metadata": "research/holo600/cases/49516b3949a7c093/result.json"
+  },
+  "display_scale": {
+    "target_detector_reconstruction_vmin": 0,
+    "target_detector_reconstruction_vmax": 3.255137244195794e-07,
+    "detector_pixels_above_scale": 13352,
+    "preview": "8-bit palette PNG for display; all metrics from full precision saved field"
+  },
+  "scope": "已保存的实际角谱传播计算。页面切换不重新求解；当前近似模型采样验收仍FAIL。",
+  "provenance": {
+    "raw_sha256": "99f2b02ab1c9ae8433fd2982dd3a3f66fe8c6f733be4732de8fd325eeeb841b5",
+    "scan_summary_sha256": "038db987e4b7838ba805cb73e643c21ec1a981d23f7e4c403a627ac1b96c6ed4",
+    "raw_record_id": "49516b3949a7c093",
+    "raw_field_in_public_bundle": false,
+    "sources": {
+      "design": "2c05e3cff4787f4cb201b1f0bdeecd11dcb35a234e83c19623396a2431626245",
+      "config": "72da9ed40931374cb17d3049bd40e0ed1838dd5a8b1813607c27dbeec10f8e90",
+      "core": "051df16fc010dfc55b4fbded3e72b20796f2d7242240477dfc25dd484e78a3d5",
+      "evaluation": "9a839d1c5ec183db01d6d3e0fd42621d1746b7de9b4d81ec4c5f20d47866ea53",
+      "holography": "0243cfe23f499a38206642401a343bd0355ce42096bc13f10a58b76344ec52f1"
+    },
+    "auxiliary_web_record": {
+      "id": "20261101_114823_c1ecfce1",
+      "source_fields_sha256": "998c77ffa4e671ac33572a20f315d8ddab472ac599d0dc13e7eb5139b7777c87",
+      "same_physical_key": true,
+      "field_reference": "same frozen model/design, separate actual saved forward run"
+    }
+  },
+  "available_planes": [
+    "detector",
+    "layer3_physical_exit"
+  ],
+  "phase_warning": "arg Ex and arg Ey at physical layer3 exit; amplitude below1e-7 of global peak masked; no total-field scalar phase",
+  "layer3_output_plane": "physical exit: 1mm after entrance contrast plane; detector remains5mm from entrance, no double-count"
+}

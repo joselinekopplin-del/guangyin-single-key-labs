@@ -1,7 +1,7 @@
 /* Material 成果页导航与展示交互；不参与传播、解码或误码计算。 */
 (()=>{'use strict';
- const names=['overview','lab','pilots','data','boundaries'];
- const title={overview:'成果展示',lab:'交互演示',pilots:'公开导频',data:'器件数据',boundaries:'研究边界'};
+ const names=['overview','lab','holo600','pilots','data','boundaries'];
+ const title={overview:'成果展示',lab:'交互演示',holo600:'动态全息',pilots:'公开导频',data:'器件数据',boundaries:'研究边界'};
  const normalize=v=>v==='research'?'data':names.includes(v)?v:'overview';
  function show(view,{historyEntry=true,scroll=true}={}){
   const structureAnchor=view==='structure';

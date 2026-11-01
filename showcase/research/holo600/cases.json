@@ -1,0 +1,1665 @@
+{
+  "schema": "trikey.holo600.cases.public.v1",
+  "mode": "precomputed",
+  "default_id": "49516b3949a7c093",
+  "count": 72,
+  "cases": [
+    {
+      "id": "49516b3949a7c093",
+      "label": "设计参数 · 匹配",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7489584790915927,
+        "PSNR_dB": 12.017687093238948,
+        "SSIM": 0.034449510550530145,
+        "MSE_absolute": 6.6584002663533716e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.019706752927022002,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/49516b3949a7c093/result.json",
+      "created_at": "2026-11-01T11:48:05.976466+08:00",
+      "has_reference_measurement": true,
+      "raw_sha256": "99f2b02ab1c9ae8433fd2982dd3a3f66fe8c6f733be4732de8fd325eeeb841b5"
+    },
+    {
+      "id": "0d9bbdff1841b085",
+      "label": "α 0° / θ₂ 0° / d₂₃ 6.05 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.00605
+      },
+      "metrics": {
+        "NCC": 0.7439317336430294,
+        "PSNR_dB": 12.072926874458394,
+        "SSIM": 0.034021594160157737,
+        "MSE_absolute": 6.5742455469876864e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01961777041953946,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/0d9bbdff1841b085/result.json",
+      "created_at": "2026-11-01T11:48:33.968603+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "dffaab3cda707dffd0ba0510ec90af2a16667362f3b0215c2dc628bd08caf91b"
+    },
+    {
+      "id": "b78cac10f11162f5",
+      "label": "α 0° / θ₂ 0° / d₂₃ 6.2 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006200000000000001
+      },
+      "metrics": {
+        "NCC": 0.6733557774727977,
+        "PSNR_dB": 12.428028697232032,
+        "SSIM": 0.029867040734627832,
+        "MSE_absolute": 6.0580902455370854e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.018595456865357383,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/b78cac10f11162f5/result.json",
+      "created_at": "2026-11-01T11:48:35.191721+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "f60e70484c5c53aa44b8aacfd9132a2e9c3b3ec5fe7d0b41f762b8c727173380"
+    },
+    {
+      "id": "e7b3e7fcd460642a",
+      "label": "α 0° / θ₂ 0° / d₂₃ 6.5 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006500000000000001
+      },
+      "metrics": {
+        "NCC": 0.40696323193628364,
+        "PSNR_dB": 11.782052255306095,
+        "SSIM": 0.02041537047781138,
+        "MSE_absolute": 7.02964482631544e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01641026674248714,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/e7b3e7fcd460642a/result.json",
+      "created_at": "2026-11-01T11:48:36.427143+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "33dccb1edab59b42d03ec65ab1cb53ea0170723c8dbebb8c31aaf62ac93d894a"
+    },
+    {
+      "id": "7854b15de4395e4c",
+      "label": "α 0° / θ₂ 0° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.3384102061408009,
+        "PSNR_dB": 11.571083072598176,
+        "SSIM": 0.018409460067045726,
+        "MSE_absolute": 7.379557160740105e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.015836731437137725,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/7854b15de4395e4c/result.json",
+      "created_at": "2026-11-01T11:48:37.657400+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "312ea73fa8cef1f9c1c1dc251ff84f2b75918fc3e2082d95dd457a157ccd0fb5"
+    },
+    {
+      "id": "545bff8d6b77bec9",
+      "label": "α 0° / θ₂ 0° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.3044404738808782,
+        "PSNR_dB": 11.540808760395972,
+        "SSIM": 0.01885699342062126,
+        "MSE_absolute": 7.431179165907898e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.015336131694383507,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/545bff8d6b77bec9/result.json",
+      "created_at": "2026-11-01T11:48:38.889696+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "93dc502eb377a9eb93618dbcdc6aa470939cbe265f213ad2d32f6fe6f2c96827"
+    },
+    {
+      "id": "9a2b96fcb4a976a2",
+      "label": "α 0° / θ₂ 0° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.29762733923315965,
+        "PSNR_dB": 11.554919329374258,
+        "SSIM": 0.020242347251149793,
+        "MSE_absolute": 7.407073862087182e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.015166695082758164,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/9a2b96fcb4a976a2/result.json",
+      "created_at": "2026-11-01T11:48:40.125662+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "8de2c0e4e3052ef05c57bd7fa2da84ed189d24fc0b4eef8e5f68c2fab78213c6"
+    },
+    {
+      "id": "19f5835eee15d246",
+      "label": "仅改变层间距",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.24099231067146043,
+        "PSNR_dB": 11.40245505239708,
+        "SSIM": 0.018499136078095942,
+        "MSE_absolute": 7.671726348236395e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.014739585379026268,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/19f5835eee15d246/result.json",
+      "created_at": "2026-11-01T11:48:41.385997+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "95fbe027f248f8b71db5d76e248fc1f9b46566b881129fa5f1aafa1957b8732a"
+    },
+    {
+      "id": "ca5dcc899420d421",
+      "label": "α 0° / θ₂ 0.25° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 0.25,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.6582828618998064,
+        "PSNR_dB": 12.99629392229271,
+        "SSIM": 0.028281240121165074,
+        "MSE_absolute": 5.315072784163142e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01751178199086,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/ca5dcc899420d421/result.json",
+      "created_at": "2026-11-01T11:48:20.230207+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "dc4ea02de5a16f5e2857ae9fc3976df4a47d0443231991a8105c7411d22baf5b"
+    },
+    {
+      "id": "fd343505280f9746",
+      "label": "α 0° / θ₂ 1° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 1.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.3396367147450434,
+        "PSNR_dB": 12.405582161196836,
+        "SSIM": 0.020118705864036118,
+        "MSE_absolute": 6.0894825767155784e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.012937143384219264,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/fd343505280f9746/result.json",
+      "created_at": "2026-11-01T11:48:21.610397+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "e1098a30c07c3983498f13814426cb5a9a1146e2c1ac88a402b397a250c2b394"
+    },
+    {
+      "id": "8451cf3c1691e69a",
+      "label": "α 0° / θ₂ 5° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 5.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.25844227339554376,
+        "PSNR_dB": 12.180954009589067,
+        "SSIM": 0.019913701429038554,
+        "MSE_absolute": 6.412733728205881e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.012206658158613421,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/8451cf3c1691e69a/result.json",
+      "created_at": "2026-11-01T11:48:23.064584+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "ec5554e32f9a4e366ce894826ab196c7ad956b0e526c06708d0ed60aa2ba3547"
+    },
+    {
+      "id": "33801040674cc879",
+      "label": "α 0° / θ₂ 5° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 5.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.22236831000415744,
+        "PSNR_dB": 12.088290363758896,
+        "SSIM": 0.01980162061737491,
+        "MSE_absolute": 6.551029753930204e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011838564153876614,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/33801040674cc879/result.json",
+      "created_at": "2026-11-01T11:49:18.206093+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "89c4e7853fd9c77fa08dbcccf9085fe993fa2adc96b1a6e4495009d583d43f37"
+    },
+    {
+      "id": "ae0f29b57d282b0c",
+      "label": "α 0° / θ₂ 5° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 5.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.2241062959036612,
+        "PSNR_dB": 12.115226449072745,
+        "SSIM": 0.020494854956234303,
+        "MSE_absolute": 6.5105242880736095e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011665683966104597,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/ae0f29b57d282b0c/result.json",
+      "created_at": "2026-11-01T11:49:19.463347+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "94f9d959f45a0596ee221dc30246af11c396ade040855e70788de0b872ef1744"
+    },
+    {
+      "id": "7587b62e780920bb",
+      "label": "α 0° / θ₂ 5° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 5.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.21706028043913492,
+        "PSNR_dB": 12.12392466871718,
+        "SSIM": 0.02203376411078629,
+        "MSE_absolute": 6.4974978048696825e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011365716324672207,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/7587b62e780920bb/result.json",
+      "created_at": "2026-11-01T11:49:20.726343+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "43c9d997aabf4840c5a2a9ae3383df02cdb8e2e8667e9618d59fb8b937614250"
+    },
+    {
+      "id": "e6b7d9eec7f5e195",
+      "label": "α 0° / θ₂ 5° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 5.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.20141723524155272,
+        "PSNR_dB": 12.1118699679756,
+        "SSIM": 0.02175495544587692,
+        "MSE_absolute": 6.51555794592949e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01106330526730243,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/e6b7d9eec7f5e195/result.json",
+      "created_at": "2026-11-01T11:49:21.991219+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "48d53fd4c832f06c15ac279495ca56b241d5233ceb454a3d2cfbf68b9a0f4fe1"
+    },
+    {
+      "id": "34726a3a73c4c582",
+      "label": "α 0° / θ₂ 15° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 15.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.2862972354095328,
+        "PSNR_dB": 12.376598454206766,
+        "SSIM": 0.026860693375828443,
+        "MSE_absolute": 6.130258143150664e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.012167117012719787,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/34726a3a73c4c582/result.json",
+      "created_at": "2026-11-01T11:48:24.510860+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "5c43bee57f112c7700599135c2a409bce47ca69eeb39704a8badcb16c51a0407"
+    },
+    {
+      "id": "c59705811ed45e90",
+      "label": "α 0° / θ₂ 15° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 15.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.23393616587840502,
+        "PSNR_dB": 12.205905281675228,
+        "SSIM": 0.025873903293115705,
+        "MSE_absolute": 6.3759966492347955e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011815437056048697,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/c59705811ed45e90/result.json",
+      "created_at": "2026-11-01T11:49:23.304690+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "7e0f0770a629afb98a71707c1e344aa76cd4e43cd85c0d35fba3b2f3392fa073"
+    },
+    {
+      "id": "d220061dffc8bc81",
+      "label": "α 0° / θ₂ 15° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 15.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.2250436792110663,
+        "PSNR_dB": 12.215482149947448,
+        "SSIM": 0.02499484963845594,
+        "MSE_absolute": 6.361952076639948e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011518570318727784,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/d220061dffc8bc81/result.json",
+      "created_at": "2026-11-01T11:49:24.582132+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "35c8e2d1b98e8fa4d0b3710cbf8eeae8c1a2eb8adf5b1af47352fab163ba4de7"
+    },
+    {
+      "id": "c2c7da682d74a357",
+      "label": "α 0° / θ₂ 15° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 15.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.227160656049317,
+        "PSNR_dB": 12.256028360278286,
+        "SSIM": 0.026396822694579866,
+        "MSE_absolute": 6.3028325949741035e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01122021377697151,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/c2c7da682d74a357/result.json",
+      "created_at": "2026-11-01T11:49:25.834198+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "273932d8ac5aca7fc29f7c82ea73de18a9fbf76a246b661300afa09e600dfd41"
+    },
+    {
+      "id": "53563441beb6b747",
+      "label": "α 0° / θ₂ 15° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 15.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.21760948384465073,
+        "PSNR_dB": 12.23762439484897,
+        "SSIM": 0.026208857265602514,
+        "MSE_absolute": 6.329598590006421e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011006565700975905,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/53563441beb6b747/result.json",
+      "created_at": "2026-11-01T11:49:27.077033+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "cd1102dd48abc62c05bcde3d07a76db0b2c4f8de073136600c2b03bda58f9769"
+    },
+    {
+      "id": "e35da70aefe44b95",
+      "label": "α 0° / θ₂ 45° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 45.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.302963396248288,
+        "PSNR_dB": 12.569051862629788,
+        "SSIM": 0.03888891439360442,
+        "MSE_absolute": 5.864532833039317e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.012201804949230453,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/e35da70aefe44b95/result.json",
+      "created_at": "2026-11-01T11:48:25.881807+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "daa2769abd3a490791d5775c7bb56c6418c4125f74d7f225d915e25ccf219d55"
+    },
+    {
+      "id": "c89a77abd7aa272f",
+      "label": "α 0° / θ₂ 45° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 45.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.2449386015221349,
+        "PSNR_dB": 12.389410039267217,
+        "SSIM": 0.03497166073541295,
+        "MSE_absolute": 6.112200673476249e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01185520257152851,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/c89a77abd7aa272f/result.json",
+      "created_at": "2026-11-01T11:49:28.452570+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "23856c5b7f8c7b04a957e24fef8fbd128fe0b9a550e12b02f928946fe561421b"
+    },
+    {
+      "id": "7d675fcba18bc1f7",
+      "label": "α 0° / θ₂ 45° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 45.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.24117459777591135,
+        "PSNR_dB": 12.397349927654574,
+        "SSIM": 0.03381160741165875,
+        "MSE_absolute": 6.1010363925351805e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01161466354811152,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/7d675fcba18bc1f7/result.json",
+      "created_at": "2026-11-01T11:49:29.726199+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "23ad0f74f0acad9f3fce0e4f94c64efcba0ae1d45ecfeff8c2e45604454104c9"
+    },
+    {
+      "id": "3d5b9c19feb7bcfd",
+      "label": "α 0° / θ₂ 45° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 45.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.227593108973314,
+        "PSNR_dB": 12.370901289667351,
+        "SSIM": 0.03222046067613502,
+        "MSE_absolute": 6.1383052191585704e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011367567753631505,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/3d5b9c19feb7bcfd/result.json",
+      "created_at": "2026-11-01T11:49:31.010887+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "fd90c6856c190b6bb5a0861fdc99d6091304b4e6b2699f56df5a85e0abfc2fac"
+    },
+    {
+      "id": "4467a2a23f8d0703",
+      "label": "α 0° / θ₂ 45° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 45.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.22417151131680516,
+        "PSNR_dB": 12.371608863331948,
+        "SSIM": 0.030991080328187905,
+        "MSE_absolute": 6.137305218121831e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.0111866636110577,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/4467a2a23f8d0703/result.json",
+      "created_at": "2026-11-01T11:49:32.325927+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "633890b1e707c9692effa9b2e44da6d10e184e7f19ed8b9cb9a6838c6b1b7f63"
+    },
+    {
+      "id": "e4e6ecb9c730a214",
+      "label": "仅改变第二层转角",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 90.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.16402514618824807,
+        "PSNR_dB": 11.931783338185335,
+        "SSIM": 0.01625251836320652,
+        "MSE_absolute": 6.79141507794297e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011650276014775014,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/e4e6ecb9c730a214/result.json",
+      "created_at": "2026-11-01T11:48:27.311580+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "617e4696a0386563269cf64cce9aab91dfc656d7b4d5935593bcd409cb89096c"
+    },
+    {
+      "id": "9a28b761470e8a42",
+      "label": "α 0° / θ₂ 90° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 90.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.177682834937071,
+        "PSNR_dB": 12.03985896617647,
+        "SSIM": 0.01701396018191548,
+        "MSE_absolute": 6.624494009569017e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011270317839280114,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/9a28b761470e8a42/result.json",
+      "created_at": "2026-11-01T11:49:33.637219+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "5b7ac8efe5f3e4c25ffdb20f3bff7929d7d786c1caa3986f3d111ba0846fec1a"
+    },
+    {
+      "id": "9eceacf4a121013e",
+      "label": "α 0° / θ₂ 90° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 90.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.18184547144322513,
+        "PSNR_dB": 12.080041363736713,
+        "SSIM": 0.018024762361664916,
+        "MSE_absolute": 6.563484620541411e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011027880088202869,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/9eceacf4a121013e/result.json",
+      "created_at": "2026-11-01T11:49:34.888923+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "fd5ad14907fbd768e830610d8fdfd8320bc1381409bf87c4ddcbe8609199b806"
+    },
+    {
+      "id": "cfa9c3ecb6a6c7da",
+      "label": "α 0° / θ₂ 90° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 90.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.17805064814182128,
+        "PSNR_dB": 12.110559385631683,
+        "SSIM": 0.01961318616695252,
+        "MSE_absolute": 6.517524460388077e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.010696053173298886,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/cfa9c3ecb6a6c7da/result.json",
+      "created_at": "2026-11-01T11:49:36.131717+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "203046edd93a78b33ffc75f363f5343a6be7027e2f07a0f8651c6074325e48d1"
+    },
+    {
+      "id": "d43b2991a9987fe4",
+      "label": "α 0° / θ₂ 90° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 90.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.17217202345185592,
+        "PSNR_dB": 12.112082011278979,
+        "SSIM": 0.020115747573664623,
+        "MSE_absolute": 6.515239833045113e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.010478597855234058,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/d43b2991a9987fe4/result.json",
+      "created_at": "2026-11-01T11:49:37.377677+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "7528ca7c1260ed32991ab0ca664aae1f73b10d28966548e2730fb630b9282f04"
+    },
+    {
+      "id": "52f1233f5e300cdc",
+      "label": "α 0° / θ₂ 180° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 180.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.26081157615334105,
+        "PSNR_dB": 12.179644340353617,
+        "SSIM": 0.018504525376736507,
+        "MSE_absolute": 6.4146678597460224e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.012331584751873681,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/52f1233f5e300cdc/result.json",
+      "created_at": "2026-11-01T11:48:28.709403+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "fb674c3111185935e8c64114d2040f3f81da23ed37f35156c99d84d0c6fdc493"
+    },
+    {
+      "id": "644a48b0e7e9a5a8",
+      "label": "α 0° / θ₂ 270° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 270.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.262723649755154,
+        "PSNR_dB": 12.282373110499273,
+        "SSIM": 0.018629330617805282,
+        "MSE_absolute": 6.2647146942464e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01185264538071293,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/644a48b0e7e9a5a8/result.json",
+      "created_at": "2026-11-01T11:48:30.132168+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "7d7385cfdfc3f08f8f1bcaa036bd5101068986b45860208188861e3db779b9b6"
+    },
+    {
+      "id": "86c22b901fb0ef73",
+      "label": "α 0° / θ₂ 359° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 359.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.3443390541637428,
+        "PSNR_dB": 12.436993497673122,
+        "SSIM": 0.020187801420657344,
+        "MSE_absolute": 6.045597902801535e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.012898930606883588,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/86c22b901fb0ef73/result.json",
+      "created_at": "2026-11-01T11:48:31.576168+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "1daaf5d644457289beb2a19c210440dbe70e550932153ccb34364f1418d11f05"
+    },
+    {
+      "id": "5ca34ab85800a505",
+      "label": "α 0° / θ₂ 360° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 0.0,
+        "theta_deg": 360.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7489584790915927,
+        "PSNR_dB": 12.017687093238948,
+        "SSIM": 0.034449510550530145,
+        "MSE_absolute": 6.6584002663533716e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.019706752927022002,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/5ca34ab85800a505/result.json",
+      "created_at": "2026-11-01T11:48:32.737468+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "c78cefcffd53f38959493b7348771c637e8cd1ac15d3a85338d4e33146edf909"
+    },
+    {
+      "id": "e9be3f1d3b55892e",
+      "label": "α 5° / θ₂ 0° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 5.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7489364266216058,
+        "PSNR_dB": 12.088220067483439,
+        "SSIM": 0.03443260520402489,
+        "MSE_absolute": 6.5511357918234585e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.019630152473779878,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/e9be3f1d3b55892e/result.json",
+      "created_at": "2026-11-01T11:48:07.215931+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "b5393e57d50073fc46558afd8dd17adb70c478853dd903c4c83272442266af5e"
+    },
+    {
+      "id": "0a49ac460f367026",
+      "label": "α 15° / θ₂ 0° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 15.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7486449589151994,
+        "PSNR_dB": 12.638880785389153,
+        "SSIM": 0.03444210149507839,
+        "MSE_absolute": 5.770992764225632e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01903125306469657,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/0a49ac460f367026/result.json",
+      "created_at": "2026-11-01T11:48:08.454057+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "8a16937bfebcd916da037a376e3d855247c4d83a66ffd2f84e66349fe105cd5a"
+    },
+    {
+      "id": "27aed064303db331",
+      "label": "α 15° / θ₂ 15° / d₂₃ 6.5 mm",
+      "keys": {
+        "alpha_deg": 15.0,
+        "theta_deg": 15.0,
+        "d23_m": 0.006500000000000001
+      },
+      "metrics": {
+        "NCC": 0.22930058651040258,
+        "PSNR_dB": 12.225046054929178,
+        "SSIM": 0.024890706880263895,
+        "MSE_absolute": 6.347957388428267e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.011813469056269425,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/27aed064303db331/result.json",
+      "created_at": "2026-11-01T11:48:42.722455+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "c4efdda65757e87bca3905c16fb64b6a5be120b8bbf30339c470f7eb042bd236"
+    },
+    {
+      "id": "6a191493455aacea",
+      "label": "α 30° / θ₂ 0° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 30.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7455020305326242,
+        "PSNR_dB": 14.209756529250061,
+        "SSIM": 0.035288214751757696,
+        "MSE_absolute": 4.0194159854890954e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.017185755578708814,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/6a191493455aacea/result.json",
+      "created_at": "2026-11-01T11:48:09.719601+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "0e3b475ab59c37f70b2b24cb097a734f0f74dcbeae819d2b1758beba150c0f25"
+    },
+    {
+      "id": "d5929437169467f3",
+      "label": "α 30° / θ₂ 0° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 30.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.33783360934928797,
+        "PSNR_dB": 12.259193089815529,
+        "SSIM": 0.017459955328757437,
+        "MSE_absolute": 6.298241356674652e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01421435753379357,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/d5929437169467f3/result.json",
+      "created_at": "2026-11-01T11:48:47.935177+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "ecc6943785cbc50a28db2d6c6e138a4f2b56ba0c83b0da5a3a2999f90f1321b1"
+    },
+    {
+      "id": "f4930b9381a16ef6",
+      "label": "α 30° / θ₂ 0° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 30.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.30592091563168977,
+        "PSNR_dB": 12.186439125308615,
+        "SSIM": 0.017628612305980826,
+        "MSE_absolute": 6.404639592835696e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.013784079866661888,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/f4930b9381a16ef6/result.json",
+      "created_at": "2026-11-01T11:48:49.187758+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "4c180067d89a7039ac70bdb6b0d95a7106651347854784e1498f06816cfe393a"
+    },
+    {
+      "id": "c525875df52595c7",
+      "label": "α 30° / θ₂ 0° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 30.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.2990457858344534,
+        "PSNR_dB": 12.183958798913446,
+        "SSIM": 0.01868559556477902,
+        "MSE_absolute": 6.40829843134752e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.013604043741615808,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/c525875df52595c7/result.json",
+      "created_at": "2026-11-01T11:48:50.452752+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "79a18046881e97f8e0f86cfbe83d2e78a71a2066556ecbf9ecec7f50fe2a0a55"
+    },
+    {
+      "id": "de11ca814367b66e",
+      "label": "α 30° / θ₂ 0° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 30.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.24358720740815037,
+        "PSNR_dB": 12.006119157116647,
+        "SSIM": 0.0173315335982547,
+        "MSE_absolute": 6.676159327177803e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01322168345438571,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/de11ca814367b66e/result.json",
+      "created_at": "2026-11-01T11:48:51.705599+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "69ac1916ff57351947d9c690e8cb8d93c379e3fb7e4fce6e0ad1902a627fa23d"
+    },
+    {
+      "id": "d3fc2fb072ad050d",
+      "label": "α 45° / θ₂ 0° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 45.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7242851843445932,
+        "PSNR_dB": 15.174540565659843,
+        "SSIM": 0.03614936358164673,
+        "MSE_absolute": 3.218730028961168e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.014664758069779679,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/d3fc2fb072ad050d/result.json",
+      "created_at": "2026-11-01T11:48:11.008888+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "2508f5053e371be9feadd420165e8965c45ccf66e2c8ef6393c0c01b396f0220"
+    },
+    {
+      "id": "37a7deb14fdd39a3",
+      "label": "α 45° / θ₂ 45° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 45.0,
+        "theta_deg": 45.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.20657144472572703,
+        "PSNR_dB": 12.356242831335024,
+        "SSIM": 0.03477003615736112,
+        "MSE_absolute": 6.159058444128829e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.010755122932257156,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/37a7deb14fdd39a3/result.json",
+      "created_at": "2026-11-01T11:48:44.049829+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "dfd804bad6aed5cd533f84e9adafb01f95a8912c94ecf947f679dcef42fdc26e"
+    },
+    {
+      "id": "de29bff1584cbdb6",
+      "label": "α 60° / θ₂ 0° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 60.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.595356718162028,
+        "PSNR_dB": 13.961020872745383,
+        "SSIM": 0.0316117272947779,
+        "MSE_absolute": 4.256342044088418e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.012143762428578016,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/de29bff1584cbdb6/result.json",
+      "created_at": "2026-11-01T11:48:12.352555+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "fd68da9b513a63000e16761acabda270408d006d1ffb47aecefbcd670c32a037"
+    },
+    {
+      "id": "4470c0fbdca5a4e8",
+      "label": "α 60° / θ₂ 0° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 60.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.23383309596707577,
+        "PSNR_dB": 12.430268814944021,
+        "SSIM": 0.018586436022945005,
+        "MSE_absolute": 6.054966250997288e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.010969610897132422,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/4470c0fbdca5a4e8/result.json",
+      "created_at": "2026-11-01T11:48:52.989004+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "92ff97d00836eabb3426c4c9d286af8120090a00bbd666c776f4f1ef12756802"
+    },
+    {
+      "id": "1278b8aa30d4d9d4",
+      "label": "α 60° / θ₂ 0° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 60.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.22002662436506895,
+        "PSNR_dB": 12.403858863335628,
+        "SSIM": 0.018865948782305113,
+        "MSE_absolute": 6.091899387207566e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.010679977290468115,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/1278b8aa30d4d9d4/result.json",
+      "created_at": "2026-11-01T11:48:54.242778+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "375ef36235c5a85b8c4d0e6efd551f3bfe71f5d32ae26a84f29e59ba991c975f"
+    },
+    {
+      "id": "f021b86a3e6fa6b2",
+      "label": "α 60° / θ₂ 0° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 60.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.2152697306272375,
+        "PSNR_dB": 12.39879487810962,
+        "SSIM": 0.01991568092545306,
+        "MSE_absolute": 6.099006841321165e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.010478742191043727,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/f021b86a3e6fa6b2/result.json",
+      "created_at": "2026-11-01T11:48:55.489405+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "e1366ddca1859d538d1fc8f348bd31562b19985bbbf2d57a911ef79e6e8e94dd"
+    },
+    {
+      "id": "5ed09b49b1f72af7",
+      "label": "α 60° / θ₂ 0° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 60.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.18086300816235398,
+        "PSNR_dB": 12.315532892415268,
+        "SSIM": 0.019812060164644745,
+        "MSE_absolute": 6.217063727347697e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01018588073924386,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/5ed09b49b1f72af7/result.json",
+      "created_at": "2026-11-01T11:48:56.733728+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "89282174f25e404c885645b510a4e4e5d2ce198553b09384f223eb143b32fbd9"
+    },
+    {
+      "id": "8324db634f6e77b2",
+      "label": "仅改变入射偏振",
+      "keys": {
+        "alpha_deg": 90.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": -0.0030260529805684554,
+        "PSNR_dB": 11.7191193304439,
+        "SSIM": 0.017320848691191444,
+        "MSE_absolute": 7.132251931205818e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.009622765610309596,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/8324db634f6e77b2/result.json",
+      "created_at": "2026-11-01T11:48:13.620334+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "cd33f2157835acbdac637e17d5c9d04261811cbaf2deed877d9ffdf3f5149338"
+    },
+    {
+      "id": "b41c544716c156be",
+      "label": "α 90° / θ₂ 0° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 90.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.041723978799505,
+        "PSNR_dB": 11.867299038171772,
+        "SSIM": 0.01931846163739426,
+        "MSE_absolute": 6.893006761519657e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.009347237404450644,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/b41c544716c156be/result.json",
+      "created_at": "2026-11-01T11:48:57.981849+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "adab1757b7619c8ae60fa834cbf771259e20a1d1605ac6952dba47d478cbf521"
+    },
+    {
+      "id": "e9ae6c91842939a1",
+      "label": "α 90° / θ₂ 0° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 90.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.05408756983457803,
+        "PSNR_dB": 11.92265895867031,
+        "SSIM": 0.02046370929077628,
+        "MSE_absolute": 6.805698609639581e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.009127925843924927,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/e9ae6c91842939a1/result.json",
+      "created_at": "2026-11-01T11:48:59.231010+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "8c1ee078d3d7ef38daf9a24d7efb1c0295c1c8319b1f182cbbdf37c04e26cf33"
+    },
+    {
+      "id": "eae9271537b8a35e",
+      "label": "α 90° / θ₂ 0° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 90.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.05258477349951953,
+        "PSNR_dB": 11.9336539097662,
+        "SSIM": 0.021444704720875,
+        "MSE_absolute": 6.7884905433021085e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.008916091241404592,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/eae9271537b8a35e/result.json",
+      "created_at": "2026-11-01T11:49:00.497425+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "6d5f0f43ffc6376ded8ce97de69d2682c1514093eb5116bb038662ba26d68987"
+    },
+    {
+      "id": "ae6c41ff53068d6f",
+      "label": "α 90° / θ₂ 0° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 90.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.053975551917961676,
+        "PSNR_dB": 11.956074556367165,
+        "SSIM": 0.02279587545149086,
+        "MSE_absolute": 6.75353496517466e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.008667979241200833,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/ae6c41ff53068d6f/result.json",
+      "created_at": "2026-11-01T11:49:01.756390+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "f24221d3aed86a5b855c6c3d9dc4f36a92ebc2a78bd1868b957a721a6af4e192"
+    },
+    {
+      "id": "862928a676e0981a",
+      "label": "三项同时改变",
+      "keys": {
+        "alpha_deg": 90.0,
+        "theta_deg": 90.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.06226542248000752,
+        "PSNR_dB": 11.93086361877588,
+        "SSIM": 0.023371057508620934,
+        "MSE_absolute": 6.7928534700847995e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.009003446412979304,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/862928a676e0981a/result.json",
+      "created_at": "2026-11-01T11:48:45.423327+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "3f2e6f7f0b84eed9b511df92c99bcb854c7a95cb42ff4342e6e7c74fd619f468"
+    },
+    {
+      "id": "b702e826b303905c",
+      "label": "α 120° / θ₂ 0° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 120.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.595356718162028,
+        "PSNR_dB": 13.961020872745383,
+        "SSIM": 0.0316117272947779,
+        "MSE_absolute": 4.256342044088418e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.012143762428578016,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/b702e826b303905c/result.json",
+      "created_at": "2026-11-01T11:48:14.935939+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "2368dd0c44421bd96e824ec79700f3b727573479a74e06263b68c8c0e44f4068"
+    },
+    {
+      "id": "120d7ef3d60c50b3",
+      "label": "α 120° / θ₂ 0° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 120.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.23383309596707577,
+        "PSNR_dB": 12.430268814944021,
+        "SSIM": 0.018586436022945005,
+        "MSE_absolute": 6.054966250997288e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.010969610897132422,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/120d7ef3d60c50b3/result.json",
+      "created_at": "2026-11-01T11:49:03.003814+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "4cf864098d67a57e747e70279f367f37546e56d333286a9e978ed9d063ac12da"
+    },
+    {
+      "id": "417c9ef95229cc72",
+      "label": "α 120° / θ₂ 0° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 120.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.22002662436506895,
+        "PSNR_dB": 12.403858863335628,
+        "SSIM": 0.018865948782305113,
+        "MSE_absolute": 6.091899387207566e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.010679977290468115,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/417c9ef95229cc72/result.json",
+      "created_at": "2026-11-01T11:49:04.262797+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "73241e82fd5baa61523a2ec887b59a6a16bf297c9758de12da5013da2768dca6"
+    },
+    {
+      "id": "3cd3205535c76c72",
+      "label": "α 120° / θ₂ 0° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 120.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.2152697306272375,
+        "PSNR_dB": 12.39879487810962,
+        "SSIM": 0.01991568092545306,
+        "MSE_absolute": 6.099006841321165e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.010478742191043727,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/3cd3205535c76c72/result.json",
+      "created_at": "2026-11-01T11:49:05.513558+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "aa1da6cad8e2c65dbfda697863099c23a1a0d1b27a165ff34e535d895e7b954e"
+    },
+    {
+      "id": "e8c4f6dcf8abb2a1",
+      "label": "α 120° / θ₂ 0° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 120.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.18086300816235398,
+        "PSNR_dB": 12.315532892415268,
+        "SSIM": 0.019812060164644745,
+        "MSE_absolute": 6.217063727347697e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01018588073924386,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/e8c4f6dcf8abb2a1/result.json",
+      "created_at": "2026-11-01T11:49:06.773484+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "3f36c1a74c69c794d9b980a3640dc9555ac96a8dfe92a09923a1aceb9e439f27"
+    },
+    {
+      "id": "b6cf08068734e151",
+      "label": "α 150° / θ₂ 0° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 150.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7455020305326242,
+        "PSNR_dB": 14.209756529250061,
+        "SSIM": 0.035288214751757696,
+        "MSE_absolute": 4.0194159854890954e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.017185755578708814,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/b6cf08068734e151/result.json",
+      "created_at": "2026-11-01T11:48:16.213108+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "98d1ea03fadc551ce62dafda1c7b28de17694be1e1c909b674ef60b195c8b8f5"
+    },
+    {
+      "id": "ce6793ddaf9c984b",
+      "label": "α 150° / θ₂ 0° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 150.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.33783360934928797,
+        "PSNR_dB": 12.259193089815529,
+        "SSIM": 0.017459955328757437,
+        "MSE_absolute": 6.298241356674652e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01421435753379357,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/ce6793ddaf9c984b/result.json",
+      "created_at": "2026-11-01T11:49:08.021877+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "22f79555a3f1411f26e9ec71a49d01fa89694493cd177280d81dfd7694f3d071"
+    },
+    {
+      "id": "065b05af4a9ab1e0",
+      "label": "α 150° / θ₂ 0° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 150.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.30592091563168977,
+        "PSNR_dB": 12.186439125308615,
+        "SSIM": 0.017628612305980826,
+        "MSE_absolute": 6.404639592835696e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.013784079866661888,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/065b05af4a9ab1e0/result.json",
+      "created_at": "2026-11-01T11:49:09.286010+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "b39c95c2cf7b85958297d7aeadd1d94214cf3a8b69fabefae6af51a3107d76c7"
+    },
+    {
+      "id": "d8766cd940f86168",
+      "label": "α 150° / θ₂ 0° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 150.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.2990457858344534,
+        "PSNR_dB": 12.183958798913446,
+        "SSIM": 0.01868559556477902,
+        "MSE_absolute": 6.40829843134752e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.013604043741615808,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/d8766cd940f86168/result.json",
+      "created_at": "2026-11-01T11:49:10.543145+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "d248bb0808f76ff975e0415411050083c2fb56d2792e04469bd97632fe48ef6e"
+    },
+    {
+      "id": "c10a026de1d99f2b",
+      "label": "α 150° / θ₂ 0° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 150.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.24358720740815037,
+        "PSNR_dB": 12.006119157116647,
+        "SSIM": 0.0173315335982547,
+        "MSE_absolute": 6.676159327177803e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01322168345438571,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/c10a026de1d99f2b/result.json",
+      "created_at": "2026-11-01T11:49:11.804695+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "7a1ad8df13128fef1feb463c213947083b3a65280be72a88c209cedcdd5f03c8"
+    },
+    {
+      "id": "3bcfba8cbd797c09",
+      "label": "α 175° / θ₂ 0° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 175.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7489364266216058,
+        "PSNR_dB": 12.088220067483439,
+        "SSIM": 0.03443260520402489,
+        "MSE_absolute": 6.5511357918234585e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.019630152473779878,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/3bcfba8cbd797c09/result.json",
+      "created_at": "2026-11-01T11:48:17.487689+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "3ba162973f25313b9c12947bf3b283f132cd3d3584d10d329052065145d3fc4f"
+    },
+    {
+      "id": "8a668afe9a731970",
+      "label": "α 180° / θ₂ 0° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 180.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7489584790915927,
+        "PSNR_dB": 12.017687093238948,
+        "SSIM": 0.034449510550530145,
+        "MSE_absolute": 6.6584002663533716e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.019706752927022002,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/8a668afe9a731970/result.json",
+      "created_at": "2026-11-01T11:48:18.804637+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "a66377fe0764b4cbb38e812af0d1365d9c14653b9bbcd556d4f6ed4ff377147d"
+    },
+    {
+      "id": "272c03128a10c882",
+      "label": "α 180° / θ₂ 0° / d₂₃ 7 mm",
+      "keys": {
+        "alpha_deg": 180.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.007
+      },
+      "metrics": {
+        "NCC": 0.3384102061408009,
+        "PSNR_dB": 11.571083072598176,
+        "SSIM": 0.018409460067045726,
+        "MSE_absolute": 7.379557160740105e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.015836731437137725,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/272c03128a10c882/result.json",
+      "created_at": "2026-11-01T11:49:13.083142+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "60f6a68313709de86a5acef2534ef871b41d2c7aa0d35c50457afe183321dc09"
+    },
+    {
+      "id": "d98d5f3558385c47",
+      "label": "α 180° / θ₂ 0° / d₂₃ 8 mm",
+      "keys": {
+        "alpha_deg": 180.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.008
+      },
+      "metrics": {
+        "NCC": 0.3044404738808782,
+        "PSNR_dB": 11.540808760395972,
+        "SSIM": 0.01885699342062126,
+        "MSE_absolute": 7.431179165907898e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.015336131694383507,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/d98d5f3558385c47/result.json",
+      "created_at": "2026-11-01T11:49:14.351120+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "845a04d5033ee56b5d98cadbbd4114f7e33aff52ab92d76ba57fa01bea95662e"
+    },
+    {
+      "id": "6f849f06db904521",
+      "label": "α 180° / θ₂ 0° / d₂₃ 9 mm",
+      "keys": {
+        "alpha_deg": 180.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.009000000000000001
+      },
+      "metrics": {
+        "NCC": 0.29762733923315965,
+        "PSNR_dB": 11.554919329374258,
+        "SSIM": 0.020242347251149793,
+        "MSE_absolute": 7.407073862087182e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.015166695082758164,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/6f849f06db904521/result.json",
+      "created_at": "2026-11-01T11:49:15.615346+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "6c80f98c00ceacd71ecaff7d9ab00914720b09bef1b89eaefe20b5b8860e2e53"
+    },
+    {
+      "id": "c7404ff3beb0c8a5",
+      "label": "α 180° / θ₂ 0° / d₂₃ 10 mm",
+      "keys": {
+        "alpha_deg": 180.0,
+        "theta_deg": 0.0,
+        "d23_m": 0.01
+      },
+      "metrics": {
+        "NCC": 0.24099231067146043,
+        "PSNR_dB": 11.40245505239708,
+        "SSIM": 0.018499136078095942,
+        "MSE_absolute": 7.671726348236395e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.014739585379026268,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/c7404ff3beb0c8a5/result.json",
+      "created_at": "2026-11-01T11:49:16.878483+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "ff6feba18c8a388a601cfb093ac0530cb28bcda5e55a1acaeb1444ba1f3058dd"
+    },
+    {
+      "id": "8e2b9bfae17e4c04",
+      "label": "α 180° / θ₂ 360° / d₂₃ 6 mm",
+      "keys": {
+        "alpha_deg": 180.0,
+        "theta_deg": 360.0,
+        "d23_m": 0.006
+      },
+      "metrics": {
+        "NCC": 0.7489584790915927,
+        "PSNR_dB": 12.017687093238948,
+        "SSIM": 0.034449510550530145,
+        "MSE_absolute": 6.6584002663533716e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.019706752927022002,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "result_url": "research/holo600/cases/8e2b9bfae17e4c04/result.json",
+      "created_at": "2026-11-01T11:48:46.683701+08:00",
+      "has_reference_measurement": false,
+      "raw_sha256": "a9de825524a7b15ac97fdfa14a8406fe31b1d14bdd2cce1d23f9735fe60eeba7"
+    }
+  ],
+  "scope": "72 actual archived conditions only; no continuous online propagation"
+}

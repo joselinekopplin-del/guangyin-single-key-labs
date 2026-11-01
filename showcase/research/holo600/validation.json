@@ -1,0 +1,454 @@
+{
+  "schema": "trikey.holo600.validation.public.v1",
+  "overall": "FAIL",
+  "scope": "Functional prototype delivered; sampling convergence not passed. No complete-device FDTD or hardware experiment.",
+  "full600_checks": [
+    {
+      "name": "actual three 600x600 geometry arrays",
+      "status": "PASS",
+      "value": [
+        3,
+        600,
+        600
+      ],
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "1080000 legal library indices",
+      "status": "PASS",
+      "value": {
+        "count": 1080000,
+        "min": 0,
+        "max": 24
+      },
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "L_um same-record mapping",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "W_um same-record mapping",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "paired x/y complex mapping",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "layer1 separate export geometry response height material",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "layer2 separate export geometry response height material",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "layer3 separate export geometry response height material",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "web binary preserves all1080000 indices",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "66mm aperture and actual cell centers",
+      "status": "PASS",
+      "value": {
+        "edge_m": 0.033,
+        "center_min_m": -0.032945,
+        "center_max_m": 0.032945
+      },
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "library source hash frozen",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "core and optimizer export provenance",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "optimizer changed each independent full layer",
+      "status": "PASS",
+      "value": [
+        37431,
+        35341,
+        36765
+      ],
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "recorded objective improves real baseline",
+      "status": "PASS",
+      "value": {
+        "initial": 0.9759015769958057,
+        "final": 0.41070747734256113
+      },
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "full600 finite at grid1536",
+      "status": "PASS",
+      "value": {
+        "NCC": 0.7489584790915483,
+        "PSNR_dB": 12.017687093238948,
+        "SSIM": 0.034449510550530145,
+        "MSE_absolute": 6.6584002663533716e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.019706752927022002,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "full600 grid1536 layer1 no transverse gain",
+      "status": "PASS",
+      "value": {
+        "before": 1.0000000111176632,
+        "after_sheet": 0.9171035955341722,
+        "after_propagation": 0.2692454838167139
+      },
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "full600 grid1536 layer2 no transverse gain",
+      "status": "PASS",
+      "value": {
+        "before": 0.2692454838167139,
+        "after_sheet": 0.22562492617965363,
+        "after_propagation": 0.07352319442973247
+      },
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "full600 grid1536 layer3 no transverse gain",
+      "status": "PASS",
+      "value": {
+        "before": 0.07352319442973247,
+        "after_sheet": 0.061556607174359255,
+        "after_propagation": 0.020945127779949644
+      },
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "full600 finite at grid2048",
+      "status": "PASS",
+      "value": {
+        "NCC": 0.7488589929839548,
+        "PSNR_dB": 12.02165024813846,
+        "SSIM": 0.03449408490001686,
+        "MSE_absolute": 6.652326913803717e-15,
+        "data_range": 3.255137244195794e-07,
+        "captured_energy": 0.01969783995539938,
+        "target_energy": 0.00933085053704568,
+        "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+      },
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "full600 grid2048 layer1 no transverse gain",
+      "status": "PASS",
+      "value": {
+        "before": 1.0000000111176632,
+        "after_sheet": 0.9171035955341722,
+        "after_propagation": 0.26923332889998114
+      },
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "full600 grid2048 layer2 no transverse gain",
+      "status": "PASS",
+      "value": {
+        "before": 0.26923332889998114,
+        "after_sheet": 0.22559798788678068,
+        "after_propagation": 0.07350791162869444
+      },
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "full600 grid2048 layer3 no transverse gain",
+      "status": "PASS",
+      "value": {
+        "before": 0.07350791162869444,
+        "after_sheet": 0.06153734650034705,
+        "after_propagation": 0.020938501607582698
+      },
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "full600 padding 1536 vs2048 fixed detector",
+      "status": "FAIL",
+      "value": 0.022632498199584846,
+      "threshold": 0.01,
+      "scope": "numerical reliability"
+    },
+    {
+      "name": "full600 two samples per cell physical pixel average",
+      "status": "FAIL",
+      "value": 0.17786135974555006,
+      "threshold": 0.05,
+      "scope": "numerical reliability"
+    },
+    {
+      "name": "detector intensity pixel integration refinement diagnostic",
+      "status": "DIAGNOSTIC",
+      "value": {
+        "relative_intensity_error": 0.2703064827097481,
+        "metrics": {
+          "NCC": 0.7717591151311052,
+          "PSNR_dB": 15.019942472861217,
+          "SSIM": 0.05620486590738451,
+          "MSE_absolute": 3.3353726331521796e-15,
+          "data_range": 3.255137244195794e-07,
+          "captured_energy": 0.014991490523049598,
+          "target_energy": 0.00933085053704568,
+          "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+        }
+      },
+      "threshold": null,
+      "scope": "numerical reliability"
+    },
+    {
+      "name": "full600 theta17 two samples per cell physical pixel average",
+      "status": "FAIL",
+      "value": 0.4341570910934122,
+      "threshold": 0.05,
+      "scope": "numerical reliability"
+    },
+    {
+      "name": "design unchanged during independent audit",
+      "status": "PASS",
+      "value": {
+        "before": "2c05e3cff4787f4cb201b1f0bdeecd11dcb35a234e83c19623396a2431626245",
+        "after": "2c05e3cff4787f4cb201b1f0bdeecd11dcb35a234e83c19623396a2431626245"
+      },
+      "threshold": null,
+      "scope": "implementation"
+    }
+  ],
+  "small_checks": [
+    {
+      "name": "source unit transverse norm",
+      "status": "PASS",
+      "value": 1.0,
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "rotated local Jones analytic R diag(t) R^T",
+      "status": "PASS",
+      "value": 3.3732812850428035e-08,
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "zero-angle sheet matches direct lookup",
+      "status": "PASS",
+      "value": 0.0,
+      "threshold": 0,
+      "scope": "implementation"
+    },
+    {
+      "name": "sheet transverse norm contraction",
+      "status": "PASS",
+      "value": 0.014512327499687672,
+      "threshold": 1.000002,
+      "scope": "implementation"
+    },
+    {
+      "name": "plane-wave ASM analytic phase",
+      "status": "PASS",
+      "value": 7.025827008733352e-08,
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "existing 16x16 full FFT model regression",
+      "status": "PASS",
+      "value": 3.304562341066608e-07,
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "layer 1 transverse norm no gain",
+      "status": "PASS",
+      "value": {
+        "before": 1.0,
+        "after_sheet": 0.9263657934498042,
+        "after_propagation": 0.2451650204441893
+      },
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "layer 2 transverse norm no gain",
+      "status": "PASS",
+      "value": {
+        "before": 0.2451650204441893,
+        "after_sheet": 0.041098986199472165,
+        "after_propagation": 0.0133790101746201
+      },
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "layer 3 transverse norm no gain",
+      "status": "PASS",
+      "value": {
+        "before": 0.0133790101746201,
+        "after_sheet": 0.0016063433090494073,
+        "after_propagation": 0.00039821872144125384
+      },
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "alpha changes source and output",
+      "status": "PASS",
+      "value": 1.2535049289288154,
+      "threshold": "nonzero",
+      "scope": "implementation"
+    },
+    {
+      "name": "theta rigid rotation changes output",
+      "status": "PASS",
+      "value": 0.30484684067293144,
+      "threshold": "nonzero",
+      "scope": "implementation"
+    },
+    {
+      "name": "d23 changes output and only middle kernel",
+      "status": "PASS",
+      "value": {
+        "relative_field": 1.4337045726674909,
+        "hashes_before": [
+          "23daa5653646fbdd3b195b4e215aaba8933b425d42f2f7fcf5967a6e14391510",
+          "8e326a1a02f8fb50930752699437cd230969ae437e60d4473836027976f61c40",
+          "23daa5653646fbdd3b195b4e215aaba8933b425d42f2f7fcf5967a6e14391510"
+        ],
+        "hashes_after": [
+          "23daa5653646fbdd3b195b4e215aaba8933b425d42f2f7fcf5967a6e14391510",
+          "8db8a7eac2e485e63cb22edee25c62f34178b8d018d19a254f9b0e4075e67ac4",
+          "23daa5653646fbdd3b195b4e215aaba8933b425d42f2f7fcf5967a6e14391510"
+        ]
+      },
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "alpha plus 180 intensity equivalent",
+      "status": "PASS",
+      "value": 0.0,
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "theta plus 360 field equivalent",
+      "status": "PASS",
+      "value": 0.0,
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "fixed key reproducible complex field",
+      "status": "PASS",
+      "value": 0.0,
+      "threshold": 0,
+      "scope": "implementation"
+    },
+    {
+      "name": "all small fields finite",
+      "status": "PASS",
+      "value": null,
+      "threshold": null,
+      "scope": "implementation"
+    },
+    {
+      "name": "L3 physical exit then remaining air equals direct detector",
+      "status": "PASS",
+      "value": 2.219845967921933e-07,
+      "threshold": 2e-06,
+      "scope": "implementation"
+    },
+    {
+      "name": "four-key objective adjoint finite difference",
+      "status": "PASS",
+      "value": {
+        "analytic": -0.05800090730190277,
+        "finite_difference": -0.057981282724717254,
+        "relative_error": 0.0003384640053358386,
+        "step": 0.001
+      },
+      "threshold": 0.01,
+      "scope": "implementation"
+    },
+    {
+      "name": "small32 two-samples-per-cell theta 0",
+      "status": "PASS",
+      "value": 0.028253953307463442,
+      "threshold": 0.05,
+      "scope": "numerical diagnostic, not final600"
+    },
+    {
+      "name": "small32 two-samples-per-cell theta 17",
+      "status": "FAIL",
+      "value": 0.1995317149748924,
+      "threshold": 0.05,
+      "scope": "numerical diagnostic, not final600"
+    }
+  ],
+  "source_sha256": {
+    "full_tests": "da5033923d2afcda5b2ab6659652f11b8c31c97d80b51db801ab3e602d066fd0",
+    "small_tests": "0bff91f0decd63b7b25c796f5ee60cd6c540aad3133c1bc27a3a80272f883635",
+    "design": "2c05e3cff4787f4cb201b1f0bdeecd11dcb35a234e83c19623396a2431626245"
+  },
+  "not_run": [
+    "full-device 3D vector Maxwell",
+    "600-cell 4x spatial refinement",
+    "fabrication and experiments",
+    "cryptographic security proof"
+  ]
+}

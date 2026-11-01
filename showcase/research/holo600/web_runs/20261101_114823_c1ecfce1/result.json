@@ -1,0 +1,90 @@
+{
+  "schema": "trikey.holo600.result.v1",
+  "job_id": "20261101_114823_c1ecfce1",
+  "keys": {
+    "alpha_deg": 0.0,
+    "theta_deg": 0.0,
+    "d23_m": 0.006
+  },
+  "reference_enabled": true,
+  "model_version": "holo600-diagonal-jones-asm-v1",
+  "design_sha256": "2c05e3cff4787f4cb201b1f0bdeecd11dcb35a234e83c19623396a2431626245",
+  "core_sha256": "051df16fc010dfc55b4fbded3e72b20796f2d7242240477dfc25dd484e78a3d5",
+  "frequency_Hz": 700000000000.0,
+  "period_m": 0.00011,
+  "aperture_m": 0.066,
+  "grid": 1536,
+  "n": 600,
+  "metrics": {
+    "NCC": 0.7489584790915927,
+    "PSNR_dB": 12.017687093238948,
+    "SSIM": 0.034449510550530145,
+    "MSE_absolute": 6.6584002663533716e-15,
+    "data_range": 3.255137244195794e-07,
+    "captured_energy": 0.019706752927022002,
+    "target_energy": 0.00933085053704568,
+    "normalization": "fixed target intensity; unit incident transverse norm; SSIM gaussian sigma1.5; no per-key max scaling"
+  },
+  "power": [
+    {
+      "before": 1.0000000111176632,
+      "after_sheet": 0.9171035955341722,
+      "after_propagation": 0.2692454838167139
+    },
+    {
+      "before": 0.2692454838167139,
+      "after_sheet": 0.22562492617965363,
+      "after_propagation": 0.07352319442973247
+    },
+    {
+      "before": 0.07352319442973247,
+      "after_sheet": 0.061556607174359255,
+      "after_propagation": 0.020945127779949644
+    }
+  ],
+  "kernel_hashes": [
+    "229e31c2d1e5a46f8e7d5f6a91f7a51749e272a58b63bd7ec465fbdaad2b3728",
+    "bd13b09952c0941abd39a7c0b5d0a422651423d2db5c37bbd11ae582af6c008c",
+    "229e31c2d1e5a46f8e7d5f6a91f7a51749e272a58b63bd7ec465fbdaad2b3728"
+  ],
+  "elapsed_seconds": 2.577809700000003,
+  "propagation_seconds": 0.8752811000000023,
+  "holography": {
+    "field_relative_error": 2.8429931830942223e-07,
+    "assumption": "ideal known coherent reference; four phase steps per polarization, eight exposures; no camera noise",
+    "reference_amplitude": 0.0016666666666666668
+  },
+  "phase_warning": "arg Ex and arg Ey at physical layer3 exit; amplitude below1e-7 of global peak masked; no total-field scalar phase",
+  "layer3_output_plane": "physical exit: 1mm after entrance contrast plane; detector remains5mm from entrance, no double-count",
+  "created_at": "2026-11-01T11:48:25.825971+08:00",
+  "display_scale": {
+    "target_detector_reconstruction_vmin": 0,
+    "target_detector_reconstruction_vmax": 3.255137244195794e-07,
+    "detector_pixels_above_scale": 13352,
+    "layer3_and_hologram": "independent auto scale marked in each title; read physical colorbar; all metrics use unmodified raw data"
+  },
+  "precomputed": true,
+  "real_compute": false,
+  "mode": "precomputed",
+  "record_kind": "archived_web_run",
+  "scope": "已保存的真实计算结果回看；浏览器未重新执行传播或FDTD。",
+  "images": {
+    "detector": "research/holo600/web_runs/20261101_114823_c1ecfce1/detector.png",
+    "layer3": "research/holo600/web_runs/20261101_114823_c1ecfce1/layer3.png",
+    "phase_x": "research/holo600/web_runs/20261101_114823_c1ecfce1/phase_x.png",
+    "phase_y": "research/holo600/web_runs/20261101_114823_c1ecfce1/phase_y.png",
+    "target": "research/holo600/web_runs/20261101_114823_c1ecfce1/target.png",
+    "hologram_x": "research/holo600/web_runs/20261101_114823_c1ecfce1/hologram_x.png",
+    "reconstruction": "research/holo600/web_runs/20261101_114823_c1ecfce1/reconstruction.png"
+  },
+  "downloads": {
+    "metadata": "research/holo600/web_runs/20261101_114823_c1ecfce1/result.json"
+  },
+  "provenance": {
+    "result_sha256": "284b2bab47a407ef21c43a1599b314e21905d30ee4126241db5a8a985a1d3ea0",
+    "fields_sha256": "998c77ffa4e671ac33572a20f315d8ddab472ac599d0dc13e7eb5139b7777c87",
+    "exposure_data_sha256": "993cd885b71c8e281a9ee7d61befb430e32ef3dfe8d2b788cb7e6e7990642048",
+    "raw_field_in_public_bundle": false,
+    "note": "完整本机复场和运行日志不随公共网站打包；来源SHA保留。"
+  }
+}

@@ -1,0 +1,911 @@
+{
+  "schema": "trikey.holo600.web.v1",
+  "n": 600,
+  "layers": 3,
+  "frequency_Hz": 700000000000.0,
+  "wavelength_m": 0.00042827494,
+  "period_m": 0.00011,
+  "pillar_height_m": 0.0005,
+  "substrate_height_m": 0.0005,
+  "k": 0,
+  "aperture_m": 0.066,
+  "d12_m": 0.005,
+  "d3_detector_m": 0.005,
+  "nominal_key": {
+    "alpha_deg": 0.0,
+    "theta_deg": 0.0,
+    "d23_m": 0.006
+  },
+  "ranges": {
+    "alpha_deg": [
+      0,
+      180
+    ],
+    "theta_deg": [
+      0,
+      360
+    ],
+    "d23_m": [
+      0.006,
+      0.01
+    ]
+  },
+  "records": [
+    {
+      "id": "L30_W30",
+      "L_um": 30.0,
+      "W_um": 30.0,
+      "responses": {
+        "x": {
+          "t_real": 0.7772673736856364,
+          "t_imag": -0.6076215459075163,
+          "amplitude": 0.986584265659658,
+          "phase_rad": -0.6635076403286039,
+          "T": 0.9725245235387306,
+          "R": 0.027615074803448495
+        },
+        "y": {
+          "t_real": 0.7772673481970273,
+          "t_imag": -0.6076215220338044,
+          "amplitude": 0.9865842308753551,
+          "phase_rad": -0.6635076371757462,
+          "T": 0.9725245436563301,
+          "R": 0.02761507506929758
+        }
+      }
+    },
+    {
+      "id": "L30_W45",
+      "L_um": 30.0,
+      "W_um": 45.0,
+      "responses": {
+        "x": {
+          "t_real": 0.8852420250238103,
+          "t_imag": -0.4353297251074544,
+          "amplitude": 0.9864914659693658,
+          "phase_rad": -0.4570367325364835,
+          "T": 0.9723415779413804,
+          "R": 0.0274487780594009
+        },
+        "y": {
+          "t_real": 0.9842409041610349,
+          "t_imag": -0.054534629820439766,
+          "amplitude": 0.985750568487477,
+          "phase_rad": -0.05535120985494936,
+          "T": 0.9708816711798225,
+          "R": 0.028461190345807453
+        }
+      }
+    },
+    {
+      "id": "L30_W60",
+      "L_um": 30.0,
+      "W_um": 60.0,
+      "responses": {
+        "x": {
+          "t_real": 0.9524322226551944,
+          "t_imag": -0.25750417200901565,
+          "amplitude": 0.9866283684113095,
+          "phase_rad": -0.264051840372517,
+          "T": 0.9726114741462505,
+          "R": 0.026941177438646796
+        },
+        "y": {
+          "t_real": 0.6845487712206314,
+          "t_imag": 0.7262521712223958,
+          "amplitude": 0.9980226632621728,
+          "phase_rad": 0.8149496460469087,
+          "T": 0.9952061247143766,
+          "R": 0.0044823788657996
+        }
+      }
+    },
+    {
+      "id": "L30_W75",
+      "L_um": 30.0,
+      "W_um": 75.0,
+      "responses": {
+        "x": {
+          "t_real": 0.984812548348652,
+          "t_imag": -0.07522961469894311,
+          "amplitude": 0.9876817555836077,
+          "phase_rad": -0.07624171061236241,
+          "T": 0.974689423981549,
+          "R": 0.0246881187141733
+        },
+        "y": {
+          "t_real": -0.4148466052686121,
+          "t_imag": 0.8629671451926211,
+          "amplitude": 0.9575019580057234,
+          "phase_rad": 2.01890229131713,
+          "T": 0.916033962618234,
+          "R": 0.0839317956642082
+        }
+      }
+    },
+    {
+      "id": "L30_W90",
+      "L_um": 30.0,
+      "W_um": 90.0,
+      "responses": {
+        "x": {
+          "t_real": 0.9863378361540953,
+          "t_imag": 0.08319675706145974,
+          "amplitude": 0.9898404050222877,
+          "phase_rad": 0.08414995674173496,
+          "T": 0.9789545899840423,
+          "R": 0.020383159683526345
+        },
+        "y": {
+          "t_real": -0.9235374853977121,
+          "t_imag": -0.2671706671144599,
+          "amplitude": 0.9614060808529946,
+          "phase_rad": -2.859989769514397,
+          "T": 0.9235192713269894,
+          "R": 0.0755997985965971
+        }
+      }
+    },
+    {
+      "id": "L45_W30",
+      "L_um": 45.0,
+      "W_um": 30.0,
+      "responses": {
+        "x": {
+          "t_real": 0.9842409600765014,
+          "t_imag": -0.054534639580203145,
+          "amplitude": 0.9857506248572485,
+          "phase_rad": -0.05535121660250567,
+          "T": 0.9708816937927892,
+          "R": 0.028461189621920794
+        },
+        "y": {
+          "t_real": 0.8852419814820688,
+          "t_imag": -0.4353297026114726,
+          "amplitude": 0.9864914169692975,
+          "phase_rad": -0.4570367315506551,
+          "T": 0.9723415699753993,
+          "R": 0.02744877622261466
+        }
+      }
+    },
+    {
+      "id": "L45_W45",
+      "L_um": 45.0,
+      "W_um": 45.0,
+      "responses": {
+        "x": {
+          "t_real": 0.9233775158824319,
+          "t_imag": 0.36555795678165887,
+          "amplitude": 0.9931055616617963,
+          "phase_rad": 0.37696016245835795,
+          "T": 0.9854237387525687,
+          "R": 0.013949390876346737
+        },
+        "y": {
+          "t_real": 0.9233774736716382,
+          "t_imag": 0.36555794207351644,
+          "amplitude": 0.9931055170007069,
+          "phase_rad": 0.37696016433344776,
+          "T": 0.985423739832977,
+          "R": 0.013949391781272196
+        }
+      }
+    },
+    {
+      "id": "L45_W60",
+      "L_um": 45.0,
+      "W_um": 60.0,
+      "responses": {
+        "x": {
+          "t_real": 0.7021836550428706,
+          "t_imag": 0.7109403595294517,
+          "amplitude": 0.999248757926289,
+          "phase_rad": 0.7915947833088846,
+          "T": 0.997652804308539,
+          "R": 0.0020854602498938846
+        },
+        "y": {
+          "t_real": -0.08984912873841165,
+          "t_imag": 0.9724587079732513,
+          "amplitude": 0.9766006372351274,
+          "phase_rad": 1.662928528020823,
+          "T": 0.9529415062196306,
+          "R": 0.047474833793011366
+        }
+      }
+    },
+    {
+      "id": "L45_W75",
+      "L_um": 45.0,
+      "W_um": 75.0,
+      "responses": {
+        "x": {
+          "t_real": 0.36417274084633344,
+          "t_imag": 0.9253076704488639,
+          "amplitude": 0.994392312001171,
+          "phase_rad": 1.195845874229283,
+          "T": 0.9879789962186701,
+          "R": 0.01227465243930982
+        },
+        "y": {
+          "t_real": -0.9518175651618116,
+          "t_imag": -0.19021538734336713,
+          "amplitude": 0.9706382286582096,
+          "phase_rad": -2.9443467367113674,
+          "T": 0.941341091782213,
+          "R": 0.05789583514068588
+        }
+      }
+    },
+    {
+      "id": "L45_W90",
+      "L_um": 45.0,
+      "W_um": 90.0,
+      "responses": {
+        "x": {
+          "t_real": 0.01468827431175371,
+          "t_imag": 0.9781007367283825,
+          "amplitude": 0.9782110184366469,
+          "phase_rad": 1.5557803169195925,
+          "T": 0.9560867444070493,
+          "R": 0.044345097774405325
+        },
+        "y": {
+          "t_real": 0.5615634098437293,
+          "t_imag": -0.6256805462485725,
+          "amplitude": 0.8407315916683685,
+          "phase_rad": -0.8393507748034496,
+          "T": 0.7062313123466968,
+          "R": 0.2923700896617655
+        }
+      }
+    },
+    {
+      "id": "L60_W30",
+      "L_um": 60.0,
+      "W_um": 30.0,
+      "responses": {
+        "x": {
+          "t_real": 0.6845487978616376,
+          "t_imag": 0.7262521967275631,
+          "amplitude": 0.9980227000952554,
+          "phase_rad": 0.8149496441508602,
+          "T": 0.9952061075707513,
+          "R": 0.004482379000515009
+        },
+        "y": {
+          "t_real": 0.9524321705049165,
+          "t_imag": -0.25750416330541104,
+          "amplitude": 0.98662831579695,
+          "phase_rad": -0.2640518456520869,
+          "T": 0.9726114589000552,
+          "R": 0.026941177324676418
+        }
+      }
+    },
+    {
+      "id": "L60_W45",
+      "L_um": 60.0,
+      "W_um": 45.0,
+      "responses": {
+        "x": {
+          "t_real": -0.08984913283361663,
+          "t_imag": 0.9724587605927849,
+          "amplitude": 0.9766006900082593,
+          "phase_rad": 1.662928527239274,
+          "T": 0.9529415221631146,
+          "R": 0.047474832714728556
+        },
+        "y": {
+          "t_real": 0.7021836212827588,
+          "t_imag": 0.7109403294744763,
+          "amplitude": 0.9992487128193089,
+          "phase_rad": 0.7915947862105562,
+          "T": 0.9976528053622191,
+          "R": 0.0020854604855424647
+        }
+      }
+    },
+    {
+      "id": "L60_W60",
+      "L_um": 60.0,
+      "W_um": 60.0,
+      "responses": {
+        "x": {
+          "t_real": -0.7082525913860941,
+          "t_imag": 0.6199229268340479,
+          "amplitude": 0.9412365103519996,
+          "phase_rad": 2.422601214960854,
+          "T": 0.885176192140334,
+          "R": 0.11374852703477749
+        },
+        "y": {
+          "t_real": -0.7082525582494169,
+          "t_imag": 0.6199228969363049,
+          "amplitude": 0.9412364657261979,
+          "phase_rad": 2.4226012156753245,
+          "T": 0.8851761890117447,
+          "R": 0.11374852971608024
+        }
+      }
+    },
+    {
+      "id": "L60_W75",
+      "L_um": 60.0,
+      "W_um": 75.0,
+      "responses": {
+        "x": {
+          "t_real": -0.9704671032105816,
+          "t_imag": -0.021789178493980713,
+          "amplitude": 0.9707116805279414,
+          "phase_rad": -3.11914416647246,
+          "T": 0.941483477740721,
+          "R": 0.0577075866816331
+        },
+        "y": {
+          "t_real": 0.035431411346707055,
+          "t_imag": -0.9191318705627827,
+          "amplitude": 0.9198145358681061,
+          "phase_rad": -1.5322666253945287,
+          "T": 0.845342625748953,
+          "R": 0.15517625767524562
+        }
+      }
+    },
+    {
+      "id": "L60_W90",
+      "L_um": 60.0,
+      "W_um": 90.0,
+      "responses": {
+        "x": {
+          "t_real": -0.6791257507506461,
+          "t_imag": -0.7177228896455796,
+          "amplitude": 0.98809813867542,
+          "phase_rad": -2.3285699364300783,
+          "T": 0.9755114180731841,
+          "R": 0.02498624185620955
+        },
+        "y": {
+          "t_real": 0.7236031442561796,
+          "t_imag": 0.6821564971368683,
+          "amplitude": 0.9944541200897463,
+          "phase_rad": 0.7559232498615917,
+          "T": 0.9881018993072488,
+          "R": 0.011669083363607797
+        }
+      }
+    },
+    {
+      "id": "L75_W30",
+      "L_um": 75.0,
+      "W_um": 30.0,
+      "responses": {
+        "x": {
+          "t_real": -0.41484662071135664,
+          "t_imag": 0.862967199208903,
+          "amplitude": 0.9575020133796537,
+          "phase_rad": 2.0189022814111635,
+          "T": 0.9160339850409355,
+          "R": 0.08393179140266772
+        },
+        "y": {
+          "t_real": 0.9848125104391066,
+          "t_imag": -0.07522961283533035,
+          "amplitude": 0.9876817176422418,
+          "phase_rad": -0.07624171165448994,
+          "T": 0.9746894380070702,
+          "R": 0.02468811689897522
+        }
+      }
+    },
+    {
+      "id": "L75_W45",
+      "L_um": 75.0,
+      "W_um": 45.0,
+      "responses": {
+        "x": {
+          "t_real": -0.9518176045157691,
+          "t_imag": -0.19021539561234033,
+          "amplitude": 0.9706382688695601,
+          "phase_rad": -2.944346736302908,
+          "T": 0.9413410840334734,
+          "R": 0.05789583771579546
+        },
+        "y": {
+          "t_real": 0.3641727221228768,
+          "t_imag": 0.9253076334603599,
+          "amplitude": 0.9943922707253903,
+          "phase_rad": 1.1958458781276353,
+          "T": 0.9879790039648415,
+          "R": 0.012274653152667523
+        }
+      }
+    },
+    {
+      "id": "L75_W60",
+      "L_um": 75.0,
+      "W_um": 60.0,
+      "responses": {
+        "x": {
+          "t_real": 0.035431414201664055,
+          "t_imag": -0.9191319140543691,
+          "amplitude": 0.9198145794373875,
+          "phase_rad": -1.5322666241143414,
+          "T": 0.8453426288550033,
+          "R": 0.15517625453785444
+        },
+        "y": {
+          "t_real": -0.9704670591015461,
+          "t_imag": -0.021789174244253046,
+          "amplitude": 0.9707116363346275,
+          "phase_rad": -3.1191441698293367,
+          "T": 0.941483477621715,
+          "R": 0.05770758771587354
+        }
+      }
+    },
+    {
+      "id": "L75_W75",
+      "L_um": 75.0,
+      "W_um": 75.0,
+      "responses": {
+        "x": {
+          "t_real": 0.7540029758081374,
+          "t_imag": -0.3906226859512278,
+          "amplitude": 0.8491799398874647,
+          "phase_rad": -0.4779950839345127,
+          "T": 0.7204961190321216,
+          "R": 0.2775073620949872
+        },
+        "y": {
+          "t_real": 0.7540029342415024,
+          "t_imag": -0.3906226711696078,
+          "amplitude": 0.8491798961801175,
+          "phase_rad": -0.4779950909951686,
+          "T": 0.7204961105796954,
+          "R": 0.27750737035432144
+        }
+      }
+    },
+    {
+      "id": "L75_W90",
+      "L_um": 75.0,
+      "W_um": 90.0,
+      "responses": {
+        "x": {
+          "t_real": 0.7711519910180111,
+          "t_imag": 0.628151089598101,
+          "amplitude": 0.9946100666162213,
+          "phase_rad": 0.6835573393998414,
+          "T": 0.9884117379451892,
+          "R": 0.011477931099091315
+        },
+        "y": {
+          "t_real": -0.45797705488663665,
+          "t_imag": 0.602266426136147,
+          "amplitude": 0.7566160392520399,
+          "phase_rad": 2.2209346529319896,
+          "T": 0.5719832608429658,
+          "R": 0.42656605833570915
+        }
+      }
+    },
+    {
+      "id": "L90_W30",
+      "L_um": 90.0,
+      "W_um": 30.0,
+      "responses": {
+        "x": {
+          "t_real": -0.9235375348167686,
+          "t_imag": -0.2671706788071746,
+          "amplitude": 0.9614061315748514,
+          "phase_rad": -2.8599897721159957,
+          "T": 0.9235192846469468,
+          "R": 0.0755998003640102
+        },
+        "y": {
+          "t_real": 0.9863377893042511,
+          "t_imag": 0.08319676104359602,
+          "amplitude": 0.9898403586729239,
+          "phase_rad": 0.08414996472868612,
+          "T": 0.978954587544761,
+          "R": 0.02038316152835138
+        }
+      }
+    },
+    {
+      "id": "L90_W45",
+      "L_um": 90.0,
+      "W_um": 45.0,
+      "responses": {
+        "x": {
+          "t_real": 0.5615634355979399,
+          "t_imag": -0.6256805864961413,
+          "amplitude": 0.8407316388234221,
+          "phase_rad": -0.8393507839819744,
+          "T": 0.7062313272047572,
+          "R": 0.2923700916148194
+        },
+        "y": {
+          "t_real": 0.014688278813954932,
+          "t_imag": 0.9781006920934082,
+          "amplitude": 0.9782109738743072,
+          "phase_rad": 1.5557803116324838,
+          "T": 0.9560867443058887,
+          "R": 0.04434509614917857
+        }
+      }
+    },
+    {
+      "id": "L90_W60",
+      "L_um": 90.0,
+      "W_um": 60.0,
+      "responses": {
+        "x": {
+          "t_real": 0.7236031785448891,
+          "t_imag": 0.6821565288251303,
+          "amplitude": 0.9944541667764369,
+          "phase_rad": 0.7559232493959007,
+          "T": 0.9881019020085287,
+          "R": 0.011669081937018952
+        },
+        "y": {
+          "t_real": -0.6791257116081615,
+          "t_imag": -0.7177228548820165,
+          "amplitude": 0.9880980865214161,
+          "phase_rad": -2.3285699318367645,
+          "T": 0.9755114040951841,
+          "R": 0.02498624428160673
+        }
+      }
+    },
+    {
+      "id": "L90_W75",
+      "L_um": 90.0,
+      "W_um": 75.0,
+      "responses": {
+        "x": {
+          "t_real": -0.45797707770575724,
+          "t_imag": 0.6022664602484418,
+          "amplitude": 0.7566160802177635,
+          "phase_rad": 2.2209346496489086,
+          "T": 0.5719832707280322,
+          "R": 0.42656606678597625
+        },
+        "y": {
+          "t_real": 0.7711519612037077,
+          "t_imag": 0.6281510641565784,
+          "amplitude": 0.9946100274325442,
+          "phase_rad": 0.6835573384987604,
+          "T": 0.9884117502132098,
+          "R": 0.011477930915636198
+        }
+      }
+    },
+    {
+      "id": "L90_W90",
+      "L_um": 90.0,
+      "W_um": 90.0,
+      "responses": {
+        "x": {
+          "t_real": -0.8579327531987029,
+          "t_imag": -0.037478018661940275,
+          "amplitude": 0.8587509597630335,
+          "phase_rad": -3.0979363110523686,
+          "T": 0.7368289226394424,
+          "R": 0.2606637615678741
+        },
+        "y": {
+          "t_real": -0.8579327140560361,
+          "t_imag": -0.03747801455804572,
+          "amplitude": 0.8587509204785572,
+          "phase_rad": -3.097936313837462,
+          "T": 0.7368289224481688,
+          "R": 0.26066376350890325
+        }
+      }
+    }
+  ],
+  "indices_url": "research/holo600/indices.bin",
+  "indices_dtype": "uint8",
+  "indices_shape": [
+    3,
+    600,
+    600
+  ],
+  "coordinate_convention": "indices[layer,row_y,column_x]; x,y=(index-(n-1)/2)*period; propagation +z",
+  "target_url": "research/holo600/target.png",
+  "design_sha256": "2c05e3cff4787f4cb201b1f0bdeecd11dcb35a234e83c19623396a2431626245",
+  "model_version": "holo600-diagonal-jones-asm-v1",
+  "design_metadata": {
+    "schema": "trikey.holo600.design.v1",
+    "n": 600,
+    "layers": 3,
+    "independent_positions": 1080000,
+    "geometry_count_used": 25,
+    "seed": 20261101,
+    "optimization": "full-grid adjoint gradient, discrete paired response projected update with objective line search",
+    "iterations_completed": 35,
+    "source_library_sha256": "61fde1173921e37e590aff3023157c4d323cdae9df3d8553d6424a9181081db3",
+    "core_sha256": "051df16fc010dfc55b4fbded3e72b20796f2d7242240477dfc25dd484e78a3d5",
+    "optimizer_sha256": "b431acf6c9f2a81976c29409433aa477e95d50c7103c8459db4bb6e1f96a6515",
+    "config_sha256": "72da9ed40931374cb17d3049bd40e0ed1838dd5a8b1813607c27dbeec10f8e90",
+    "correct_key": {
+      "alpha_deg": 0.0,
+      "theta_deg": 0.0,
+      "d23_m": 0.006
+    },
+    "target_energy_scale": 0.00933085056173914,
+    "target_scale_rule": "target unit-sum shape times baseline correct captured energy, frozen before optimizing",
+    "baseline": {
+      "iteration": 0,
+      "loss": 0.9759015769958057,
+      "cases": [
+        {
+          "key": {
+            "alpha_deg": 0.0,
+            "theta_deg": 0.0,
+            "d23_m": 0.006
+          },
+          "loss": 0.9743619756905054,
+          "energy": 0.00933085056173914,
+          "NCC": 0.06222629759630999
+        },
+        {
+          "key": {
+            "alpha_deg": 90.0,
+            "theta_deg": 0.0,
+            "d23_m": 0.006
+          },
+          "loss": 0.00045997122678772927,
+          "energy": 0.009295921780510604,
+          "NCC": 0.06191198233431402
+        },
+        {
+          "key": {
+            "alpha_deg": 0.0,
+            "theta_deg": 90.0,
+            "d23_m": 0.006
+          },
+          "loss": 0.0005033555013716325,
+          "energy": 0.00938370868758142,
+          "NCC": 0.06476595693801596
+        },
+        {
+          "key": {
+            "alpha_deg": 0.0,
+            "theta_deg": 0.0,
+            "d23_m": 0.01
+          },
+          "loss": 0.0005762745771409147,
+          "energy": 0.0084139031306083,
+          "NCC": 0.069298543583837
+        }
+      ],
+      "elapsed_s": 0,
+      "accepted": true,
+      "changed_positions": 0
+    },
+    "final": {
+      "iteration": 35,
+      "loss": 0.41070747734256113,
+      "cases": [
+        {
+          "key": {
+            "alpha_deg": 0.0,
+            "theta_deg": 0.0,
+            "d23_m": 0.006
+          },
+          "loss": 0.4005085934054607,
+          "energy": 0.019706752927022002,
+          "NCC": 0.7489584790572944
+        },
+        {
+          "key": {
+            "alpha_deg": 90.0,
+            "theta_deg": 0.0,
+            "d23_m": 0.006
+          },
+          "loss": 1.0988396396489082e-06,
+          "energy": 0.009622765610309596,
+          "NCC": -0.003026053039368979
+        },
+        {
+          "key": {
+            "alpha_deg": 0.0,
+            "theta_deg": 90.0,
+            "d23_m": 0.006
+          },
+          "loss": 0.0032285098282765373,
+          "energy": 0.011650276014775014,
+          "NCC": 0.1640251461482999
+        },
+        {
+          "key": {
+            "alpha_deg": 0.0,
+            "theta_deg": 0.0,
+            "d23_m": 0.01
+          },
+          "loss": 0.006969275269184226,
+          "energy": 0.014739585379026268,
+          "NCC": 0.2409923108936643
+        }
+      ],
+      "elapsed_s": 319.8894002,
+      "accepted": false,
+      "changed_positions": 0,
+      "step_fraction": 0.0009375
+    },
+    "geometry_ids": [
+      "L30_W30",
+      "L30_W45",
+      "L30_W60",
+      "L30_W75",
+      "L30_W90",
+      "L45_W30",
+      "L45_W45",
+      "L45_W60",
+      "L45_W75",
+      "L45_W90",
+      "L60_W30",
+      "L60_W45",
+      "L60_W60",
+      "L60_W75",
+      "L60_W90",
+      "L75_W30",
+      "L75_W45",
+      "L75_W60",
+      "L75_W75",
+      "L75_W90",
+      "L90_W30",
+      "L90_W45",
+      "L90_W60",
+      "L90_W75",
+      "L90_W90"
+    ],
+    "coordinate_axes": "arrays [layer,y,x]; y positive upward; origin at centre; plot origin lower",
+    "physical": {
+      "frequency_Hz": 700000000000.0,
+      "wavelength_m": 0.00042827494,
+      "period_m": 0.00011,
+      "aperture_m": 0.066,
+      "pillar_height_m": 0.0005,
+      "substrate_height_m": 0.0005,
+      "n": 3.42,
+      "k": 0,
+      "d12_m": 0.005,
+      "d3_detector_m": 0.005
+    },
+    "reference": "t includes 1mm finite pillar/substrate relative to equal air. Distances entrance-plane to entrance-plane/detector; do not add thickness again.",
+    "jones": "normal-incidence diagonal local response rotated as R diag(tx,ty) R^-1; spatial rigid inverse map uses nearest-cell piecewise constant sampling",
+    "classification": "optimized numerical design using real FDTD co-polar pairs; approximate model, not full-device FDTD or fabricated chip"
+  },
+  "compute": "precomputed archive on GitHub Pages; no Python/FDTD backend in browser",
+  "mode": "precomputed",
+  "cases_url": "research/holo600/cases.json",
+  "scans_url": "research/holo600/scans.json",
+  "validation_url": "research/holo600/validation.json",
+  "scan_plot_urls": [
+    {
+      "title": "固定600结构上的实际探测强度；全图使用相同色标，所有指标使用固定目标强度和范围。",
+      "url": "research/holo600/figures/matched_wrong_comparison.png",
+      "caption": "固定600结构上的实际探测强度；全图使用相同色标，所有指标使用固定目标强度和范围。",
+      "sha256": "697436f04d7e08b3cba8bf105f199bb2217e2ba47e55b5b13eb8f79569402e81",
+      "source_records": [
+        "results\\scans\\ca26cc205ef6edff/summary.json"
+      ]
+    },
+    {
+      "title": "单参数真实重算曲线。连线只连接已测点，未对未计算条件伪造结果；任意旋转仍有采样误差。",
+      "url": "research/holo600/figures/key_sensitivity.png",
+      "caption": "单参数真实重算曲线。连线只连接已测点，未对未计算条件伪造结果；任意旋转仍有采样误差。",
+      "sha256": "95d72007d0a127ba2850e64cb6b76e4183e7266595392433baf6c87e2022e86f",
+      "source_records": [
+        "results\\scans\\ca26cc205ef6edff/summary.json"
+      ]
+    },
+    {
+      "title": "有限的α–d和θ–d实测质量图；坐标为离散条件，未作连续插值或安全位数推算。",
+      "url": "research/holo600/figures/two_parameter_quality.png",
+      "caption": "有限的α–d和θ–d实测质量图；坐标为离散条件，未作连续插值或安全位数推算。",
+      "sha256": "1fd9e0131315553d1600a259f9b21816614ac9133e5fc777cc6d0889ddfd8317",
+      "source_records": [
+        "results\\scans\\ca26cc205ef6edff/summary.json"
+      ]
+    }
+  ],
+  "geometry_plot_urls": [
+    {
+      "title": "第1层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "url": "research/holo600/figures/layer1_L.png",
+      "caption": "第1层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "sha256": "84fd554363ecf268d60c4e83eecac0ead1f0ee16bba693e982874f451b148c42",
+      "source_records": [
+        "data/design_600.npz",
+        "data/library_mapping.json"
+      ]
+    },
+    {
+      "title": "第2层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "url": "research/holo600/figures/layer2_L.png",
+      "caption": "第2层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "sha256": "293119147a9aa428bd7fbed2a924e2e159469ffffa11770c825022a121f4664b",
+      "source_records": [
+        "data/design_600.npz",
+        "data/library_mapping.json"
+      ]
+    },
+    {
+      "title": "第3层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "url": "research/holo600/figures/layer3_L.png",
+      "caption": "第3层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "sha256": "ffb432800a85bf8ec7fbd48fa316dc5c86b10c0d47ef504b32d9d589f15901d9",
+      "source_records": [
+        "data/design_600.npz",
+        "data/library_mapping.json"
+      ]
+    },
+    {
+      "title": "第1层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "url": "research/holo600/figures/layer1_W.png",
+      "caption": "第1层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "sha256": "1bad83e202256c3ab7b5224f248ba3397368a90f7a7ab9b19577284deb9fd67c",
+      "source_records": [
+        "data/design_600.npz",
+        "data/library_mapping.json"
+      ]
+    },
+    {
+      "title": "第2层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "url": "research/holo600/figures/layer2_W.png",
+      "caption": "第2层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "sha256": "9af11f14966444127485c589685559a77390f995b227b5b3f00b845ae211e8e1",
+      "source_records": [
+        "data/design_600.npz",
+        "data/library_mapping.json"
+      ]
+    },
+    {
+      "title": "第3层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "url": "research/holo600/figures/layer3_W.png",
+      "caption": "第3层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+      "sha256": "d98d5fec4c1a2f5ecee36bb248a8766111b2a06a8d75a911e4fc0658e6bf4238",
+      "source_records": [
+        "data/design_600.npz",
+        "data/library_mapping.json"
+      ]
+    }
+  ],
+  "all_figures_url": "research/holo600/figures.json",
+  "downloads": {
+    "structure": "research/holo600/design_600.npz",
+    "library": "research/holo600/library.json"
+  },
+  "measurement": "dual-polarization complex transverse field; matched archived ideal8-exposure reconstruction only when supplied",
+  "physical_assumptions": "0.7 THz literature-assumption model; diagonal local Jones plus one-way transverse ASM; all three final600 sampling checks still FAIL",
+  "material_n": 3.42,
+  "material_k": 0,
+  "public_downloads": [
+    {
+      "label": "三层结构 NPZ",
+      "url": "research/holo600/design_600.npz"
+    },
+    {
+      "label": "25种响应库 JSON",
+      "url": "research/holo600/library.json"
+    },
+    {
+      "label": "公开版说明",
+      "url": "research/holo600/README_公开版.md"
+    },
+    {
+      "label": "图表与研究记录",
+      "url": "research/holo600/index.html"
+    },
+    {
+      "label": "扫描指标 JSON",
+      "url": "research/holo600/scans.json"
+    }
+  ]
+}

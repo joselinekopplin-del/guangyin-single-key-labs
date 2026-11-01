@@ -1,0 +1,137 @@
+[
+  {
+    "title": "第1层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "url": "research/holo600/figures/layer1_L.png",
+    "caption": "第1层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "sha256": "84fd554363ecf268d60c4e83eecac0ead1f0ee16bba693e982874f451b148c42",
+    "source_records": [
+      "data/design_600.npz",
+      "data/library_mapping.json"
+    ]
+  },
+  {
+    "title": "第2层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "url": "research/holo600/figures/layer2_L.png",
+    "caption": "第2层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "sha256": "293119147a9aa428bd7fbed2a924e2e159469ffffa11770c825022a121f4664b",
+    "source_records": [
+      "data/design_600.npz",
+      "data/library_mapping.json"
+    ]
+  },
+  {
+    "title": "第3层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "url": "research/holo600/figures/layer3_L.png",
+    "caption": "第3层 L：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "sha256": "ffb432800a85bf8ec7fbd48fa316dc5c86b10c0d47ef504b32d9d589f15901d9",
+    "source_records": [
+      "data/design_600.npz",
+      "data/library_mapping.json"
+    ]
+  },
+  {
+    "title": "第1层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "url": "research/holo600/figures/layer1_W.png",
+    "caption": "第1层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "sha256": "1bad83e202256c3ab7b5224f248ba3397368a90f7a7ab9b19577284deb9fd67c",
+    "source_records": [
+      "data/design_600.npz",
+      "data/library_mapping.json"
+    ]
+  },
+  {
+    "title": "第2层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "url": "research/holo600/figures/layer2_W.png",
+    "caption": "第2层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "sha256": "9af11f14966444127485c589685559a77390f995b227b5b3f00b845ae211e8e1",
+    "source_records": [
+      "data/design_600.npz",
+      "data/library_mapping.json"
+    ]
+  },
+  {
+    "title": "第3层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "url": "research/holo600/figures/layer3_W.png",
+    "caption": "第3层 W：实际600×600位置，坐标mm，几何μm；无展示插值。",
+    "sha256": "d98d5fec4c1a2f5ecee36bb248a8766111b2a06a8d75a911e4fc0658e6bf4238",
+    "source_records": [
+      "data/design_600.npz",
+      "data/library_mapping.json"
+    ]
+  },
+  {
+    "title": "三层六张尺寸图。每个位置的L、W及x/y复响应均来自同一个真实FDTD库编号。",
+    "url": "research/holo600/figures/geometry_all.png",
+    "caption": "三层六张尺寸图。每个位置的L、W及x/y复响应均来自同一个真实FDTD库编号。",
+    "sha256": "3c4a58b9edaf446ccaab7db4c7653f75219909defd5cee3627a3b3c53bc7899c",
+    "source_records": [
+      "data/design_600.npz",
+      "data/library_mapping.json"
+    ]
+  },
+  {
+    "title": "真实离散优化过程，未接受的迭代没有删去；初始随机结构只是基线。",
+    "url": "research/holo600/figures/optimization_history.png",
+    "caption": "真实离散优化过程，未接受的迭代没有删去；初始随机结构只是基线。",
+    "sha256": "f8d49afbc84ef8cb685be395424ca253663843a2cf574603941efe6919834266",
+    "source_records": [
+      "logs/optimization_600.json"
+    ]
+  },
+  {
+    "title": "固定600结构上的实际探测强度；全图使用相同色标，所有指标使用固定目标强度和范围。",
+    "url": "research/holo600/figures/matched_wrong_comparison.png",
+    "caption": "固定600结构上的实际探测强度；全图使用相同色标，所有指标使用固定目标强度和范围。",
+    "sha256": "697436f04d7e08b3cba8bf105f199bb2217e2ba47e55b5b13eb8f79569402e81",
+    "source_records": [
+      "results\\scans\\ca26cc205ef6edff/summary.json"
+    ]
+  },
+  {
+    "title": "单参数真实重算曲线。连线只连接已测点，未对未计算条件伪造结果；任意旋转仍有采样误差。",
+    "url": "research/holo600/figures/key_sensitivity.png",
+    "caption": "单参数真实重算曲线。连线只连接已测点，未对未计算条件伪造结果；任意旋转仍有采样误差。",
+    "sha256": "95d72007d0a127ba2850e64cb6b76e4183e7266595392433baf6c87e2022e86f",
+    "source_records": [
+      "results\\scans\\ca26cc205ef6edff/summary.json"
+    ]
+  },
+  {
+    "title": "有限的α–d和θ–d实测质量图；坐标为离散条件，未作连续插值或安全位数推算。",
+    "url": "research/holo600/figures/two_parameter_quality.png",
+    "caption": "有限的α–d和θ–d实测质量图；坐标为离散条件，未作连续插值或安全位数推算。",
+    "sha256": "1fd9e0131315553d1600a259f9b21816614ac9133e5fc777cc6d0889ddfd8317",
+    "source_records": [
+      "results\\scans\\ca26cc205ef6edff/summary.json"
+    ]
+  },
+  {
+    "title": "第三层物理出口的等效传播结果：总强度与两个分量相位；没有给矢量场捏造一个总相位。",
+    "url": "research/holo600/figures/layer3_exit.png",
+    "caption": "第三层物理出口的等效传播结果：总强度与两个分量相位；没有给矢量场捏造一个总相位。",
+    "sha256": "7dc8f2c70c42a86f21e5c5be319b114bd2157f15074c610c14fba3acdeb097f5",
+    "source_records": [
+      "results/representative/fields.npz"
+    ]
+  },
+  {
+    "title": "新增理想参考光假设下，x偏振一张干涉图及双偏振四步相移恢复；各面板色标明确，8次曝光、无噪声、同探测面。",
+    "url": "research/holo600/figures/ideal_holography.png",
+    "caption": "新增理想参考光假设下，x偏振一张干涉图及双偏振四步相移恢复；各面板色标明确，8次曝光、无噪声、同探测面。",
+    "sha256": "c46feef4630dfe66332233305420660bd3fc7ed8f38ce8af97fa52ad408674eb",
+    "source_records": [
+      "results/representative/ideal_phase_shift.npz"
+    ]
+  },
+  {
+    "title": "最终600结构的独立采样检查：标称0°、17°与补零差异均保留；实际失败项不随图形改善而取消。",
+    "url": "research/holo600/figures/sampling_audit.png",
+    "caption": "最终600结构的独立采样检查：标称0°、17°与补零差异均保留；实际失败项不随图形改善而取消。",
+    "sha256": "ce54efd2d80719f66f69b88fc9f17002952cf95096b691154d46b0cf5e6be25a",
+    "source_records": [
+      "audit/full600_sampling_fields.npz",
+      "audit/full_tests.json",
+      "audit/sampling_figure_sources.json"
+    ]
+  }
+]
